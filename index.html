@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Recipe Book</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>&#x1F4D6; My Recipe Book</h1>
+    <span class="header-meta" id="header-meta">Loading...</span>
+  </header>
+
+  <main class="container">
+
+    <div class="controls">
+      <div class="filter-row" id="filter-row">
+        <button class="filter-btn active" data-filter="all">All recipes</button>
+        <button class="filter-btn" data-filter="fav">&#9733; Favorites</button>
+        <button class="filter-btn" data-filter="southwest">Southwest</button>
+        <button class="filter-btn" data-filter="asian">Asian</button>
+        <button class="filter-btn" data-filter="lettuce">Lettuce bowls</button>
+        <button class="filter-btn" data-filter="snack">Snacks</button>
+      </div>
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="search-input" id="search" type="text" placeholder="Search by name, ingredient, tag..." />
+      </div>
+    </div>
+
+    <div class="count-line" id="count-line"></div>
+    <div id="recipe-output"></div>
+
+  </main>
+
+ <script src="js/recipes.js"></script>
+ 
+</body>
+</html>
