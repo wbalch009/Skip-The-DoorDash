@@ -675,7 +675,7 @@ const RECIPES = [
       "Rice for serving"
     ],
     steps: "Whisk together soy sauce, sesame oil, brown sugar, 1 tsp cornstarch, and ½ cup water in a small bowl. Set aside. Cut tofu into 1-inch cubes and pat completely dry with paper towels. Toss tofu with granulated garlic, onion powder, salt, pepper, and ¼ cup cornstarch until fully coated. Heat 2 tbsp vegetable oil in a large skillet over medium heat. Add tofu and cook turning occasionally until all sides are golden, 10–12 min. Transfer to a plate and season with salt. In the same skillet heat 1 tbsp oil over medium heat. Add broccoli and cook undisturbed until lightly charred on the bottom, 2–3 min — do not move them. Toss and cook until other sides are darkened in spots, another 2–3 min. Add remaining 1 tbsp oil, garlic, ginger, and scallions to the skillet. Stir until fragrant, 1–2 min. Reduce heat to low, add tofu back in, and pour in the reserved sauce. Bring to a simmer tossing frequently until tofu and broccoli are evenly glazed, 30–60 seconds. Serve topped with toasted sesame seeds over rice.",
-    tip: "Do not move the broccoli while it chars — that's where the flavor comes from. Leftovers keep 3 days. For meal prep store tofu and broccoli separately from rice and combine when reheating."
+    tip: "Tofu often comes out best if you give it time to dry out, such as overnight, removing excess liquid and allowing it to absorb more flavors.Do not move the broccoli while it chars — that's where the flavor comes from. Leftovers keep 3 days. For meal prep store tofu and broccoli separately from rice and combine when reheating."
   },
 
   // -------------------------------------------------------
