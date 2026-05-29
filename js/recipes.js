@@ -707,7 +707,35 @@ const RECIPES = [
     ],
     steps: "Stir yogurt, peanut butter, and cinnamon together until smooth. Slice apple. Dip.",
     tip: "Freeze the yogurt-PB blend for 20 min for a chilled dessert-style treat."
-  }
+  },
+  {
+    id: "r24",
+    title: "Mushroom stroganoff",
+    cal: 520, protein: "vegetarian", proteinG: 22, fiber: 4, cost: "$",
+    serves: 4,
+    prep: true,
+    tags: ["egg noodles", "mushrooms", "Greek yogurt", "parmesan", "white wine", "thyme", "onion", "rich", "creamy", "savory", "earthy", "hearty"],
+    desc: "A vegetarian stroganoff with sautéed mushrooms and onions in a rich white wine and Worcestershire sauce, finished with Greek yogurt and Parmesan over egg noodles. Comfort food at its best.",
+    ing: [
+      "1 lb wide egg noodles",
+      "3 tbsp butter, divided",
+      "1 medium white onion, thinly sliced",
+      "4 cloves garlic, minced",
+      "1 lb baby button mushrooms (or any combination)",
+      "½ cup dry white wine",
+      "1½ cups vegetable stock",
+      "1½ tbsp Worcestershire sauce",
+      "2 tbsp flour",
+      "3 small sprigs fresh thyme (or ¼ tsp dried thyme)",
+      "2 tbsp fresh parsley, finely chopped",
+      "1 cup plain Greek yogurt or light sour cream",
+      "1 cup Parmesan cheese, grated",
+      "Kosher salt and black pepper to taste",
+      "Optional toppings: extra Parmesan, fresh parsley, black pepper"
+    ],
+    steps: "Cook egg noodles al dente in generously salted boiling water according to package instructions — time this so noodles finish when the sauce is ready. Melt 1 tbsp butter in a large sauté pan over medium-high heat. Add onion and sauté 5 min, stirring occasionally. Add remaining 2 tbsp butter, garlic, and mushrooms and stir to combine. Continue sautéing 5–7 min until mushrooms are cooked and tender. Add white wine and deglaze the pan, scraping up the browned bits from the bottom with a wooden spoon. Simmer 3 min. In a separate bowl whisk together vegetable stock, Worcestershire sauce, and flour until smooth. Pour into the pan along with thyme, parsley, parmesan cheese and stir to combine. Simmer 5 min stirring occasionally until slightly thickened. Remove from heat and stir in Greek yogurt until evenly combined. Season generously with salt and pepper. Serve immediately over egg noodles garnished with Parmesan, parsley, and extra black pepper.",
+    tip: "Do not boil the sauce after adding the Greek yogurt — it will curdle. Remove from heat first, then stir it in. Leftovers keep 3 days; reheat gently on low with a splash of vegetable stock to loosen."
+  },
 
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
