@@ -678,6 +678,34 @@ const RECIPES = [
     tip: "Tofu often comes out best if you give it time to dry out, such as overnight, removing excess liquid and allowing it to absorb more flavors.Do not move the broccoli while it chars — that's where the flavor comes from. Leftovers keep 3 days. For meal prep store tofu and broccoli separately from rice and combine when reheating."
   },
 
+{
+    id: "r23",
+    title: "Creamy Italian sausage & orecchiette pasta",
+    cal: 680, protein: "beef", proteinG: 28, fiber: 4, cost: "$",
+    serves: 4,
+    prep: true,
+    tags: ["Italian sausage", "orecchiette", "spinach", "parmesan", "lemon", "cream", "chili flakes"],
+    desc: "One-pan creamy pasta with Italian sausage, orecchiette, fresh spinach, and a bright lemon-parmesan sauce. Everything cooks in the same pan including the dry pasta — minimal cleanup.",
+    ing: [
+      "1 lb ground Italian sausage (mild or spicy)",
+      "1 medium onion, finely chopped",
+      "2 cloves garlic, minced",
+      "2 tsp red chili flakes",
+      "2 lemons, zested and juiced",
+      "¼ cup chiffonade basil leaves",
+      "2 tsp salt",
+      "2 tsp black pepper",
+      "½ tsp Italian seasoning",
+      "2½ cups low-sodium chicken broth",
+      "1 cup heavy whipping cream",
+      "3½ cups dry orecchiette pasta (12 oz / 340g)",
+      "2 cups fresh spinach, chopped",
+      "½ cup grated Parmesan cheese"
+    ],
+    steps: "Heat a large saucepan over medium-high heat. Add sausage and onion and cook 4–5 min until sausage is browned and onion is softened, breaking up the meat as it cooks. Add garlic, salt, pepper, chili flakes, basil leaves, lemon zest, and Italian seasoning. Cook 1 min until fragrant. Add chicken broth and scrape up any browned bits from the bottom of the pan. Add cream and bring to a simmer. Stir in dry orecchiette, cover, and reduce heat to medium-low. Cook stirring often for 10–15 min until pasta is al dente and has absorbed most of the liquid. Stir in spinach, lemon juice, and Parmesan. Taste and adjust seasoning and cheese to your preference before serving.",
+    tip: "Stir frequently once the pasta goes in — it can stick to the bottom. Leftovers thicken up in the fridge; reheat with a splash of chicken broth or water to loosen. Keeps 4 days."
+  },
+
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
   //  Copy any object above, paste it here, change the id,
