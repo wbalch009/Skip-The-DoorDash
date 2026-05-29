@@ -736,10 +736,15 @@ function toggleFav(id, e) {
 }
 
 function toggleDetail(id) {
-  if (openCards.has(id)) openCards.delete(id);
-  else openCards.add(id);
+  if (openCards.has(id)) {
+    openCards.clear();
+  } else {
+    openCards.clear();
+    openCards.add(id);
+  }
   renderAll();
 }
+
 
 function getFiltered() {
   const q = document.getElementById("search").value.toLowerCase().trim();
