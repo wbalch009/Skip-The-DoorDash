@@ -548,8 +548,41 @@ const RECIPES = [
     ],
     steps: "Stir yogurt, peanut butter, and cinnamon together until smooth. Slice apple. Dip.",
     tip: "Freeze the yogurt-PB blend for 20 min for a chilled dessert-style treat."
-  }
+  },
 
+  {
+    id: "r19",
+    title: "Beef Lasagna",
+    cal: 720, protein: "beef", proteinG: 48, fiber: 6, cost: "$$",
+    prep: true,
+    tags: ["Italian sausage", "ground beef", "ricotta", "mozzarella", "lasagna noodles", "parmesan"],
+    desc: "The classic layered lasagna — Italian sausage and ground beef in a slow-simmered tomato sauce, layered with ricotta, mozzarella, and Parmesan. Makes 12 hearty servings, freezes beautifully.",
+    ing: [
+      "1 lb sweet Italian sausage",
+      "¾ lb lean ground beef",
+      "½ cup onion, minced",
+      "2 cloves garlic, crushed",
+      "1 can (28 oz) crushed tomatoes",
+      "2 cans (6.5 oz each) tomato sauce",
+      "2 cans (6 oz each) tomato paste",
+      "½ cup water",
+      "2 tbsp white sugar",
+      "4 tbsp fresh parsley, chopped — divided",
+      "1½ tsp dried basil",
+      "1 tsp Italian seasoning",
+      "1 tsp granulated garlic",
+      "¼ tsp black pepper",
+      "1½ tsp salt — divided",
+      "12 lasagna noodles",
+      "16 oz ricotta cheese",
+      "1 large egg",
+      "¾ lb mozzarella cheese, sliced",
+      "¾ cup Parmesan cheese, grated"
+    ],
+    steps: "Brown sausage, ground beef, onion, and garlic in an appropriate-sized pot over medium heat until cooked through. Stir in crushed tomatoes, tomato sauce, tomato paste, and water. Add sugar, 2 tbsp parsley, basil, Italian seasoning, granulated garlic, pepper, and 1 tsp salt. Simmer covered for 1½ hours, stirring occasionally. Boil lasagna noodles 8–10 min, drain and rinse with cold water. Mix ricotta with egg, remaining 2 tbsp parsley, and ½ tsp salt. Preheat oven to 375°F. In a 9x13 baking dish spread 1½ cups meat sauce. Layer 6 noodles, half the ricotta mixture, one third of the mozzarella, 1½ cups meat sauce, and ¼ cup Parmesan. Repeat layers. Top with remaining mozzarella and Parmesan. Cover with foil (spray foil so it does not stick to cheese). Bake covered 25 min, then uncovered 25 min. Rest 15 min before cutting.",
+    tip: "Makes 12 servings — ideal for batch cooking. Slice into portions, wrap individually, and freeze up to 3 months. Reheats perfectly from frozen at 350°F for 45 min or microwave covered on 50% power for 3–4 min."
+  },
+  
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
   //  Copy any object above, paste it here, change the id,
