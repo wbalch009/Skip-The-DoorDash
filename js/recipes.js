@@ -648,6 +648,36 @@ const RECIPES = [
     tip: "Marinate overnight for the deepest flavor. The bang bang sauce keeps 5 days in the fridge — make a double batch and use as a dipping sauce or salad dressing. For a lighter version, air fry the coated chicken at 400°F for 12–14 min instead of deep frying."
   },
 
+{
+    id: "r22",
+    title: "Crispy tofu & broccoli stir-fry",
+    cal: 420, protein: "vegetarian", proteinG: 18, fiber: 8, cost: "$",
+    serves: 3,
+    prep: true,
+    tags: ["tofu", "broccoli", "sesame", "soy sauce", "ginger", "garlic", "scallions", "rice"],
+    desc: "Crispy pan-fried tofu and charred broccoli florets glazed in a savory sesame-soy sauce with garlic and ginger. A satisfying vegetarian stir-fry ready in under 30 minutes.",
+    ing: [
+      "1 block (14 oz) firm tofu, drained",
+      "2 medium broccoli crowns, cut into florets",
+      "4 garlic cloves, finely chopped",
+      "1 piece fresh ginger (½ inch), finely chopped (about 2 tsp)",
+      "3 scallions, finely chopped",
+      "¼ cup light soy sauce",
+      "1 tbsp toasted sesame oil",
+      "2 tsp granulated garlic",
+      "2 tsp onion powder",
+      "2 tsp light brown sugar",
+      "1 tsp cornstarch (for sauce) + ¼ cup cornstarch (for coating tofu)",
+      "½ cup water",
+      "4 tbsp vegetable oil, divided",
+      "Kosher salt and pepper to taste",
+      "Toasted sesame seeds for garnish",
+      "Rice for serving"
+    ],
+    steps: "Whisk together soy sauce, sesame oil, brown sugar, 1 tsp cornstarch, and ½ cup water in a small bowl. Set aside. Cut tofu into 1-inch cubes and pat completely dry with paper towels. Toss tofu with granulated garlic, onion powder, salt, pepper, and ¼ cup cornstarch until fully coated. Heat 2 tbsp vegetable oil in a large skillet over medium heat. Add tofu and cook turning occasionally until all sides are golden, 10–12 min. Transfer to a plate and season with salt. In the same skillet heat 1 tbsp oil over medium heat. Add broccoli and cook undisturbed until lightly charred on the bottom, 2–3 min — do not move them. Toss and cook until other sides are darkened in spots, another 2–3 min. Add remaining 1 tbsp oil, garlic, ginger, and scallions to the skillet. Stir until fragrant, 1–2 min. Reduce heat to low, add tofu back in, and pour in the reserved sauce. Bring to a simmer tossing frequently until tofu and broccoli are evenly glazed, 30–60 seconds. Serve topped with toasted sesame seeds over rice.",
+    tip: "Do not move the broccoli while it chars — that's where the flavor comes from. Leftovers keep 3 days. For meal prep store tofu and broccoli separately from rice and combine when reheating."
+  },
+
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
   //  Copy any object above, paste it here, change the id,
