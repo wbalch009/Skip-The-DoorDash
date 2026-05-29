@@ -737,6 +737,35 @@ const RECIPES = [
     tip: "Do not boil the sauce after adding the Greek yogurt — it will curdle. Remove from heat first, then stir it in. Leftovers keep 3 days; reheat gently on low with a splash of vegetable stock to loosen."
   },
 
+  {
+    id: "r25",
+    title: "Greek yogurt pasta salad",
+    cal: 480, protein: "vegetarian", proteinG: 20, fiber: 9, cost: "$",
+    serves: 4,
+    prep: true,
+    tags: ["pasta", "chickpeas", "Greek yogurt", "pepperoncini", "feta", "parsley", "red onion", "fresh", "tangy", "bright", "zesty", "light"],
+    desc: "A creamy Greek yogurt-dressed pasta salad with chickpeas, pepperoncini, feta, and fresh herbs. Tangy, fresh, and endlessly customizable with whatever vegetables you have on hand.",
+    ing: [
+      "1 lb medium shell or farfalle pasta (dry), cooked and cooled",
+      "½ cup pickled pepperoncini peppers, sliced",
+      "¼ cup red onion, finely chopped",
+      "1 can (15 oz) chickpeas, drained and rinsed",
+      "1 bunch parsley, finely chopped",
+      "¼ cup feta cheese, crumbled",
+      "Optional: 1 handful kale, shredded",
+      "Optional: ½ bunch cilantro, finely chopped",
+      "--- Dressing ---",
+      "1 cup plain Greek yogurt",
+      "2½ tbsp pickled pepperoncini juice (or lemon juice)",
+      "1 tsp maple syrup",
+      "1½ tbsp olive oil",
+      "1–2 tbsp chili oil",
+      "Salt and pepper to taste"
+    ],
+    steps: "Cook pasta according to package instructions. Drain and spread out to cool completely — warm pasta will make the dressing watery. Make the dressing: whisk together Greek yogurt, pepperoncini juice, maple syrup, olive oil, salt, and pepper until smooth. Just before adding to the salad, drizzle chili oil over the dressing and swirl to disperse across the surface. Add pasta, chickpeas, pepperoncini, red onion, parsley, feta, and any optional add-ins to a large bowl. Pour dressing over the top and toss well to coat. Serve immediately or refrigerate.",
+    tip: "Works with almost any vegetable — bell peppers, cucumbers, broccoli, spinach, arugula, dill, or basil all work great. Keeps 4 days in the fridge in a sealed container. Toss with a splash of lemon juice before serving leftovers to brighten it back up."
+  },
+
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
   //  Copy any object above, paste it here, change the id,
