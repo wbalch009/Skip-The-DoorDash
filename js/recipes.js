@@ -582,7 +582,72 @@ const RECIPES = [
     steps: "Brown sausage, ground beef, onion, and garlic in an appropriate-sized pot over medium heat until cooked through. Stir in crushed tomatoes, tomato sauce, tomato paste, and water. Add sugar, 2 tbsp parsley, basil, Italian seasoning, granulated garlic, pepper, and 1 tsp salt. Simmer covered for 1½ hours, stirring occasionally. Boil lasagna noodles 8–10 min, drain and rinse with cold water. Mix ricotta with egg, remaining 2 tbsp parsley, and ½ tsp salt. Preheat oven to 375°F. In a 9x13 baking dish spread 1½ cups meat sauce. Layer 6 noodles, half the ricotta mixture, one third of the mozzarella, 1½ cups meat sauce, and ¼ cup Parmesan. Repeat layers. Top with remaining mozzarella and Parmesan. Cover with foil (spray foil so it does not stick to cheese). Bake covered 25 min, then uncovered 25 min. Rest 15 min before cutting.",
     tip: "Makes 12 servings — ideal for batch cooking. Slice into portions, wrap individually, and freeze up to 3 months. Reheats perfectly from frozen at 350°F for 45 min or microwave covered on 50% power for 3–4 min."
   },
-  
+
+ {
+    id: "r20",
+    title: "Honey garlic chicken fried rice",
+    cal: 580, protein: "chicken", proteinG: 52, fiber: 6, cost: "$",
+    prep: true,
+    serves: 7,
+    tags: ["chicken breast", "fried rice", "honey garlic", "mixed vegetables", "eggs", "soy sauce", "spring onion"],
+    desc: "Crispy air-fryer chicken breast coated in a sticky honey garlic sauce served over egg fried rice with mixed vegetables. High protein, big flavor, and meal-preps extremely well.",
+    ing: [
+      "2.5 lb chicken breast, diced (raw weight)",
+      "2½ tbsp reduced-salt soy sauce (for chicken marinade)",
+      "2 garlic cloves, minced",
+      "½ tsp black pepper",
+      "1 tsp onion powder",
+      "1 tsp garlic powder",
+      "¾ cup potato or corn starch (about ⅓ cup sticks to chicken)",
+      "3½ cups frozen mixed vegetables",
+      "5 eggs",
+      "¼ cup spring onion, white part only",
+      "5 cups cooked white rice (day-old works best)",
+      "Just under 3 tbsp reduced-salt soy sauce (for rice)",
+      "2 tbsp spring onion, green part only",
+      "--- Honey garlic sauce ---",
+      "5 garlic cloves, minced",
+      "¼ cup soy sauce + ¼ cup water",
+      "⅓ cup reduced-sugar ketchup",
+      "1 tbsp + 2 tsp rice wine vinegar",
+      "1 tsp corn starch + ⅓ cup water (slurry)",
+      "¼ cup honey or maple syrup"
+    ],
+    steps: "Dice chicken and mix with soy sauce, minced garlic, black pepper, onion powder, and garlic powder. Coat well with corn starch — a zip-lock bag works great for this. Place on a tray, spray with oil, and air fry at 400°F for 10 min. Flip, spray again, and cook another 8–10 min until internal temp reaches 165°F. Meanwhile heat a large pan or wok on high heat. Add frozen mixed vegetables and eggs, cook while stirring for a few minutes until eggs are cooked through. Add white spring onion parts and day-old rice. Pour in soy sauce and stir-fry everything together until hot throughout. Stir in green spring onion parts and mix well. For the sauce: heat a pan on medium, add minced garlic and cook 30 seconds. Add soy sauce, water, ketchup, and rice vinegar. Stir to combine. Add cornstarch slurry and stir until lightly simmering and thickened. Remove from heat and stir in honey or maple syrup. Toss cooked chicken in the sauce until fully coated. Plate chicken over or beside the fried rice.",
+    tip: "Day-old rice is key — fresh rice is too wet and turns mushy. Cook rice the night before and refrigerate uncovered. Portion chicken and rice separately into containers to reheat separately — keeps 5 days. Reheat rice with a splash of water, and if separated reheat chicken in an air fryer 3–4 min to keep it crispy."
+  },
+
+{
+    id: "r21",
+    title: "Bang bang chicken",
+    cal: 612, protein: "chicken", proteinG: 43, fiber: 2, cost: "$",
+    serves: 3,
+    prep: false,
+    tags: ["chicken thighs", "bang bang sauce", "sweet chili", "sriracha", "soy sauce", "ginger", "garlic"],
+    desc: "Crispy deep-fried chicken thighs marinated in a Japanese-inspired soy-mirin blend, tossed in a creamy, spicy-sweet bang bang sauce. Best served fresh over steamed rice.",
+    ing: [
+      "4 chicken thighs, cut into bite-sized pieces",
+      "2 tbsp soy sauce",
+      "1 tbsp sake",
+      "1 tbsp mirin",
+      "1 tsp sesame oil",
+      "4 cloves garlic, minced",
+      "2 tsp ginger, minced",
+      "½ tsp salt",
+      "½ tsp white pepper",
+      "1 egg white, beaten",
+      "Potato or corn starch to coat",
+      "Neutral oil for frying",
+      "--- Bang bang sauce ---",
+      "½ cup mayo",
+      "¼ cup + 1 tbsp Thai sweet chili sauce",
+      "3 tbsp sriracha or chili sauce",
+      "1 tbsp lemon juice"
+    ],
+    steps: "Combine chicken with soy sauce, sake, mirin, sesame oil, garlic, ginger, white pepper, salt, and egg white. Mix well, cover, and marinate in the fridge for at least 1 hour or overnight for best results. Make bang bang sauce: whisk together mayo, Thai sweet chili sauce, sriracha, and lemon juice. Set aside. Dredge marinated chicken pieces in potato or corn starch until fully coated. Deep fry in neutral oil at 350°F for 5–6 min until golden brown and crispy — work in batches to avoid crowding. Drain on a wire rack or paper towels. Toss hot chicken in bang bang sauce until fully coated. Serve immediately over steamed rice, garnished with green onion or chives.",
+    tip: "Marinate overnight for the deepest flavor. The bang bang sauce keeps 5 days in the fridge — make a double batch and use as a dipping sauce or salad dressing. For a lighter version, air fry the coated chicken at 400°F for 12–14 min instead of deep frying."
+  },
+
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
   //  Copy any object above, paste it here, change the id,
@@ -704,7 +769,7 @@ function cardHTML(r) {
           <h4>Steps</h4>
           <p>${r.steps}</p>
         </div>
-        <div class="prep-tip"><strong>Prep tip:</strong> ${r.tip}</div>
+   <div class="prep-tip">${r.serves ? `<strong>Serves ${r.serves}</strong> &nbsp;&middot;&nbsp; ` : ""}<strong>Prep tip:</strong> ${r.tip}</div>
       </div>
     </div>`;
 }
