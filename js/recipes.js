@@ -858,7 +858,42 @@ const RECIPES = [
     steps: "Whisk together flour, sugar, baking powder, salt, and cinnamon in a medium bowl. Make a well in the center and add milk, eggs, and applesauce. Stir just until combined — do not overmix or the fritters will be tough. Fold in diced apples. Heat 1½ inches of oil in a heavy skillet, Dutch oven, or deep fryer to 375°F — use a candy thermometer to track temperature. Drop about ¼ cup of batter per fritter into the hot oil, spreading it out slightly as you drop. Do not overcrowd the pan. Cook each side until golden brown, approximately 2 min per side. Remove with a slotted spoon and drain on paper towels. Make glaze: whisk together powdered sugar, maple syrup, milk, and vanilla until smooth. Dunk each fritter in the glaze, turning to coat both sides. Place on a wire rack to air dry and drip.",
     tip: "Maintain oil temperature as close to 375°F as possible — turn heat up slightly when adding batter (temperature drops) and down slightly when removing fritters (temperature rises). Best eaten warm the day they are made, but store in an airtight container at room temp up to 2 days."
   },
-
+  
+  {
+    id: "r27",
+    title: "Pork Dumplings",
+    cal: 480, protein: "pork", proteinG: 32, fiber: 2, cost: "$",
+    serves: 4,
+    prep: true,
+    tags: ["ground pork", "wonton wrappers", "napa cabbage", "ginger", "garlic", "sesame", "chili crisp", "soy sauce", "savory", "umami", "crispy", "rich"],
+    desc: "Pan-fried pork dumplings made with wonton wrappers draped over seasoned pork and cabbage meatballs, served with a creamy chili crisp mayo sauce. Easier than traditional dumplings with incredible results.",
+    ing: [
+      "--- Pork filling ---",
+      "1 lb ground pork",
+      "2 garlic cloves, grated or minced",
+      "½–1 tsp fresh ginger, grated or minced",
+      "2 tbsp soy sauce",
+      "1 tbsp rice vinegar",
+      "1 tsp sesame oil",
+      "¼ cup green onion, thinly sliced (reserve some for garnish)",
+      "1 egg",
+      "Black pepper to taste",
+      "2 tsp cornstarch",
+      "1 cup napa cabbage, thinly sliced",
+      "Pinch of salt (for wilting cabbage)",
+      "Wonton wrappers (dumpling size)",
+      "Cooking oil",
+      "¼ cup water (for steaming)",
+      "--- Chili crisp mayo sauce ---",
+      "¾ cup mayo",
+      "1 tbsp soy sauce",
+      "1 tbsp chili crisp (drain oil, use only the crisp solids)",
+      "2 tbsp rice vinegar",
+      "Pinch of MSG (optional)"
+    ],
+    steps: "Thinly slice napa cabbage and place in a bowl with a pinch of salt. Work the salt into the cabbage thoroughly and set aside to wilt for 10–15 min. Meanwhile combine ground pork, garlic, ginger, soy sauce, rice vinegar, sesame oil, black pepper, green onion, egg, and cornstarch in a bowl. Mix well. Squeeze and drain as much liquid as possible from the cabbage then add it to the pork mixture. Form into small meatballs and set aside. Mix all sauce ingredients together and set aside. Heat a pan over medium heat with a little cooking oil. Add pork meatballs keeping space between them. Cook until browned on the bottom, about 2–3 min, then flip and brown the other side — about 5 min total. Tilt the pan slightly toward yourself and use a paper towel along the edge to absorb excess fat. Drape a wonton wrapper over each meatball. Add about ¼ cup water to the pan and cover immediately. Steam 2–3 min until wonton wrappers cling to the filling and are cooked through. Plate the dumplings, drizzle generously with sauce, and garnish with remaining green onion.",
+    tip: "Salting and squeezing the cabbage is essential — skipping this step makes the filling watery. The sauce keeps 5 days in the fridge and works great as a dipping sauce for other dishes too. Make a double batch of filling and freeze uncooked meatballs for a quick future meal."
+  },
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
   //  Copy any object above, paste it here, change the id,
