@@ -772,7 +772,7 @@ const RECIPES = [
   // -------------------------------------------------------
   {
     id: "d1",
-    title: "Coconut macaroons",
+    title: "Coconut Macaroons",
     cal: 180, protein: "dessert", proteinG: 3, fiber: 2, cost: "$",
     serves: 12,
     prep: true,
@@ -794,7 +794,7 @@ const RECIPES = [
  
    {
     id: "d2",
-    title: "Old Fashioned Apple fritters",
+    title: "Old Fashioned Apple Fritters",
     cal: 380, protein: "dessert", proteinG: 5, fiber: 2, cost: "$",
     serves: 8,
     prep: false,
