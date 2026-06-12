@@ -460,7 +460,46 @@ ul { list-style: none; }
   color: var(--hint);
   font-size: 14px;
 }
+/* =====================================================
+   FLOATING FOOD DECORATIONS
+===================================================== */
+.food-deco {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
 
+.left-deco  { left: 0; }
+.right-deco { right: 0; }
+
+.food-deco span {
+  font-size: 24px;
+  opacity: 0.6;
+  animation: floatEmoji 4s ease-in-out infinite;
+  animation-delay: var(--d);
+  transform: translateX(var(--x));
+  display: block;
+  filter: saturate(0.8);
+}
+
+@keyframes floatEmoji {
+  0%   { transform: translateX(var(--x)) translateY(0px);   }
+  50%  { transform: translateX(var(--x)) translateY(-12px); }
+  100% { transform: translateX(var(--x)) translateY(0px);   }
+}
+
+/* Hide on small screens where there's no room */
+@media (max-width: 900px) {
+  .food-deco { display: none; }
+}
 /* =====================================================
    RESPONSIVE — mobile
 ===================================================== */
