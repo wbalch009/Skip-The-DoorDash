@@ -6,7 +6,7 @@
 //  id       — unique string, e.g. "r20" (never reuse one)
 //  title    — recipe name
 //  cal      — calories per serving (number)
-//  protein  — "chicken" | "beef" | "fish" | "vegetarian" | "snack"
+//  protein  — "chicken" | "beef" | "fish" | "vegetarian" | "snack" | "dessert"
 //  proteinG — grams of protein (number)
 //  fiber    — grams fiber (number)
 //  cost     — "$" or "$$" or "$$$"
@@ -96,6 +96,64 @@ const RECIPES = [
     ],
     steps: "Whisk together soy sauce, sesame oil, brown sugar, 1 tsp cornstarch, and ½ cup water in a small bowl. Set aside. Cut tofu into 1-inch cubes and pat completely dry with paper towels. Toss tofu with granulated garlic, onion powder, salt, pepper, and ¼ cup cornstarch until fully coated. Heat 2 tbsp vegetable oil in a large skillet over medium heat. Add tofu and cook turning occasionally until all sides are golden, 10–12 min. Transfer to a plate and season with salt. In the same skillet heat 1 tbsp oil over medium heat. Add broccoli and cook undisturbed until lightly charred on the bottom, 2–3 min — do not move them. Toss and cook until other sides are darkened in spots, another 2–3 min. Add remaining 1 tbsp oil, garlic, ginger, and scallions to the skillet. Stir until fragrant, 1–2 min. Reduce heat to low, add tofu back in, and pour in the reserved sauce. Bring to a simmer tossing frequently until tofu and broccoli are evenly glazed, 30–60 seconds. Serve topped with toasted sesame seeds over rice.",
     tip: "Press tofu overnight uncovered in the fridge for best crispiness. Do not move the broccoli while it chars — that's where the flavor comes from. Leftovers keep 3 days; store tofu and broccoli separately from rice."
+  },
+
+  {
+    id: "r24",
+    title: "Mushroom stroganoff",
+    cal: 520, protein: "vegetarian", proteinG: 22, fiber: 4, cost: "$",
+    serves: 4,
+    prep: true,
+    tags: ["egg noodles", "mushrooms", "Greek yogurt", "parmesan", "white wine", "thyme", "onion", "rich", "creamy", "savory", "earthy", "hearty"],
+    desc: "A vegetarian stroganoff with sautéed mushrooms and onions in a rich white wine and Worcestershire sauce, finished with Greek yogurt and Parmesan over egg noodles. Comfort food at its best.",
+    ing: [
+      "1 lb wide egg noodles",
+      "3 tbsp butter, divided",
+      "1 medium white onion, thinly sliced",
+      "4 cloves garlic, minced",
+      "1 lb baby button mushrooms (or any combination)",
+      "½ cup dry white wine",
+      "1½ cups vegetable stock",
+      "1½ tbsp Worcestershire sauce",
+      "2 tbsp flour",
+      "3 small sprigs fresh thyme (or ¼ tsp dried thyme)",
+      "2 tbsp fresh parsley, finely chopped",
+      "1 cup plain Greek yogurt or light sour cream",
+      "1 cup Parmesan cheese, grated",
+      "Kosher salt and black pepper to taste",
+      "Optional toppings: extra Parmesan, fresh parsley, black pepper"
+    ],
+    steps: "Cook egg noodles al dente in generously salted boiling water according to package instructions — time this so noodles finish when the sauce is ready. Melt 1 tbsp butter in a large sauté pan over medium-high heat. Add onion and sauté 5 min, stirring occasionally. Add remaining 2 tbsp butter, garlic, and mushrooms and stir to combine. Continue sautéing 5–7 min until mushrooms are cooked and tender. Add white wine and deglaze the pan, scraping up the browned bits from the bottom with a wooden spoon. Simmer 3 min. In a separate bowl whisk together vegetable stock, Worcestershire sauce, and flour until smooth. Pour into the pan along with thyme, parsley, and Parmesan and stir to combine. Simmer 5 min stirring occasionally until slightly thickened. Remove from heat and stir in Greek yogurt until evenly combined. Season generously with salt and pepper. Serve immediately over egg noodles garnished with extra Parmesan, parsley, and black pepper.",
+    tip: "Do not boil the sauce after adding the Greek yogurt — it will curdle. Remove from heat first, then stir it in. Leftovers keep 3 days; reheat gently on low with a splash of vegetable stock to loosen."
+  },
+
+  {
+    id: "r25",
+    title: "Greek yogurt pasta salad",
+    cal: 480, protein: "vegetarian", proteinG: 20, fiber: 9, cost: "$",
+    serves: 4,
+    prep: true,
+    tags: ["pasta", "chickpeas", "Greek yogurt", "pepperoncini", "feta", "parsley", "red onion", "fresh", "tangy", "bright", "zesty", "light"],
+    desc: "A creamy Greek yogurt-dressed pasta salad with chickpeas, pepperoncini, feta, and fresh herbs. Tangy, fresh, and endlessly customizable with whatever vegetables you have on hand.",
+    ing: [
+      "1 lb medium shell or farfalle pasta (dry), cooked and cooled",
+      "½ cup pickled pepperoncini peppers, sliced",
+      "¼ cup red onion, finely chopped",
+      "1 can (15 oz) chickpeas, drained and rinsed",
+      "1 bunch parsley, finely chopped",
+      "¼ cup feta cheese, crumbled",
+      "Optional: 1 handful kale, shredded",
+      "Optional: ½ bunch cilantro, finely chopped",
+      "--- Dressing ---",
+      "1 cup plain Greek yogurt",
+      "2½ tbsp pickled pepperoncini juice (or lemon juice)",
+      "1 tsp maple syrup",
+      "1½ tbsp olive oil",
+      "1–2 tbsp chili oil",
+      "Salt and pepper to taste"
+    ],
+    steps: "Cook pasta according to package instructions. Drain and spread out to cool completely — warm pasta will make the dressing watery. Make the dressing: whisk together Greek yogurt, pepperoncini juice, maple syrup, olive oil, salt, and pepper until smooth. Just before adding to the salad, drizzle chili oil over the dressing and swirl to disperse across the surface. Add pasta, chickpeas, pepperoncini, red onion, parsley, feta, and any optional add-ins to a large bowl. Pour dressing over the top and toss well to coat. Serve immediately or refrigerate.",
+    tip: "Works with almost any vegetable — bell peppers, cucumbers, broccoli, spinach, arugula, dill, or basil all work great. Keeps 4 days in the fridge in a sealed container. Toss with a splash of lemon juice before serving leftovers to brighten it back up."
   },
 
   // -------------------------------------------------------
@@ -708,63 +766,63 @@ const RECIPES = [
     steps: "Stir yogurt, peanut butter, and cinnamon together until smooth. Slice apple. Dip.",
     tip: "Freeze the yogurt-PB blend for 20 min for a chilled dessert-style treat."
   },
+
+  // -------------------------------------------------------
+  //  SWEET TREATS
+  // -------------------------------------------------------
   {
-    id: "r24",
-    title: "Mushroom stroganoff",
-    cal: 520, protein: "vegetarian", proteinG: 22, fiber: 4, cost: "$",
-    serves: 4,
+    id: "d1",
+    title: "Coconut macaroons",
+    cal: 180, protein: "dessert", proteinG: 3, fiber: 2, cost: "$",
+    serves: 12,
     prep: true,
-    tags: ["egg noodles", "mushrooms", "Greek yogurt", "parmesan", "white wine", "thyme", "onion", "rich", "creamy", "savory", "earthy", "hearty"],
-    desc: "A vegetarian stroganoff with sautéed mushrooms and onions in a rich white wine and Worcestershire sauce, finished with Greek yogurt and Parmesan over egg noodles. Comfort food at its best.",
+    tags: ["coconut", "condensed milk", "egg whites", "vanilla", "sweet", "chewy", "light", "crispy"],
+    desc: "Light and chewy coconut macaroons with crispy golden tops. Just five ingredients and no mixer needed. Optionally dip the bottoms in melted dark or milk chocolate to take them to the next level.",
     ing: [
-      "1 lb wide egg noodles",
-      "3 tbsp butter, divided",
-      "1 medium white onion, thinly sliced",
-      "4 cloves garlic, minced",
-      "1 lb baby button mushrooms (or any combination)",
-      "½ cup dry white wine",
-      "1½ cups vegetable stock",
-      "1½ tbsp Worcestershire sauce",
-      "2 tbsp flour",
-      "3 small sprigs fresh thyme (or ¼ tsp dried thyme)",
-      "2 tbsp fresh parsley, finely chopped",
-      "1 cup plain Greek yogurt or light sour cream",
-      "1 cup Parmesan cheese, grated",
-      "Kosher salt and black pepper to taste",
-      "Optional toppings: extra Parmesan, fresh parsley, black pepper"
+      "9 oz shredded coconut (about 4 cups)",
+      "1 can (10 oz) sweetened condensed milk",
+      "1 tsp vanilla extract",
+      "2 large egg whites, room temperature",
+      "¼ tsp salt",
+      "Optional: melted dark or milk chocolate for dipping"
     ],
-    steps: "Cook egg noodles al dente in generously salted boiling water according to package instructions — time this so noodles finish when the sauce is ready. Melt 1 tbsp butter in a large sauté pan over medium-high heat. Add onion and sauté 5 min, stirring occasionally. Add remaining 2 tbsp butter, garlic, and mushrooms and stir to combine. Continue sautéing 5–7 min until mushrooms are cooked and tender. Add white wine and deglaze the pan, scraping up the browned bits from the bottom with a wooden spoon. Simmer 3 min. In a separate bowl whisk together vegetable stock, Worcestershire sauce, and flour until smooth. Pour into the pan along with thyme, parsley, parmesan cheese and stir to combine. Simmer 5 min stirring occasionally until slightly thickened. Remove from heat and stir in Greek yogurt until evenly combined. Season generously with salt and pepper. Serve immediately over egg noodles garnished with Parmesan, parsley, and extra black pepper.",
-    tip: "Do not boil the sauce after adding the Greek yogurt — it will curdle. Remove from heat first, then stir it in. Leftovers keep 3 days; reheat gently on low with a splash of vegetable stock to loosen."
+    steps: "Preheat oven to 325°F. Line a cupcake pan with paper liners. In a large bowl combine shredded coconut, condensed milk, and vanilla extract until well blended. In a separate bowl whisk egg whites and salt to medium peaks — the whites should hold a soft floppy peak when you lift the whisk. Fold egg whites gently into the coconut mixture until just combined. Scoop batter into each cupcake cup, filling generously — the macaroons won't spread so don't be shy. Bake 20–25 min until the tops are golden brown and a toothpick comes out with minimal dry crumbs. Cool in the pan 2–3 min then transfer to a wire rack to cool completely. Optional: once fully cooled, dip the bottoms in melted chocolate and set on parchment until firm.",
+   tip: "Room temperature egg whites whip up much better than cold ones — take them out of the fridge 30 min ahead. Store in an airtight container at room temp for 3 days or refrigerate up to a week."
   },
 
-  {
-    id: "r25",
-    title: "Greek yogurt pasta salad",
-    cal: 480, protein: "vegetarian", proteinG: 20, fiber: 9, cost: "$",
-    serves: 4,
-    prep: true,
-    tags: ["pasta", "chickpeas", "Greek yogurt", "pepperoncini", "feta", "parsley", "red onion", "fresh", "tangy", "bright", "zesty", "light"],
-    desc: "A creamy Greek yogurt-dressed pasta salad with chickpeas, pepperoncini, feta, and fresh herbs. Tangy, fresh, and endlessly customizable with whatever vegetables you have on hand.",
+  
+ 
+   {
+    id: "d2",
+    title: "Old Fashioned Apple fritters",
+    cal: 380, protein: "dessert", proteinG: 5, fiber: 2, cost: "$",
+    serves: 8,
+    prep: false,
+    tags: ["apple", "cinnamon", "maple syrup", "powdered sugar", "fried", "sweet", "warm", "crispy", "cozy"],
+    desc: "Crispy fried apple fritters loaded with chunks of Granny Smith or Honeycrisp apple, dunked in a maple-vanilla glaze. A classic comfort treat best served warm.",
     ing: [
-      "1 lb medium shell or farfalle pasta (dry), cooked and cooled",
-      "½ cup pickled pepperoncini peppers, sliced",
-      "¼ cup red onion, finely chopped",
-      "1 can (15 oz) chickpeas, drained and rinsed",
-      "1 bunch parsley, finely chopped",
-      "¼ cup feta cheese, crumbled",
-      "Optional: 1 handful kale, shredded",
-      "Optional: ½ bunch cilantro, finely chopped",
-      "--- Dressing ---",
-      "1 cup plain Greek yogurt",
-      "2½ tbsp pickled pepperoncini juice (or lemon juice)",
-      "1 tsp maple syrup",
-      "1½ tbsp olive oil",
-      "1–2 tbsp chili oil",
-      "Salt and pepper to taste"
+      "--- Fritters ---",
+      "1½ cups all-purpose flour",
+      "¼ cup sugar",
+      "2 tsp baking powder",
+      "½ tsp salt",
+      "1½ tsp cinnamon",
+      "⅓ cup milk",
+      "2 eggs",
+      "3 tbsp applesauce",
+      "2 large Granny Smith or Honeycrisp apples, peeled, cored, and diced",
+      "Canola or vegetable oil for frying",
+      "--- Maple glaze ---",
+      "3 cups powdered sugar",
+      "¼ cup maple syrup",
+      "¼ cup milk",
+      "½ tsp vanilla extract"
     ],
-    steps: "Cook pasta according to package instructions. Drain and spread out to cool completely — warm pasta will make the dressing watery. Make the dressing: whisk together Greek yogurt, pepperoncini juice, maple syrup, olive oil, salt, and pepper until smooth. Just before adding to the salad, drizzle chili oil over the dressing and swirl to disperse across the surface. Add pasta, chickpeas, pepperoncini, red onion, parsley, feta, and any optional add-ins to a large bowl. Pour dressing over the top and toss well to coat. Serve immediately or refrigerate.",
-    tip: "Works with almost any vegetable — bell peppers, cucumbers, broccoli, spinach, arugula, dill, or basil all work great. Keeps 4 days in the fridge in a sealed container. Toss with a splash of lemon juice before serving leftovers to brighten it back up."
+    steps: "Whisk together flour, sugar, baking powder, salt, and cinnamon in a medium bowl. Make a well in the center and add milk, eggs, and applesauce. Stir just until combined — do not overmix or the fritters will be tough. Fold in diced apples. Heat 1½ inches of oil in a heavy skillet, Dutch oven, or deep fryer to 375°F — use a candy thermometer to track temperature. Drop about ¼ cup of batter per fritter into the hot oil, spreading it out slightly as you drop. Do not overcrowd the pan. Cook each side until golden brown, approximately 2 min per side. Remove with a slotted spoon and drain on paper towels. Make glaze: whisk together powdered sugar, maple syrup, milk, and vanilla until smooth. Dunk each fritter in the glaze, turning to coat both sides. Place on a wire rack to air dry and drip.",
+    tip: "Maintain oil temperature as close to 375°F as possible — turn heat up slightly when adding batter (temperature drops) and down slightly when removing fritters (temperature rises). Best eaten warm the day they are made, but store in an airtight container at room temp up to 2 days."
   },
+  
+ 
 
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
@@ -815,6 +873,7 @@ function getFiltered() {
     if (activeFilter === "fish"        && r.protein !== "fish")        return false;
     if (activeFilter === "vegetarian"  && r.protein !== "vegetarian")  return false;
     if (activeFilter === "snack"       && r.protein !== "snack")       return false;
+    if (activeFilter === "dessert"     && r.protein !== "dessert")     return false;
     if (q) {
       const hay = (r.title + " " + r.tags.join(" ") + " " + r.desc + " " + r.ing.join(" ")).toLowerCase();
       if (!hay.includes(q)) return false;
@@ -834,6 +893,7 @@ function proteinBadge(p) {
     case "fish":       return badge("badge-fish",       "Fish");
     case "vegetarian": return badge("badge-vegetarian", "Vegetarian");
     case "snack":      return badge("badge-snack",      "Snack");
+    case "dessert":    return badge("badge-dessert",    "Sweet Treat");
     default:           return "";
   }
 }
@@ -846,7 +906,7 @@ function cardHTML(r) {
   const extraBadges = [
     r.isLettuce ? badge("badge-ltr",  "Lettuce bowl") : "",
     r.isNew     ? badge("badge-new",  "New")           : "",
-    (r.prep && r.protein !== "snack") ? badge("badge-prep", "Meal-prep") : ""
+    (r.prep && r.protein !== "snack" && r.protein !== "dessert") ? badge("badge-prep", "Meal-prep") : ""
   ].join("");
 
   const ing = r.ing.map(i => `<li>${i}</li>`).join("");
@@ -899,13 +959,15 @@ function cardHTML(r) {
 
 function renderAll() {
   const filtered  = getFiltered();
-  const meals     = filtered.filter(r => r.protein !== "snack");
+  const meals     = filtered.filter(r => r.protein !== "snack" && r.protein !== "dessert");
   const snacks    = filtered.filter(r => r.protein === "snack");
-  const totalMeals  = RECIPES.filter(r => r.protein !== "snack").length;
-  const totalSnacks = RECIPES.filter(r => r.protein === "snack").length;
+  const desserts  = filtered.filter(r => r.protein === "dessert");
+  const totalMeals    = RECIPES.filter(r => r.protein !== "snack" && r.protein !== "dessert").length;
+  const totalSnacks   = RECIPES.filter(r => r.protein === "snack").length;
+  const totalDesserts = RECIPES.filter(r => r.protein === "dessert").length;
 
   document.getElementById("header-meta").textContent =
-    `${totalMeals} meals · ${totalSnacks} snacks`;
+    `${totalMeals} meals · ${totalSnacks} snacks · ${totalDesserts} sweet treats`;
 
   document.getElementById("count-line").textContent =
     filtered.length === RECIPES.length
@@ -915,7 +977,7 @@ function renderAll() {
   let html = "";
 
   if (meals.length) {
-    if (snacks.length || activeFilter === "all") {
+    if (snacks.length || desserts.length || activeFilter === "all") {
       html += `<div class="section-label">Meals (${meals.length})</div>`;
     }
     html += `<div class="recipe-grid">${meals.map(cardHTML).join("")}</div>`;
@@ -924,6 +986,11 @@ function renderAll() {
   if (snacks.length) {
     html += `<div class="section-label">Snacks (${snacks.length})</div>`;
     html += `<div class="recipe-grid">${snacks.map(cardHTML).join("")}</div>`;
+  }
+
+  if (desserts.length) {
+    html += `<div class="section-label">Sweet Treats (${desserts.length})</div>`;
+    html += `<div class="recipe-grid">${desserts.map(cardHTML).join("")}</div>`;
   }
 
   if (!filtered.length) {

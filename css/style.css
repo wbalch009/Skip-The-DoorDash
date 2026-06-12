@@ -296,11 +296,12 @@ ul { list-style: none; }
 .badge-snack { background: var(--amber-lt);  color: var(--amber-tx);  }
 .badge-ltr   { background: var(--green-lt);  color: var(--green-tx);  }
 .badge-prep  { background: #1e3020;          color: #80c880;          }
-.badge-new   { background: var(--teal-lt);   color: var(--teal-tx);
+.badge-new        { background: var(--teal-lt); color: var(--teal-tx); border: 1px solid #3a8f65; }
 .badge-chicken    { background: #1e3028; color: #70c49a; }
 .badge-beef       { background: #2e1a10; color: #d4845a; }
 .badge-fish       { background: #0e2030; color: #60a8d8; }
 .badge-vegetarian { background: #1e2e10; color: #90c060; }
+.badge-dessert    { background: #2e1535; color: #d4a0e8; }
                border: 1px solid #3a8f65;                             }
 
 /* =====================================================
