@@ -6,7 +6,8 @@
 //  id       — unique string, e.g. "r20" (never reuse one)
 //  title    — recipe name
 //  cal      — calories per serving (number)
-//  protein  — "chicken" | "beef" | "fish" | "vegetarian" | "snack" | "dessert"
+//  protein  — "chicken" | "beef" | "pork" | "fish" | "vegetarian" | "snack" | "dessert"
+//             OR array for multiple: ["beef", "pork"]
 //  proteinG — grams of protein (number)
 //  fiber    — grams fiber (number)
 //  cost     — "$" or "$$" or "$$$"
@@ -568,6 +569,9 @@ const RECIPES = [
     tip: "Reheat in a skillet for crispy results. Par-cook and store potatoes ahead to save time."
   },
 
+  // -------------------------------------------------------
+  //  PORK MEALS
+  // -------------------------------------------------------
   {
     id: "r19",
     title: "Beef lasagna",
@@ -605,7 +609,7 @@ const RECIPES = [
   {
     id: "r23",
     title: "Creamy Italian sausage & orecchiette pasta",
-    cal: 680, protein: "pork", proteinG: 28, fiber: 4, cost: "$",
+    cal: 680, protein: ["beef", "pork"], proteinG: 28, fiber: 4, cost: "$",
     serves: 4,
     prep: true,
     tags: ["Italian sausage", "orecchiette", "spinach", "parmesan", "lemon", "cream", "chili flakes", "rich", "creamy", "spicy", "savory", "bright"],
@@ -631,7 +635,7 @@ const RECIPES = [
   },
 
   // -------------------------------------------------------
-  //  FISH MEALS
+  //  SEAFOOD MEALS
   // -------------------------------------------------------
   {
     id: "r9",
@@ -656,6 +660,41 @@ const RECIPES = [
     ],
     steps: "Make glaze: whisk soy sauce, honey, sesame oil, garlic, ginger, rice vinegar, and cornstarch dissolved in 1 tbsp cold water. Cook rice. Pat salmon completely dry, season with salt and pepper. Sear in a hot skillet 3–4 min per side. Add glaze in last 90 seconds and spoon over fish. Cook edamame per package. Assemble bowls with rice, edamame, cucumber, glazed salmon. Finish with sesame seeds.",
     tip: "Rice and edamame prep Sunday. Sear salmon fresh each night — only 10 min. Reheat salmon on 50% microwave power for 60 sec."
+  },
+
+  {
+    id: "r26",
+    title: "Blackened shrimp & grits",
+    cal: 420, protein: "fish", proteinG: 38, fiber: 3, cost: "$$",
+    serves: 4,
+    prep: false,
+    tags: ["shrimp", "grits", "cheddar", "parmesan", "cajun", "scallions", "lime", "spicy", "smoky", "savory", "bold", "rich"],
+    desc: "Cajun-spiced jumbo shrimp blackened in a cast-iron skillet served over creamy cheddar and Parmesan grits, finished with a pan drizzle and fresh scallions. Southern comfort at its best.",
+    ing: [
+      "--- Grits ---",
+      "2½ cups low-sodium chicken broth, divided",
+      "1¼ cups milk",
+      "¼ cup water",
+      "1 tsp kosher salt",
+      "1 cup quick-cooking grits (not instant)",
+      "½ tbsp butter",
+      "1 cup sharp cheddar cheese, freshly grated — divided",
+      "1 tbsp Parmesan cheese, grated",
+      "--- Blackening spice & shrimp ---",
+      "1 tbsp paprika",
+      "½ tsp cayenne pepper",
+      "1 tsp garlic powder",
+      "½ tsp dried thyme",
+      "½ tsp dried oregano",
+      "1 tbsp kosher salt",
+      "1 tsp black pepper",
+      "Cooking oil",
+      "24 jumbo shrimp (about 1 lb), cleaned and deveined",
+      "3 tbsp scallions, sliced",
+      "Lime wedges for serving"
+    ],
+    steps: "Mix paprika, cayenne, garlic powder, thyme, oregano, salt, and black pepper in a small bowl until blended. Spritz shrimp with oil on both sides and coat thoroughly with the spice mix. Set aside. In a medium pot bring 2 cups chicken broth, milk, water, and salt to a boil — watch carefully so it does not boil over. Slowly stir in grits and mix continuously until well combined. Reduce heat to the lowest setting, cover, and simmer 28–30 min, stirring occasionally to prevent sticking. Add more water if needed — finished grits should be smooth like cream of wheat. Stir in butter, Parmesan, and ¾ of the cheddar. Remove from heat and keep warm. Just before grits are done, heat a cast-iron skillet (or heavy sauté pan) over medium-high with a little oil. Add shrimp and cook until spices are darkened and aromatic and shrimp is opaque, about 2 min per side. Remove shrimp. Add remaining ½ cup chicken broth to the hot skillet to deglaze, scraping up any browned bits. Simmer 1 min over medium heat until reduced by half. Divide grits among 4 plates, top with remaining cheddar, arrange shrimp on top, and drizzle the pan sauce over each plate. Garnish with scallions and lime wedges.",
+    tip: "A cast-iron skillet is key for a proper blackened crust — it holds heat better than other pans. Make the spice blend ahead and store in a jar. Grits thicken as they sit; reheat with a splash of broth or milk stirred in."
   },
 
   // -------------------------------------------------------
@@ -772,7 +811,7 @@ const RECIPES = [
   // -------------------------------------------------------
   {
     id: "d1",
-    title: "Filipino Coconut Macaroons",
+    title: "Filipino coconut macaroons",
     cal: 180, protein: "dessert", proteinG: 3, fiber: 2, cost: "$",
     serves: 12,
     prep: true,
@@ -787,14 +826,12 @@ const RECIPES = [
       "Optional: melted dark or milk chocolate for dipping"
     ],
     steps: "Preheat oven to 325°F. Line a cupcake pan with paper liners. In a large bowl combine shredded coconut, condensed milk, and vanilla extract until well blended. In a separate bowl whisk egg whites and salt to medium peaks — the whites should hold a soft floppy peak when you lift the whisk. Fold egg whites gently into the coconut mixture until just combined. Scoop batter into each cupcake cup, filling generously — the macaroons won't spread so don't be shy. Bake 20–25 min until the tops are golden brown and a toothpick comes out with minimal dry crumbs. Cool in the pan 2–3 min then transfer to a wire rack to cool completely. Optional: once fully cooled, dip the bottoms in melted chocolate and set on parchment until firm.",
-   tip: "Room temperature egg whites whip up much better than cold ones — take them out of the fridge 30 min ahead. Store in an airtight container at room temp for 3 days or refrigerate up to a week."
+    tip: "Room temperature egg whites whip up much better than cold ones — take them out of the fridge 30 min ahead. Store in an airtight container at room temp for 3 days or refrigerate up to a week."
   },
 
-  
- 
-   {
+  {
     id: "d2",
-    title: "Old Fashioned Apple Fritters",
+    title: "Old fashioned apple fritters",
     cal: 380, protein: "dessert", proteinG: 5, fiber: 2, cost: "$",
     serves: 8,
     prep: false,
@@ -821,41 +858,6 @@ const RECIPES = [
     steps: "Whisk together flour, sugar, baking powder, salt, and cinnamon in a medium bowl. Make a well in the center and add milk, eggs, and applesauce. Stir just until combined — do not overmix or the fritters will be tough. Fold in diced apples. Heat 1½ inches of oil in a heavy skillet, Dutch oven, or deep fryer to 375°F — use a candy thermometer to track temperature. Drop about ¼ cup of batter per fritter into the hot oil, spreading it out slightly as you drop. Do not overcrowd the pan. Cook each side until golden brown, approximately 2 min per side. Remove with a slotted spoon and drain on paper towels. Make glaze: whisk together powdered sugar, maple syrup, milk, and vanilla until smooth. Dunk each fritter in the glaze, turning to coat both sides. Place on a wire rack to air dry and drip.",
     tip: "Maintain oil temperature as close to 375°F as possible — turn heat up slightly when adding batter (temperature drops) and down slightly when removing fritters (temperature rises). Best eaten warm the day they are made, but store in an airtight container at room temp up to 2 days."
   },
-  
- {
-    id: "r26",
-    title: "Blackened Shrimp & Grits",
-    cal: 420, protein: "fish", proteinG: 38, fiber: 3, cost: "$$",
-    serves: 4,
-    prep: false,
-    tags: ["shrimp", "grits", "cheddar", "parmesan", "cajun", "scallions", "lime", "spicy", "smoky", "savory", "bold", "rich"],
-    desc: "Cajun-spiced jumbo shrimp blackened in a cast-iron skillet served over creamy cheddar and Parmesan grits, finished with a pan drizzle and fresh scallions. Southern comfort at its best.",
-    ing: [
-      "--- Grits ---",
-      "2½ cups low-sodium chicken broth, divided",
-      "1¼ cups milk",
-      "¼ cup water",
-      "1 tsp kosher salt",
-      "1 cup quick-cooking grits (not instant)",
-      "½ tbsp butter",
-      "1 cup sharp cheddar cheese, freshly grated — divided",
-      "1 tbsp Parmesan cheese, grated",
-      "--- Blackening spice & shrimp ---",
-      "1 tbsp paprika",
-      "½ tsp cayenne pepper",
-      "1 tsp garlic powder",
-      "½ tsp dried thyme",
-      "½ tsp dried oregano",
-      "1 tbsp kosher salt",
-      "1 tsp black pepper",
-      "Cooking oil",
-      "24 jumbo shrimp (about 1 lb), cleaned and deveined",
-      "3 tbsp scallions, sliced",
-      "Lime wedges for serving"
-    ],
-    steps: "Mix paprika, cayenne, garlic powder, thyme, oregano, salt, and black pepper in a small bowl until blended. Spritz shrimp with oil on both sides and coat thoroughly with the spice mix. Set aside. In a medium pot bring 2 cups chicken broth, milk, water, and salt to a boil — watch carefully so it does not boil over. Slowly stir in grits and mix continuously until well combined. Reduce heat to the lowest setting, cover, and simmer 28–30 min, stirring occasionally to prevent sticking. Add more water if needed — finished grits should be smooth like cream of wheat. Stir in butter, Parmesan, and ¾ of the cheddar. Remove from heat and keep warm. Just before grits are done, heat a cast-iron skillet (or heavy sauté pan) over medium-high with a little oil. Add shrimp and cook until spices are darkened and aromatic and shrimp is opaque, about 2 min per side. Remove shrimp. Add remaining ½ cup chicken broth to the hot skillet to deglaze, scraping up any browned bits. Simmer 1 min over medium heat until reduced by half. Divide grits among 4 plates, top with remaining cheddar, arrange shrimp on top, and drizzle the pan sauce over each plate. Garnish with scallions and lime wedges.",
-    tip: "A cast-iron skillet is key for a proper blackened crust — it holds heat better than other pans. Make the spice blend ahead and store in a jar. Grits thicken as they sit; reheat with a splash of broth or milk stirred in."
-  },
 
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
@@ -874,6 +876,7 @@ const STORAGE_KEY = "recipe-book-favs";
 let favs = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"));
 let activeFilter = "all";
 let openCards = new Set();
+let collapsedSections = new Set();
 
 function saveFavs() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify([...favs]));
@@ -897,18 +900,28 @@ function toggleDetail(id) {
   renderAll();
 }
 
+function toggleSection(name) {
+  if (collapsedSections.has(name)) collapsedSections.delete(name);
+  else collapsedSections.add(name);
+  renderAll();
+}
+
+function getProteins(r) {
+  return Array.isArray(r.protein) ? r.protein : [r.protein];
+}
+
 function getFiltered() {
   const q = document.getElementById("search").value.toLowerCase().trim();
   return RECIPES.filter(r => {
-    if (activeFilter === "fav"         && !favs.has(r.id))            return false;
-  const proteins = Array.isArray(r.protein) ? r.protein : [r.protein];
-    if (activeFilter === "chicken"    && !proteins.includes("chicken"))    return false;
-    if (activeFilter === "beef"       && !proteins.includes("beef"))       return false;
-    if (activeFilter === "pork"       && !proteins.includes("pork"))       return false;
-    if (activeFilter === "fish"       && !proteins.includes("fish"))       return false;
-    if (activeFilter === "vegetarian" && !proteins.includes("vegetarian")) return false;
-    if (activeFilter === "snack"      && !proteins.includes("snack"))      return false;
-    if (activeFilter === "dessert"    && !proteins.includes("dessert"))    return false;
+    const proteins = getProteins(r);
+    if (activeFilter === "fav"         && !favs.has(r.id))                  return false;
+    if (activeFilter === "chicken"     && !proteins.includes("chicken"))     return false;
+    if (activeFilter === "beef"        && !proteins.includes("beef"))        return false;
+    if (activeFilter === "pork"        && !proteins.includes("pork"))        return false;
+    if (activeFilter === "fish"        && !proteins.includes("fish"))        return false;
+    if (activeFilter === "vegetarian"  && !proteins.includes("vegetarian")) return false;
+    if (activeFilter === "snack"       && !proteins.includes("snack"))       return false;
+    if (activeFilter === "dessert"     && !proteins.includes("dessert"))     return false;
     if (q) {
       const hay = (r.title + " " + r.tags.join(" ") + " " + r.desc + " " + r.ing.join(" ")).toLowerCase();
       if (!hay.includes(q)) return false;
@@ -938,17 +951,18 @@ function proteinBadge(p) {
 function cardHTML(r) {
   const isOpen  = openCards.has(r.id);
   const isFav   = favs.has(r.id);
+  const proteins = getProteins(r);
   const classes = ["card", r.isLettuce ? "is-lettuce" : "", isFav ? "is-fav" : ""].filter(Boolean).join(" ");
 
   const extraBadges = [
-    r.isLettuce ? badge("badge-ltr",  "Lettuce bowl") : "",
-    r.isNew     ? badge("badge-new",  "New")           : "",
-    (r.prep && r.protein !== "snack" && r.protein !== "dessert") ? badge("badge-prep", "Meal-prep") : ""
+    r.isLettuce ? badge("badge-ltr", "Lettuce bowl") : "",
+    r.isNew     ? badge("badge-new", "New")           : "",
+    (r.prep && !proteins.includes("snack") && !proteins.includes("dessert")) ? badge("badge-prep", "Meal-prep") : ""
   ].join("");
 
   const ing = r.ing.map(i => `<li>${i}</li>`).join("");
 
-return `
+  return `
     <div class="${classes}" id="card-${r.id}">
       <div class="card-top">
         <span class="card-title">${r.title}</span>
@@ -992,15 +1006,11 @@ return `
 
 function renderAll() {
   const filtered  = getFiltered();
- const getProteins = r => Array.isArray(r.protein) ? r.protein : [r.protein];
   const meals     = filtered.filter(r => !getProteins(r).includes("snack") && !getProteins(r).includes("dessert"));
   const snacks    = filtered.filter(r => getProteins(r).includes("snack"));
   const desserts  = filtered.filter(r => getProteins(r).includes("dessert"));
-  const totalMeals    = RECIPES.filter(r => !getProteins(r).includes("snack") && !getProteins(r).includes("dessert")).length;
-  const totalSnacks   = RECIPES.filter(r => getProteins(r).includes("snack")).length;
-  const totalDesserts = RECIPES.filter(r => getProteins(r).includes("dessert")).length;
-  document.getElementById("header-meta").textContent = ""
-   
+
+  document.getElementById("header-meta").textContent = "";
 
   document.getElementById("count-line").textContent =
     filtered.length === RECIPES.length
@@ -1010,20 +1020,33 @@ function renderAll() {
   let html = "";
 
   if (meals.length) {
-    if (snacks.length || desserts.length || activeFilter === "all") {
-      html += `<div class="section-label">Meals (${meals.length})</div>`;
+    const closed = collapsedSections.has("meals");
+    html += `<div class="section-label" onclick="toggleSection('meals')">
+      Meals (${meals.length}) <span>${closed ? "▶" : "▼"}</span>
+    </div>`;
+    if (!closed) {
+      html += `<div class="recipe-grid">${meals.map(cardHTML).join("")}</div>`;
     }
-    html += `<div class="recipe-grid">${meals.map(cardHTML).join("")}</div>`;
   }
 
   if (snacks.length) {
-    html += `<div class="section-label">Snacks (${snacks.length})</div>`;
-    html += `<div class="recipe-grid">${snacks.map(cardHTML).join("")}</div>`;
+    const closed = collapsedSections.has("snacks");
+    html += `<div class="section-label" onclick="toggleSection('snacks')">
+      Snacks (${snacks.length}) <span>${closed ? "▶" : "▼"}</span>
+    </div>`;
+    if (!closed) {
+      html += `<div class="recipe-grid">${snacks.map(cardHTML).join("")}</div>`;
+    }
   }
 
   if (desserts.length) {
-    html += `<div class="section-label">Sweet Treats (${desserts.length})</div>`;
-    html += `<div class="recipe-grid">${desserts.map(cardHTML).join("")}</div>`;
+    const closed = collapsedSections.has("desserts");
+    html += `<div class="section-label" onclick="toggleSection('desserts')">
+      Sweet Treats (${desserts.length}) <span>${closed ? "▶" : "▼"}</span>
+    </div>`;
+    if (!closed) {
+      html += `<div class="recipe-grid">${desserts.map(cardHTML).join("")}</div>`;
+    }
   }
 
   if (!filtered.length) {

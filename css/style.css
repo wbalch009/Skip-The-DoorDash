@@ -191,6 +191,18 @@ ul { list-style: none; }
   margin: 1.75rem 0 0.75rem;
   padding: 8px 14px;
   border-radius: var(--radius-md);
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.15s;
+}
+
+.section-label:hover {
+  background: #3d7f87;
 }
 
 .count-line {
