@@ -309,6 +309,7 @@ ul { list-style: none; }
 .badge-new        { background: var(--teal-lt);   color: var(--teal-tx);   border: 1px solid #2d8f65; }
 .badge-chicken    { background: #e8f5ee;          color: #0d6e40;          }
 .badge-beef       { background: #fdeee8;          color: #8a3010;          }
+.badge-pork { background: #fde8f0; color: #8a1040; }
 .badge-fish       { background: #e2eef8;          color: #1a4a80;          }
 .badge-vegetarian { background: #e8f5e2;          color: #2d6e10;          }
 .badge-dessert    { background: #f5e8f8;          color: #6e2d8a;          }

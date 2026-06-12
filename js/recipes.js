@@ -605,7 +605,7 @@ const RECIPES = [
   {
     id: "r23",
     title: "Creamy Italian sausage & orecchiette pasta",
-    cal: 680, protein: "beef", proteinG: 28, fiber: 4, cost: "$",
+    cal: 680, protein: "pork", proteinG: 28, fiber: 4, cost: "$",
     serves: 4,
     prep: true,
     tags: ["Italian sausage", "orecchiette", "spinach", "parmesan", "lemon", "cream", "chili flakes", "rich", "creamy", "spicy", "savory", "bright"],
@@ -903,6 +903,7 @@ function getFiltered() {
     if (activeFilter === "fav"         && !favs.has(r.id))            return false;
     if (activeFilter === "chicken"     && r.protein !== "chicken")     return false;
     if (activeFilter === "beef"        && r.protein !== "beef")        return false;
+    if (activeFilter === "pork"        && r.protein !== "pork")        return false;
     if (activeFilter === "fish"        && r.protein !== "fish")        return false;
     if (activeFilter === "vegetarian"  && r.protein !== "vegetarian")  return false;
     if (activeFilter === "snack"       && r.protein !== "snack")       return false;
@@ -923,6 +924,7 @@ function proteinBadge(p) {
   switch(p) {
     case "chicken":    return badge("badge-chicken",    "🍗 Chicken");
     case "beef":       return badge("badge-beef",       "🥩 Beef");
+    case "pork":       return badge("badge-pork",       "🍖 Pork");
     case "fish":       return badge("badge-fish",       "🐟🦐 Seafood");
     case "vegetarian": return badge("badge-vegetarian", "🥗 Vegetarian");
     case "snack":      return badge("badge-snack",      "🌿 Snacks");
