@@ -911,7 +911,7 @@ function cardHTML(r) {
 
   const ing = r.ing.map(i => `<li>${i}</li>`).join("");
 
-  return `
+return `
     <div class="${classes}" id="card-${r.id}">
       <div class="card-top">
         <span class="card-title">${r.title}</span>
@@ -921,38 +921,34 @@ function cardHTML(r) {
           ${isFav ? "&#9733;" : "&#9734;"}
         </button>
       </div>
-
-      <div class="badge-row">${proteinBadge(r.protein)}${extraBadges}</div>
-
-      <div class="macro-row">
-        <div class="macro"><span class="macro-val">${r.cal}</span><span class="macro-lbl">cal</span></div>
-        <div class="macro-divider"></div>
-        <div class="macro"><span class="macro-val">${r.proteinG}g</span><span class="macro-lbl">protein</span></div>
-        <div class="macro-divider"></div>
-        <div class="macro"><span class="macro-val">${r.fiber}g</span><span class="macro-lbl">fiber</span></div>
-        <div class="macro-divider"></div>
-        <div class="macro"><span class="macro-val">${r.cost}</span><span class="macro-lbl">cost</span></div>
-      </div>
-
-      <div class="tag-row">${r.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
-
-      <p class="card-desc">${r.desc}</p>
-
-      <button class="expand-btn ${isOpen ? "open" : ""}" onclick="toggleDetail('${r.id}')">
-        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-        ${isOpen ? "Hide" : "Show"} ingredients & steps
-      </button>
-
-      <div class="card-detail ${isOpen ? "open" : ""}">
-        <div>
-          <h4>Ingredients</h4>
-          <ul>${ing}</ul>
+      <div class="card-body">
+        <div class="badge-row">${proteinBadge(r.protein)}${extraBadges}</div>
+        <div class="macro-row">
+          <div class="macro"><span class="macro-val">${r.cal}</span><span class="macro-lbl">cal</span></div>
+          <div class="macro-divider"></div>
+          <div class="macro"><span class="macro-val">${r.proteinG}g</span><span class="macro-lbl">protein</span></div>
+          <div class="macro-divider"></div>
+          <div class="macro"><span class="macro-val">${r.fiber}g</span><span class="macro-lbl">fiber</span></div>
+          <div class="macro-divider"></div>
+          <div class="macro"><span class="macro-val">${r.cost}</span><span class="macro-lbl">cost</span></div>
         </div>
-        <div>
-          <h4>Steps</h4>
-          <p>${r.steps}</p>
+        <div class="tag-row">${r.tags.map(t => `<span class="tag">${t}</span>`).join("")}</div>
+        <p class="card-desc">${r.desc}</p>
+        <button class="expand-btn ${isOpen ? "open" : ""}" onclick="toggleDetail('${r.id}')">
+          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          ${isOpen ? "Hide" : "Show"} ingredients & steps
+        </button>
+        <div class="card-detail ${isOpen ? "open" : ""}">
+          <div>
+            <h4>Ingredients</h4>
+            <ul>${ing}</ul>
+          </div>
+          <div>
+            <h4>Steps</h4>
+            <p>${r.steps}</p>
+          </div>
+          <div class="prep-tip">${r.serves ? `<strong>Serves ${r.serves}</strong> &nbsp;&middot;&nbsp; ` : ""}<strong>Prep tip:</strong> ${r.tip}</div>
         </div>
-        <div class="prep-tip">${r.serves ? `<strong>Serves ${r.serves}</strong> &nbsp;&middot;&nbsp; ` : ""}<strong>Prep tip:</strong> ${r.tip}</div>
       </div>
     </div>`;
 }
@@ -966,8 +962,8 @@ function renderAll() {
   const totalSnacks   = RECIPES.filter(r => r.protein === "snack").length;
   const totalDesserts = RECIPES.filter(r => r.protein === "dessert").length;
 
-  document.getElementById("header-meta").textContent =
-    `${totalMeals} meals · ${totalSnacks} snacks · ${totalDesserts} sweet treats`;
+  document.getElementById("header-meta").textContent = ""
+   
 
   document.getElementById("count-line").textContent =
     filtered.length === RECIPES.length
