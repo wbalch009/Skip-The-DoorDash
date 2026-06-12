@@ -772,7 +772,7 @@ const RECIPES = [
   // -------------------------------------------------------
   {
     id: "d1",
-    title: "Coconut Macaroons",
+    title: "Filipino Coconut Macaroons",
     cal: 180, protein: "dessert", proteinG: 3, fiber: 2, cost: "$",
     serves: 12,
     prep: true,
