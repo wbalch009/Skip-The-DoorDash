@@ -18,7 +18,7 @@
 //  tags     — ingredients + FLAVOR WORDS (smoky, spicy, fresh, etc.)
 //  desc     — one or two sentence description
 //  ing      — ingredients list (array of strings)
-//  steps    — cooking instructions (single string)
+//  steps    — array of step strings (each step is a new line on the card)
 //  tip      — meal prep tip (single string)
 // =========================================================
 
@@ -44,7 +44,13 @@ const RECIPES = [
       "Romaine or mixed greens (or cauliflower rice)",
       "Optional: Greek yogurt as sour cream sub"
     ],
-    steps: "Sauté onion until soft. Add beans, corn, and spices with a splash of water. Simmer 10 min. Serve over greens with cilantro and lime.",
+    steps: [
+      "Sauté onion in a skillet over medium heat until soft, about 5 min.",
+      "Add beans, corn, cumin, chili powder, and garlic powder with a splash of water. Stir to combine.",
+      "Simmer 10 min until warmed through and flavors meld.",
+      "Serve over romaine or mixed greens. Top with cilantro and a squeeze of lime.",
+      "Add a dollop of Greek yogurt as a sour cream substitute if desired."
+    ],
     tip: "Make a double batch of beans — portion into containers. Add fresh greens when serving."
   },
 
@@ -65,7 +71,13 @@ const RECIPES = [
       "2 cups vegetable broth",
       "Cilantro and lime to finish"
     ],
-    steps: "Sauté peppers and onion. Add beans, corn, spices, and broth. Simmer 25 min until thick. Top with cilantro.",
+    steps: [
+      "Sauté bell peppers and onion over medium heat until softened, about 6 min.",
+      "Add all three cans of beans, corn, chili powder, smoked paprika, cumin, and garlic powder.",
+      "Pour in vegetable broth and stir everything together.",
+      "Simmer uncovered 25 min, stirring occasionally, until thick and fragrant.",
+      "Taste and adjust seasoning. Top with cilantro and a squeeze of lime before serving."
+    ],
     tip: "Improves overnight. Make Sunday, eat all week."
   },
 
@@ -95,8 +107,17 @@ const RECIPES = [
       "Toasted sesame seeds for garnish",
       "Rice for serving"
     ],
-    steps: "Whisk together soy sauce, sesame oil, brown sugar, 1 tsp cornstarch, and ½ cup water in a small bowl. Set aside. Cut tofu into 1-inch cubes and pat completely dry with paper towels. Toss tofu with granulated garlic, onion powder, salt, pepper, and ¼ cup cornstarch until fully coated. Heat 2 tbsp vegetable oil in a large skillet over medium heat. Add tofu and cook turning occasionally until all sides are golden, 10–12 min. Transfer to a plate and season with salt. In the same skillet heat 1 tbsp oil over medium heat. Add broccoli and cook undisturbed until lightly charred on the bottom, 2–3 min — do not move them. Toss and cook until other sides are darkened in spots, another 2–3 min. Add remaining 1 tbsp oil, garlic, ginger, and scallions to the skillet. Stir until fragrant, 1–2 min. Reduce heat to low, add tofu back in, and pour in the reserved sauce. Bring to a simmer tossing frequently until tofu and broccoli are evenly glazed, 30–60 seconds. Serve topped with toasted sesame seeds over rice.",
-    tip: "Press tofu overnight uncovered in the fridge for best crispiness. Do not move the broccoli while it chars — that's where the flavor comes from. Leftovers keep 3 days; store tofu and broccoli separately from rice."
+    steps: [
+      "Whisk together soy sauce, sesame oil, brown sugar, 1 tsp cornstarch, and ½ cup water in a small bowl. Set aside.",
+      "Cut tofu into 1-inch cubes and pat completely dry with paper towels.",
+      "Toss tofu with granulated garlic, onion powder, salt, pepper, and ¼ cup cornstarch until fully coated.",
+      "Heat 2 tbsp vegetable oil in a large skillet over medium heat. Add tofu and cook turning occasionally until all sides are golden, 10–12 min. Transfer to a plate.",
+      "In the same skillet heat 1 tbsp oil over medium heat. Add broccoli and cook undisturbed until lightly charred on the bottom, 2–3 min — do not move them. Toss and cook other sides 2–3 more min.",
+      "Add remaining 1 tbsp oil, garlic, ginger, and scallions. Stir until fragrant, 1–2 min.",
+      "Reduce heat to low. Add tofu back in and pour in the reserved sauce. Toss frequently until everything is evenly glazed, 30–60 seconds.",
+      "Serve over rice topped with toasted sesame seeds."
+    ],
+    tip: "Press tofu overnight uncovered in the fridge for best crispiness. Do not move the broccoli while it chars — that's where the flavor comes from."
   },
 
   {
@@ -106,7 +127,7 @@ const RECIPES = [
     serves: 4,
     prep: true,
     tags: ["egg noodles", "mushrooms", "Greek yogurt", "parmesan", "white wine", "thyme", "onion", "rich", "creamy", "savory", "earthy", "hearty"],
-    desc: "A vegetarian stroganoff with sautéed mushrooms and onions in a rich white wine and Worcestershire sauce, finished with Greek yogurt and Parmesan over egg noodles. Comfort food at its best.",
+    desc: "A vegetarian stroganoff with sautéed mushrooms and onions in a rich white wine and Worcestershire sauce, finished with Greek yogurt and Parmesan over egg noodles.",
     ing: [
       "1 lb wide egg noodles",
       "3 tbsp butter, divided",
@@ -124,8 +145,17 @@ const RECIPES = [
       "Kosher salt and black pepper to taste",
       "Optional toppings: extra Parmesan, fresh parsley, black pepper"
     ],
-    steps: "Cook egg noodles al dente in generously salted boiling water according to package instructions — time this so noodles finish when the sauce is ready. Melt 1 tbsp butter in a large sauté pan over medium-high heat. Add onion and sauté 5 min, stirring occasionally. Add remaining 2 tbsp butter, garlic, and mushrooms and stir to combine. Continue sautéing 5–7 min until mushrooms are cooked and tender. Add white wine and deglaze the pan, scraping up the browned bits from the bottom with a wooden spoon. Simmer 3 min. In a separate bowl whisk together vegetable stock, Worcestershire sauce, and flour until smooth. Pour into the pan along with thyme, parsley, and Parmesan and stir to combine. Simmer 5 min stirring occasionally until slightly thickened. Remove from heat and stir in Greek yogurt until evenly combined. Season generously with salt and pepper. Serve immediately over egg noodles garnished with extra Parmesan, parsley, and black pepper.",
-    tip: "Do not boil the sauce after adding the Greek yogurt — it will curdle. Remove from heat first, then stir it in. Leftovers keep 3 days; reheat gently on low with a splash of vegetable stock to loosen."
+    steps: [
+      "Cook egg noodles al dente in generously salted boiling water per package instructions. Time this to finish when the sauce is ready.",
+      "Melt 1 tbsp butter in a large sauté pan over medium-high heat. Add onion and sauté 5 min, stirring occasionally.",
+      "Add remaining 2 tbsp butter, garlic, and mushrooms. Sauté 5–7 min until mushrooms are cooked and tender.",
+      "Add white wine and deglaze the pan, scraping up browned bits with a wooden spoon. Simmer 3 min.",
+      "In a separate bowl whisk together vegetable stock, Worcestershire sauce, and flour until smooth.",
+      "Pour stock mixture into the pan along with thyme, parsley, and Parmesan. Stir to combine. Simmer 5 min until slightly thickened.",
+      "Remove from heat. Stir in Greek yogurt until evenly combined. Season generously with salt and pepper.",
+      "Serve immediately over egg noodles, garnished with extra Parmesan, parsley, and black pepper."
+    ],
+    tip: "Do not boil the sauce after adding Greek yogurt — it will curdle. Remove from heat first then stir it in. Reheat gently on low with a splash of vegetable stock."
   },
 
   {
@@ -135,7 +165,7 @@ const RECIPES = [
     serves: 4,
     prep: true,
     tags: ["pasta", "chickpeas", "Greek yogurt", "pepperoncini", "feta", "parsley", "red onion", "fresh", "tangy", "bright", "zesty", "light"],
-    desc: "A creamy Greek yogurt-dressed pasta salad with chickpeas, pepperoncini, feta, and fresh herbs. Tangy, fresh, and endlessly customizable with whatever vegetables you have on hand.",
+    desc: "A creamy Greek yogurt-dressed pasta salad with chickpeas, pepperoncini, feta, and fresh herbs. Tangy, fresh, and endlessly customizable.",
     ing: [
       "1 lb medium shell or farfalle pasta (dry), cooked and cooled",
       "½ cup pickled pepperoncini peppers, sliced",
@@ -153,8 +183,14 @@ const RECIPES = [
       "1–2 tbsp chili oil",
       "Salt and pepper to taste"
     ],
-    steps: "Cook pasta according to package instructions. Drain and spread out to cool completely — warm pasta will make the dressing watery. Make the dressing: whisk together Greek yogurt, pepperoncini juice, maple syrup, olive oil, salt, and pepper until smooth. Just before adding to the salad, drizzle chili oil over the dressing and swirl to disperse across the surface. Add pasta, chickpeas, pepperoncini, red onion, parsley, feta, and any optional add-ins to a large bowl. Pour dressing over the top and toss well to coat. Serve immediately or refrigerate.",
-    tip: "Works with almost any vegetable — bell peppers, cucumbers, broccoli, spinach, arugula, dill, or basil all work great. Keeps 4 days in the fridge in a sealed container. Toss with a splash of lemon juice before serving leftovers to brighten it back up."
+    steps: [
+      "Cook pasta per package instructions. Drain and spread out to cool completely — warm pasta will make the dressing watery.",
+      "Make the dressing: whisk together Greek yogurt, pepperoncini juice, maple syrup, olive oil, salt, and pepper until smooth.",
+      "Just before adding to the salad, drizzle chili oil over the dressing and swirl to disperse across the surface.",
+      "Add pasta, chickpeas, pepperoncini, red onion, parsley, feta, and any optional add-ins to a large bowl.",
+      "Pour dressing over the top and toss well to coat. Serve immediately or refrigerate."
+    ],
+    tip: "Works with almost any vegetable — bell peppers, cucumbers, broccoli, spinach, arugula, dill, or basil. Keeps 4 days. Toss with a splash of lemon juice before serving leftovers."
   },
 
   // -------------------------------------------------------
@@ -177,7 +213,13 @@ const RECIPES = [
       "1 tsp each: cumin, oregano, garlic powder",
       "Cilantro and lime to finish"
     ],
-    steps: "Simmer chicken in broth until cooked through, then shred. Add beans, corn, chiles, onion, and spices. Simmer 20 min. Finish with cilantro and lime.",
+    steps: [
+      "Add chicken breast and broth to a pot. Bring to a simmer over medium heat.",
+      "Cook chicken 15–18 min until cooked through. Remove and shred with two forks.",
+      "Add shredded chicken back to the pot along with beans, corn, green chiles, onion, cumin, oregano, and garlic powder.",
+      "Simmer 20 min, stirring occasionally, until flavors meld and chili thickens slightly.",
+      "Finish with fresh cilantro and a squeeze of lime before serving."
+    ],
     tip: "Freezes in portions up to 3 months. A batch yields 6–8 servings."
   },
 
@@ -198,8 +240,15 @@ const RECIPES = [
       "Greek yogurt (in place of sour cream)",
       "Lime wedges"
     ],
-    steps: "Season and sear or grill chicken thighs. Warm beans with cumin and garlic. Make cilantro-lime rice. Assemble bowls with corn, onion, and a dollop of Greek yogurt.",
-    tip: "Batch cook chicken and rice Sunday. Corn salsa (corn + red onion + cilantro + lime) lasts 4 days — make a big jar."
+    steps: [
+      "Season chicken thighs with cumin, chili powder, garlic powder, smoked paprika, salt, and pepper.",
+      "Sear in a skillet over medium-high heat 5–6 min per side until cooked through (165°F). Rest 5 min then slice.",
+      "Warm black beans in a small pan with a pinch of cumin and garlic.",
+      "Cook brown rice per package. Stir in lime juice and cilantro to make cilantro-lime rice.",
+      "Make corn salsa: combine corn, red onion, cilantro, and lime juice.",
+      "Assemble bowls: rice, beans, chicken, corn salsa, and a dollop of Greek yogurt."
+    ],
+    tip: "Batch cook chicken and rice Sunday. Corn salsa lasts 4 days — make a big jar."
   },
 
   {
@@ -208,7 +257,7 @@ const RECIPES = [
     cal: 420, protein: "chicken", proteinG: 46, fiber: 12, cost: "$",
     prep: true, isLettuce: true,
     tags: ["chicken breast", "black beans", "corn", "red onion", "cilantro", "romaine", "avocado", "zesty", "fresh", "light"],
-    desc: "Juicy spiced chicken breast over a big bed of romaine with black beans, corn, pickled red onion, avocado, and a cilantro-lime dressing. No rice — all volume, all flavor.",
+    desc: "Juicy spiced chicken breast over a big bed of romaine with black beans, corn, pickled red onion, avocado, and a cilantro-lime dressing.",
     ing: [
       "1.5 lb chicken breast",
       "1 can black beans, drained and rinsed",
@@ -223,7 +272,14 @@ const RECIPES = [
       "Salt and pepper",
       "Optional: pickled jalapeño, Greek yogurt"
     ],
-    steps: "Season chicken with spices, salt, and pepper. Sear in a skillet over medium-high heat 5–6 min per side until cooked through (165°F internal). Rest 5 min, then slice. Warm beans with a pinch of cumin. Make dressing: lime juice + 1 tsp cumin + 1 tsp olive oil + pinch of salt. Build bowls: romaine base, beans, corn, red onion, chicken, avocado. Drizzle dressing, finish with cilantro.",
+    steps: [
+      "Season chicken with cumin, chili powder, garlic powder, smoked paprika, salt, and pepper.",
+      "Sear in a skillet over medium-high heat 5–6 min per side until cooked through (165°F internal). Rest 5 min then slice.",
+      "Warm beans in a small pan with a pinch of cumin.",
+      "Make dressing: whisk lime juice, 1 tsp cumin, 1 tsp olive oil, and a pinch of salt.",
+      "Build bowls: romaine base, beans, corn, red onion, sliced chicken, avocado.",
+      "Drizzle dressing over everything and finish with cilantro."
+    ],
     tip: "Prep chicken and beans Sunday. Store separately from greens. Chop romaine fresh — it wilts once dressed."
   },
 
@@ -233,7 +289,7 @@ const RECIPES = [
     cal: 450, protein: "chicken", proteinG: 48, fiber: 15, cost: "$",
     prep: true, isLettuce: true,
     tags: ["chicken thighs", "kale", "black beans", "corn", "red onion", "chipotle", "Greek yogurt", "smoky", "spicy", "bold", "earthy"],
-    desc: "Smoky chipotle-marinated chicken thighs over massaged kale with black beans, roasted corn, and a creamy Greek yogurt-lime drizzle. Kale holds up dressed for 2–3 days — the best lettuce bowl for meal prep.",
+    desc: "Smoky chipotle-marinated chicken thighs over massaged kale with black beans, roasted corn, and a creamy Greek yogurt-lime drizzle.",
     ing: [
       "1.5 lb boneless chicken thighs",
       "2 chipotle peppers in adobo sauce, minced (or 2 tsp chipotle powder)",
@@ -248,7 +304,14 @@ const RECIPES = [
       "1 tsp honey",
       "Salt and pepper"
     ],
-    steps: "Marinate chicken thighs in chipotle, olive oil, and spices at least 30 min (overnight is better). Cook in skillet 5–6 min per side or bake at 400°F for 22–25 min. Rest then slice. Massage kale: add a pinch of salt and squeeze of lime and work with your hands for 2 min until softened and bright green. Warm beans. Make yogurt drizzle: Greek yogurt + lime juice + honey + pinch of salt. Build bowls: kale base, beans, corn, onion, chicken. Drizzle yogurt sauce.",
+    steps: [
+      "Marinate chicken thighs in chipotle, olive oil, cumin, garlic powder, and smoked paprika. Marinate at least 30 min — overnight is better.",
+      "Cook in a skillet 5–6 min per side or bake at 400°F for 22–25 min until 165°F internal. Rest then slice.",
+      "Massage kale: add a pinch of salt and squeeze of lime and work with hands for 2 min until softened and bright green.",
+      "Warm black beans in a small pan.",
+      "Make yogurt drizzle: whisk Greek yogurt, lime juice, honey, and a pinch of salt.",
+      "Build bowls: kale base, beans, corn, red onion, sliced chicken. Drizzle yogurt sauce over top."
+    ],
     tip: "Kale stays firm even when dressed — prep full bowls (minus the drizzle) and they last 3 days refrigerated."
   },
 
@@ -258,7 +321,7 @@ const RECIPES = [
     cal: 430, protein: "chicken", proteinG: 44, fiber: 13, cost: "$",
     prep: true, isLettuce: true,
     tags: ["chicken breast", "bell peppers", "red onion", "romaine", "black beans", "cumin", "cottage cheese", "smoky", "zesty", "savory", "fresh"],
-    desc: "All the flavors of sizzling fajitas over crispy romaine. Charred peppers and onions, spiced chicken, black beans, and a whipped cottage cheese dressing that adds protein without the calories of heavy dressing.",
+    desc: "All the flavors of sizzling fajitas over crispy romaine with a whipped cottage cheese dressing that adds protein without heavy calories.",
     ing: [
       "1.5 lb chicken breast, sliced thin",
       "3 bell peppers (mixed colors), sliced",
@@ -272,7 +335,14 @@ const RECIPES = [
       "1 tbsp olive oil",
       "Cilantro and hot sauce optional"
     ],
-    steps: "Season chicken slices with all spices. In a very hot cast-iron or skillet, cook chicken in batches until charred at edges — do not crowd the pan. Set aside. In same pan, cook peppers and onion strips on high heat until slightly charred and soft, about 6–8 min. Blend cottage cheese + lime juice + cumin + garlic until smooth for dressing. Build bowls: romaine, beans, fajita veggies, chicken. Drizzle dressing, top with cilantro.",
+    steps: [
+      "Season chicken slices with cumin, chili powder, garlic powder, smoked paprika, salt, and olive oil.",
+      "In a very hot cast-iron or skillet, cook chicken in batches until charred at edges — do not crowd the pan. Set aside.",
+      "In the same pan, cook peppers and onion strips on high heat until slightly charred and soft, about 6–8 min.",
+      "Blend cottage cheese, lime juice, cumin, and garlic clove until completely smooth for the dressing.",
+      "Build bowls: romaine base, warm black beans, fajita veggies, and sliced chicken.",
+      "Drizzle cottage cheese dressing over top. Finish with cilantro and hot sauce if desired."
+    ],
     tip: "The charred fajita filling keeps 4 days and is great cold. The cottage cheese dressing keeps 5 days in the fridge."
   },
 
@@ -282,7 +352,7 @@ const RECIPES = [
     cal: 410, protein: "chicken", proteinG: 43, fiber: 14, cost: "$",
     prep: true, isLettuce: true,
     tags: ["chicken thighs", "kidney beans", "corn", "cabbage", "romaine", "lime", "baked tortilla", "spicy", "zesty", "crunchy", "fresh"],
-    desc: "A deconstructed tostada bowl — spiced chicken over shredded cabbage and romaine with kidney beans, corn, and baked corn tortilla strips for crunch. Huge volume, very low calorie density.",
+    desc: "A deconstructed tostada bowl — spiced chicken over shredded cabbage and romaine with kidney beans, corn, and baked tortilla strips for crunch.",
     ing: [
       "1.5 lb boneless chicken thighs",
       "1 can kidney beans, drained",
@@ -295,7 +365,15 @@ const RECIPES = [
       "Dressing: 2 tbsp lime juice + 1 tsp cumin + 1 tsp olive oil + 1 minced garlic clove",
       "1 tsp each: chili powder, cumin, garlic powder, smoked paprika"
     ],
-    steps: "Season and cook chicken thighs (pan or oven at 400°F for 22 min). Rest and slice or shred. Bake tortilla strips at 400°F until crispy, about 8 min. Warm beans. Whisk dressing. Build bowls: cabbage + romaine base, beans, corn, onion, chicken. Drizzle dressing. Top with tortilla strips and cilantro.",
+    steps: [
+      "Season chicken thighs with chili powder, cumin, garlic powder, and smoked paprika.",
+      "Cook in a pan over medium-high heat or bake at 400°F for 22 min until cooked through. Rest and slice or shred.",
+      "Bake tortilla strips on a sheet pan at 400°F for 8 min until crispy.",
+      "Warm kidney beans in a small pan.",
+      "Whisk together lime juice, cumin, olive oil, and minced garlic for the dressing.",
+      "Build bowls: cabbage and romaine base, beans, corn, red onion, and chicken.",
+      "Drizzle dressing over top. Finish with tortilla strips and cilantro."
+    ],
     tip: "Keep tortilla strips in an open bowl at room temp — stays crispy 2 days. Store all components separately from greens."
   },
 
@@ -319,7 +397,13 @@ const RECIPES = [
       "1 tsp garlic powder, dried oregano",
       "Salt, pepper, red pepper flakes"
     ],
-    steps: "Season chicken with garlic powder, oregano, salt, and pepper. Pan-sear or bake at 400°F until 165°F internal. Rest and slice. Make dressing: whisk yogurt + lemon juice + olive oil + garlic powder + salt. Build bowls: spinach base, white beans, cucumber, red onion, sundried tomatoes, sliced chicken. Drizzle dressing.",
+    steps: [
+      "Season chicken with garlic powder, oregano, salt, and pepper.",
+      "Pan-sear over medium-high heat or bake at 400°F until 165°F internal. Rest and slice.",
+      "Make dressing: whisk Greek yogurt, lemon juice, olive oil, garlic powder, and a pinch of salt until smooth.",
+      "Build bowls: spinach base, white beans, cucumber, red onion, and sundried tomatoes.",
+      "Arrange sliced chicken on top and drizzle dressing over everything."
+    ],
     tip: "This bowl works great cold. Spinach holds better than romaine if pre-dressed — ideal for 3-day meal prep."
   },
 
@@ -343,7 +427,14 @@ const RECIPES = [
       "Cilantro and green onion",
       "Optional: crushed peanuts"
     ],
-    steps: "Make sauce: whisk peanut butter, soy sauce, lime juice, sesame oil, garlic, and chili flakes. Bake or pan-cook chicken until 165°F, then slice. Toss cabbage in a little sauce. Serve over rice. Drizzle remaining sauce, top with cilantro.",
+    steps: [
+      "Make sauce: whisk peanut butter, soy sauce, lime juice, sesame oil, garlic, and chili flakes until smooth.",
+      "Bake or pan-cook chicken thighs until 165°F internal. Rest and slice.",
+      "Cook jasmine rice per package instructions.",
+      "Toss shredded cabbage with a small amount of the peanut sauce.",
+      "Serve chicken and cabbage over rice. Drizzle remaining peanut sauce over everything.",
+      "Top with cilantro, green onion, and crushed peanuts if using."
+    ],
     tip: "Sauce and chicken keep 4 days. This bowl also works well cold — great for next-day eating."
   },
 
@@ -365,7 +456,14 @@ const RECIPES = [
       "2 heads baby bok choy, halved",
       "Sesame seeds to finish"
     ],
-    steps: "Cook rice with red lentils added to the same pot and water — they dissolve and enrich the rice. Sear chicken until cooked through. In last 2 min, add soy sauce and mirin to pan and glaze. Sauté bok choy in a little sesame oil with garlic until tender. Assemble bowls.",
+    steps: [
+      "Rinse rice and add to a pot with red lentils and the appropriate amount of water. The lentils dissolve into the rice as it cooks.",
+      "Cook rice-lentil blend per your usual rice method. Fluff and set aside.",
+      "Sear chicken breast in a skillet over medium-high heat until nearly cooked through, about 5–6 min per side.",
+      "In the last 2 min, add soy sauce and mirin to the pan. Glaze the chicken, turning to coat.",
+      "In a separate pan, sauté bok choy in a little sesame oil and garlic until tender, about 3–4 min.",
+      "Slice chicken and assemble bowls with rice-lentil blend, bok choy, and chicken. Finish with sesame seeds."
+    ],
     tip: "Cook a big rice-lentil pot Sunday — lasts 4 days refrigerated."
   },
 
@@ -387,8 +485,15 @@ const RECIPES = [
       "½ cup water or low-sodium chicken broth",
       "Green onion to finish"
     ],
-    steps: "Sauté chicken and potato in sesame oil over medium-high heat. Add garlic and ginger, cook 1 min. Add gochujang, soy sauce, and water. Stir to combine. Simmer covered 20–25 min until potato is tender and sauce is thick. Finish with green onion.",
-    tip: "Tastes even better day 2–3. Portion into containers. Reheat with a splash of water."
+    steps: [
+      "Heat sesame oil in a large skillet or pot over medium-high heat.",
+      "Add chicken thighs and potato cubes. Sear until lightly browned on all sides, about 3–4 min.",
+      "Add garlic and ginger. Cook 1 min until fragrant.",
+      "Add gochujang, soy sauce, and water or broth. Stir everything together to coat.",
+      "Cover and simmer on low 20–25 min until potatoes are tender and sauce is thick.",
+      "Taste and adjust heat or seasoning. Finish with sliced green onion."
+    ],
+    tip: "Tastes even better day 2–3. Reheat with a splash of water to loosen the sauce."
   },
 
   {
@@ -409,7 +514,14 @@ const RECIPES = [
       "Red pepper flakes, salt, pepper",
       "Optional: 2 tbsp grated Parmesan"
     ],
-    steps: "Cook pasta, reserve ½ cup pasta water before draining. Sear chicken, slice. In same pan, sauté garlic in olive oil. Add beans, spinach, sundried tomatoes and cook until spinach wilts. Toss with pasta and chicken, using pasta water to loosen sauce.",
+    steps: [
+      "Cook pasta per package instructions. Reserve ½ cup pasta water before draining.",
+      "Season and sear chicken breast in olive oil until cooked through. Rest and slice.",
+      "In the same pan, sauté garlic in olive oil over medium heat until fragrant, about 1 min.",
+      "Add cannellini beans, spinach, and sundried tomatoes. Cook until spinach wilts, 2–3 min.",
+      "Add drained pasta and sliced chicken. Toss together, using pasta water to loosen the sauce as needed.",
+      "Season with red pepper flakes, salt, and pepper. Top with Parmesan if using."
+    ],
     tip: "Reheat with a splash of pasta water or broth to loosen. Keeps 4 days."
   },
 
@@ -420,7 +532,7 @@ const RECIPES = [
     serves: 7,
     prep: true,
     tags: ["chicken breast", "fried rice", "honey garlic", "mixed vegetables", "eggs", "soy sauce", "spring onion", "sweet", "savory", "umami", "crispy"],
-    desc: "Crispy air-fryer chicken breast coated in a sticky honey garlic sauce served over egg fried rice with mixed vegetables. High protein, big flavor, and meal-preps extremely well.",
+    desc: "Crispy air-fryer chicken breast coated in a sticky honey garlic sauce served over egg fried rice with mixed vegetables.",
     ing: [
       "2.5 lb chicken breast, diced (raw weight)",
       "2½ tbsp reduced-salt soy sauce (for chicken marinade)",
@@ -443,8 +555,16 @@ const RECIPES = [
       "1 tsp corn starch + ⅓ cup water (slurry)",
       "¼ cup honey or maple syrup"
     ],
-    steps: "Dice chicken and mix with soy sauce, minced garlic, black pepper, onion powder, and garlic powder. Coat well with corn starch — a zip-lock bag works great for this. Place on a tray, spray with oil, and air fry at 400°F for 10 min. Flip, spray again, and cook another 8–10 min until internal temp reaches 165°F. Meanwhile heat a large pan or wok on high heat. Add frozen mixed vegetables and eggs, cook while stirring for a few minutes until eggs are cooked through. Add white spring onion parts and day-old rice. Pour in soy sauce and stir-fry everything together until hot throughout. Stir in green spring onion parts and mix well. For the sauce: heat a pan on medium, add minced garlic and cook 30 seconds. Add soy sauce, water, ketchup, and rice vinegar. Stir to combine. Add cornstarch slurry and stir until lightly simmering and thickened. Remove from heat and stir in honey or maple syrup. Toss cooked chicken in the sauce until fully coated. Plate chicken over or beside the fried rice.",
-    tip: "Day-old rice is key — fresh rice is too wet and turns mushy. Cook rice the night before and refrigerate uncovered. Portion chicken and rice separately into containers — keeps 5 days. Reheat rice with a splash of water, reheat chicken in an air fryer 3–4 min to keep it crispy."
+    steps: [
+      "Dice chicken and mix with soy sauce, minced garlic, black pepper, onion powder, and garlic powder. Coat well with corn starch — a zip-lock bag works great.",
+      "Place on a tray, spray with oil, and air fry at 400°F for 10 min. Flip, spray again, and cook another 8–10 min until internal temp reaches 165°F.",
+      "Heat a large pan or wok on high heat. Add frozen mixed vegetables and eggs. Cook while stirring until eggs are cooked through.",
+      "Add white spring onion parts and day-old rice. Pour in soy sauce and stir-fry until hot throughout. Stir in green spring onion parts.",
+      "For the sauce: heat a pan on medium, add minced garlic and cook 30 seconds. Add soy sauce, water, ketchup, and rice vinegar. Stir to combine.",
+      "Add cornstarch slurry and stir until lightly simmering and thickened. Remove from heat and stir in honey or maple syrup.",
+      "Toss cooked chicken in the sauce until fully coated. Plate chicken over or beside the fried rice."
+    ],
+    tip: "Day-old rice is key — fresh rice is too wet. Cook rice the night before. Reheat chicken in an air fryer 3–4 min to keep it crispy."
   },
 
   {
@@ -454,7 +574,7 @@ const RECIPES = [
     serves: 3,
     prep: false,
     tags: ["chicken thighs", "bang bang sauce", "sweet chili", "sriracha", "soy sauce", "ginger", "garlic", "spicy", "sweet", "crispy", "rich"],
-    desc: "Crispy deep-fried chicken thighs marinated in a Japanese-inspired soy-mirin blend, tossed in a creamy, spicy-sweet bang bang sauce. Best served fresh over steamed rice.",
+    desc: "Crispy deep-fried chicken thighs marinated in a Japanese-inspired soy-mirin blend, tossed in a creamy spicy-sweet bang bang sauce.",
     ing: [
       "4 chicken thighs, cut into bite-sized pieces",
       "2 tbsp soy sauce",
@@ -474,8 +594,16 @@ const RECIPES = [
       "3 tbsp sriracha or chili sauce",
       "1 tbsp lemon juice"
     ],
-    steps: "Combine chicken with soy sauce, sake, mirin, sesame oil, garlic, ginger, white pepper, salt, and egg white. Mix well, cover, and marinate in the fridge for at least 1 hour or overnight for best results. Make bang bang sauce: whisk together mayo, Thai sweet chili sauce, sriracha, and lemon juice. Set aside. Dredge marinated chicken pieces in potato or corn starch until fully coated. Deep fry in neutral oil at 350°F for 5–6 min until golden brown and crispy — work in batches to avoid crowding. Drain on a wire rack or paper towels. Toss hot chicken in bang bang sauce until fully coated. Serve immediately over steamed rice, garnished with green onion or chives.",
-    tip: "Marinate overnight for the deepest flavor. The bang bang sauce keeps 5 days in the fridge — make a double batch and use as a dipping sauce or salad dressing. For a lighter version, air fry the coated chicken at 400°F for 12–14 min instead of deep frying."
+    steps: [
+      "Combine chicken with soy sauce, sake, mirin, sesame oil, garlic, ginger, white pepper, salt, and egg white. Mix well.",
+      "Cover and marinate in the fridge for at least 1 hour — overnight gives the deepest flavor.",
+      "Make bang bang sauce: whisk together mayo, Thai sweet chili sauce, sriracha, and lemon juice. Set aside.",
+      "Dredge marinated chicken pieces in potato or corn starch until fully coated.",
+      "Deep fry in neutral oil at 350°F for 5–6 min until golden brown and crispy. Work in batches — do not overcrowd.",
+      "Drain on a wire rack or paper towels.",
+      "Toss hot chicken in bang bang sauce until fully coated. Serve immediately over steamed rice, garnished with green onion or chives."
+    ],
+    tip: "The bang bang sauce keeps 5 days in the fridge. For a lighter version, air fry at 400°F for 12–14 min instead of deep frying."
   },
 
   // -------------------------------------------------------
@@ -498,7 +626,14 @@ const RECIPES = [
       "Cilantro and lime",
       "Greek yogurt or cottage cheese as topping"
     ],
-    steps: "Roast sweet potato at 400°F for 20 min. Brown beef with spices. Warm beans. Build bowl over greens.",
+    steps: [
+      "Preheat oven to 400°F. Toss sweet potato cubes with olive oil, salt, and pepper. Roast 20 min until tender and caramelized.",
+      "Brown ground beef in a skillet over medium-high heat. Drain excess fat.",
+      "Add cumin, chili powder, garlic powder, and smoked paprika to the beef. Stir and cook 2 min.",
+      "Warm black beans in a small pan.",
+      "Build bowls over a bed of romaine or mixed greens: sweet potato, seasoned beef, and beans.",
+      "Top with cilantro, a squeeze of lime, and Greek yogurt or cottage cheese."
+    ],
     tip: "Roast double the sweet potato — use in other bowls all week."
   },
 
@@ -519,7 +654,14 @@ const RECIPES = [
       "Cilantro and lime",
       "Cottage cheese as a cool topping"
     ],
-    steps: "Cook lentils 20 min. Brown beef, add lentils and seasoning with a splash of water. Simmer 5 min. Serve over rice or greens with corn, onion, cilantro.",
+    steps: [
+      "Cook lentils in 1½ cups water for 20 min until tender. Drain any excess water.",
+      "Brown ground beef in a skillet over medium-high heat. Drain excess fat.",
+      "Add cooked lentils and taco seasoning to the beef. Add a splash of water and stir to combine.",
+      "Simmer 5 min until everything is heated through and well seasoned.",
+      "Serve over rice or greens with corn, red onion, and cilantro.",
+      "Top with cottage cheese and a squeeze of lime."
+    ],
     tip: "The beef-lentil mixture freezes well. Make big batches and freeze in portions."
   },
 
@@ -543,7 +685,15 @@ const RECIPES = [
       "2 large eggs",
       "Green onion to finish"
     ],
-    steps: "Brown beef in a skillet with garlic, ginger, soy sauce, and gochujang until cooked through. Sauté spinach until wilted. Fry eggs to your liking. Cook rice. Assemble bowls: rice, beef, spinach, carrots. Top with fried egg and drizzle sesame oil.",
+    steps: [
+      "Cook jasmine rice per package instructions.",
+      "Brown ground beef in a skillet over medium-high heat. Drain excess fat.",
+      "Add garlic, ginger, soy sauce, and gochujang to the beef. Stir and cook 2 min.",
+      "In a separate pan, sauté spinach in a little sesame oil until wilted, about 2 min.",
+      "Fry eggs to your liking in the same pan.",
+      "Assemble bowls: rice, seasoned beef, wilted spinach, and shredded carrots.",
+      "Top with a fried egg, drizzle with sesame oil, and finish with sliced green onion."
+    ],
     tip: "Prep rice and beef in bulk. Reheat with a splash of water. Fry eggs fresh each time."
   },
 
@@ -553,7 +703,7 @@ const RECIPES = [
     cal: 580, protein: "beef", proteinG: 40, fiber: 11, cost: "$",
     prep: true,
     tags: ["ground beef", "potatoes", "red onion", "bell pepper", "smoked paprika", "smoky", "savory", "hearty", "crispy"],
-    desc: "A skillet-style hash of crispy potatoes, ground beef, peppers, and onions — topped with an egg if you want. Incredibly filling and cheap.",
+    desc: "A skillet-style hash of crispy potatoes, ground beef, peppers, and onions — topped with an egg if you want.",
     ing: [
       "1 lb ground beef (90/10)",
       "3 medium potatoes, diced small",
@@ -565,12 +715,18 @@ const RECIPES = [
       "Salt and pepper",
       "Optional: eggs to top"
     ],
-    steps: "Par-cook diced potatoes in microwave for 3 min. Crisp in a skillet with a little oil. Add peppers and onion, cook down until soft. Add ground beef and all seasoning, brown fully. Top with a fried egg if desired.",
+    steps: [
+      "Par-cook diced potatoes in microwave for 3 min to speed up cooking.",
+      "Heat oil in a large skillet over medium-high heat. Add potatoes and cook until crispy, about 5 min.",
+      "Add diced bell peppers and onion. Cook until softened, about 4 min.",
+      "Add ground beef and all seasoning. Break up and brown fully, about 5–6 min.",
+      "Taste and adjust seasoning. Top with a fried egg if desired."
+    ],
     tip: "Reheat in a skillet for crispy results. Par-cook and store potatoes ahead to save time."
   },
 
   // -------------------------------------------------------
-  //  PORK MEALS
+  //  BEEF & PORK MEALS
   // -------------------------------------------------------
   {
     id: "r19",
@@ -579,7 +735,7 @@ const RECIPES = [
     serves: 12,
     prep: true,
     tags: ["Italian sausage", "ground beef", "ricotta", "mozzarella", "lasagna noodles", "parmesan", "rich", "savory", "hearty", "cheesy"],
-    desc: "The classic layered lasagna — Italian sausage and ground beef in a slow-simmered tomato sauce, layered with ricotta, mozzarella, and Parmesan. Makes 12 hearty servings, freezes beautifully.",
+    desc: "The classic layered lasagna — Italian sausage and ground beef in a slow-simmered tomato sauce, layered with ricotta, mozzarella, and Parmesan.",
     ing: [
       "1 lb sweet Italian sausage",
       "¾ lb lean ground beef",
@@ -602,8 +758,18 @@ const RECIPES = [
       "¾ lb mozzarella cheese, sliced",
       "¾ cup Parmesan cheese, grated"
     ],
-    steps: "Brown sausage, ground beef, onion, and garlic in a large pot over medium heat until cooked through. Stir in crushed tomatoes, tomato sauce, tomato paste, and water. Add sugar, 2 tbsp parsley, basil, Italian seasoning, granulated garlic, pepper, and 1 tsp salt. Simmer covered for 1½ hours, stirring occasionally. Boil lasagna noodles 8–10 min, drain and rinse with cold water. Mix ricotta with egg, remaining 2 tbsp parsley, and ½ tsp salt. Preheat oven to 375°F. In a 9x13 baking dish spread 1½ cups meat sauce. Layer 6 noodles, half the ricotta mixture, one third of the mozzarella, 1½ cups meat sauce, and ¼ cup Parmesan. Repeat layers. Top with remaining mozzarella and Parmesan. Cover with foil (spray foil so it does not stick to cheese). Bake covered 25 min, then uncovered 25 min. Rest 15 min before cutting.",
-    tip: "Makes 12 servings — ideal for batch cooking. Slice into portions, wrap individually, and freeze up to 3 months. Reheats perfectly from frozen at 350°F for 45 min or microwave covered on 50% power for 3–4 min."
+    steps: [
+      "Brown sausage, ground beef, onion, and garlic in a large pot over medium heat until cooked through. Drain excess fat.",
+      "Stir in crushed tomatoes, tomato sauce, tomato paste, and water.",
+      "Add sugar, 2 tbsp parsley, basil, Italian seasoning, granulated garlic, pepper, and 1 tsp salt. Simmer covered 1½ hours, stirring occasionally.",
+      "Boil lasagna noodles 8–10 min. Drain and rinse with cold water.",
+      "Mix ricotta with egg, remaining 2 tbsp parsley, and ½ tsp salt.",
+      "Preheat oven to 375°F. Spread 1½ cups meat sauce in a 9x13 baking dish.",
+      "Layer 6 noodles, half the ricotta, one third of the mozzarella, 1½ cups sauce, and ¼ cup Parmesan. Repeat layers.",
+      "Top with remaining mozzarella and Parmesan. Cover with foil (spray foil to prevent sticking).",
+      "Bake covered 25 min, then uncovered 25 min. Rest 15 min before cutting."
+    ],
+    tip: "Makes 12 servings — ideal for batch cooking. Freeze individual portions up to 3 months. Reheat from frozen at 350°F for 45 min."
   },
 
   {
@@ -613,7 +779,7 @@ const RECIPES = [
     serves: 4,
     prep: true,
     tags: ["Italian sausage", "orecchiette", "spinach", "parmesan", "lemon", "cream", "chili flakes", "rich", "creamy", "spicy", "savory", "bright"],
-    desc: "One-pan creamy pasta with Italian sausage, orecchiette, fresh spinach, and a bright lemon-parmesan sauce. Everything cooks in the same pan including the dry pasta — minimal cleanup.",
+    desc: "One-pan creamy pasta with Italian sausage, orecchiette, fresh spinach, and a bright lemon-parmesan sauce. Everything cooks in the same pan — minimal cleanup.",
     ing: [
       "1 lb ground Italian sausage (mild or spicy)",
       "1 medium onion, finely chopped",
@@ -630,8 +796,67 @@ const RECIPES = [
       "2 cups fresh spinach, chopped",
       "½ cup grated Parmesan cheese"
     ],
-    steps: "Heat a large saucepan over medium-high heat. Add sausage and onion and cook 4–5 min until sausage is browned and onion is softened, breaking up the meat as it cooks. Add garlic, salt, pepper, chili flakes, basil, lemon zest, and Italian seasoning. Cook 1 min until fragrant. Add chicken broth and scrape up any browned bits from the bottom of the pan. Add cream and bring to a simmer. Stir in dry orecchiette, cover, and reduce heat to medium-low. Cook stirring often for 10–15 min until pasta is al dente and has absorbed most of the liquid. Stir in spinach, lemon juice, and Parmesan. Taste and adjust seasoning and cheese to your preference before serving.",
-    tip: "Stir frequently once the pasta goes in — it can stick to the bottom. Leftovers thicken up in the fridge; reheat with a splash of chicken broth or water to loosen. Keeps 4 days."
+    steps: [
+      "Heat a large saucepan over medium-high heat. Add sausage and onion and cook 4–5 min until browned, breaking up the meat.",
+      "Add garlic, salt, pepper, chili flakes, basil, lemon zest, and Italian seasoning. Cook 1 min until fragrant.",
+      "Add chicken broth and scrape up any browned bits from the bottom of the pan.",
+      "Add cream and bring to a simmer.",
+      "Stir in dry orecchiette, cover, and reduce heat to medium-low. Cook stirring often 10–15 min until pasta is al dente.",
+      "Stir in spinach, lemon juice, and Parmesan.",
+      "Taste and adjust seasoning before serving."
+    ],
+    tip: "Stir frequently once pasta goes in — it can stick. Reheat leftovers with a splash of chicken broth to loosen. Keeps 4 days."
+  },
+
+  // -------------------------------------------------------
+  //  PORK MEALS
+  // -------------------------------------------------------
+  {
+    id: "r27",
+    title: "Pork dumplings with chili crisp mayo",
+    cal: 480, protein: "pork", proteinG: 32, fiber: 2, cost: "$",
+    serves: 4,
+    prep: true,
+    tags: ["ground pork", "wonton wrappers", "napa cabbage", "ginger", "garlic", "sesame", "chili crisp", "soy sauce", "savory", "umami", "crispy", "rich"],
+    desc: "Pan-fried pork dumplings made with wonton wrappers draped over seasoned pork and cabbage meatballs, served with a creamy chili crisp mayo sauce.",
+    ing: [
+      "--- Pork filling ---",
+      "1 lb ground pork",
+      "2 garlic cloves, grated or minced",
+      "½–1 tsp fresh ginger, grated or minced",
+      "2 tbsp soy sauce",
+      "1 tbsp rice vinegar",
+      "1 tsp sesame oil",
+      "¼ cup green onion, thinly sliced (reserve some for garnish)",
+      "1 egg",
+      "Black pepper to taste",
+      "2 tsp cornstarch",
+      "1 cup napa cabbage, thinly sliced",
+      "Pinch of salt (for wilting cabbage)",
+      "Wonton wrappers (dumpling size)",
+      "Cooking oil",
+      "¼ cup water (for steaming)",
+      "--- Chili crisp mayo sauce ---",
+      "¾ cup mayo",
+      "1 tbsp soy sauce",
+      "1 tbsp chili crisp (drain oil, use only the crisp solids)",
+      "2 tbsp rice vinegar",
+      "Pinch of MSG (optional)"
+    ],
+    steps: [
+      "Thinly slice napa cabbage, place in a bowl, and work a pinch of salt thoroughly into it. Set aside 10–15 min to wilt and release water.",
+      "Combine ground pork, garlic, ginger, soy sauce, rice vinegar, sesame oil, black pepper, green onion, egg, and cornstarch in a bowl. Mix well.",
+      "Squeeze and drain as much liquid as possible from the cabbage. Add to the pork mixture and combine.",
+      "Form mixture into small meatballs and set aside.",
+      "Mix all sauce ingredients together in a small bowl and set aside.",
+      "Heat a pan over medium heat with cooking oil. Add meatballs with space between them.",
+      "Cook until browned on the bottom, flip and brown the other side — about 5 min total.",
+      "Tilt the pan slightly and use a paper towel along the edge to absorb excess fat.",
+      "Drape a wonton wrapper over each meatball. Add about ¼ cup water to the pan and cover immediately.",
+      "Steam 2–3 min until wonton wrappers cling to the filling and are cooked through.",
+      "Plate the dumplings, drizzle with sauce, and garnish with remaining green onion."
+    ],
+    tip: "Salting and squeezing the cabbage is essential — skipping this makes the filling watery. The sauce keeps 5 days in the fridge. Freeze uncooked meatballs for a quick future meal."
   },
 
   // -------------------------------------------------------
@@ -658,7 +883,15 @@ const RECIPES = [
       "2 medium cucumbers, sliced",
       "Sesame seeds and green onion to finish"
     ],
-    steps: "Make glaze: whisk soy sauce, honey, sesame oil, garlic, ginger, rice vinegar, and cornstarch dissolved in 1 tbsp cold water. Cook rice. Pat salmon completely dry, season with salt and pepper. Sear in a hot skillet 3–4 min per side. Add glaze in last 90 seconds and spoon over fish. Cook edamame per package. Assemble bowls with rice, edamame, cucumber, glazed salmon. Finish with sesame seeds.",
+    steps: [
+      "Make glaze: whisk soy sauce, honey, sesame oil, garlic, ginger, rice vinegar, and cornstarch dissolved in 1 tbsp cold water.",
+      "Cook jasmine rice per package instructions.",
+      "Cook edamame per package. Drain and season lightly with salt.",
+      "Pat salmon completely dry with paper towels — this is key for a good sear. Season with salt and pepper.",
+      "Heat a skillet over medium-high heat. Sear salmon 3–4 min per side without moving.",
+      "In the last 90 seconds, pour glaze into the pan and spoon over the fish as it thickens.",
+      "Assemble bowls with rice, edamame, and sliced cucumber. Place salmon on top and finish with sesame seeds and green onion."
+    ],
     tip: "Rice and edamame prep Sunday. Sear salmon fresh each night — only 10 min. Reheat salmon on 50% microwave power for 60 sec."
   },
 
@@ -669,7 +902,7 @@ const RECIPES = [
     serves: 4,
     prep: false,
     tags: ["shrimp", "grits", "cheddar", "parmesan", "cajun", "scallions", "lime", "spicy", "smoky", "savory", "bold", "rich"],
-    desc: "Cajun-spiced jumbo shrimp blackened in a cast-iron skillet served over creamy cheddar and Parmesan grits, finished with a pan drizzle and fresh scallions. Southern comfort at its best.",
+    desc: "Cajun-spiced jumbo shrimp blackened in a cast-iron skillet served over creamy cheddar and Parmesan grits, finished with a pan drizzle and fresh scallions.",
     ing: [
       "--- Grits ---",
       "2½ cups low-sodium chicken broth, divided",
@@ -693,8 +926,19 @@ const RECIPES = [
       "3 tbsp scallions, sliced",
       "Lime wedges for serving"
     ],
-    steps: "Mix paprika, cayenne, garlic powder, thyme, oregano, salt, and black pepper in a small bowl until blended. Spritz shrimp with oil on both sides and coat thoroughly with the spice mix. Set aside. In a medium pot bring 2 cups chicken broth, milk, water, and salt to a boil — watch carefully so it does not boil over. Slowly stir in grits and mix continuously until well combined. Reduce heat to the lowest setting, cover, and simmer 28–30 min, stirring occasionally to prevent sticking. Add more water if needed — finished grits should be smooth like cream of wheat. Stir in butter, Parmesan, and ¾ of the cheddar. Remove from heat and keep warm. Just before grits are done, heat a cast-iron skillet (or heavy sauté pan) over medium-high with a little oil. Add shrimp and cook until spices are darkened and aromatic and shrimp is opaque, about 2 min per side. Remove shrimp. Add remaining ½ cup chicken broth to the hot skillet to deglaze, scraping up any browned bits. Simmer 1 min over medium heat until reduced by half. Divide grits among 4 plates, top with remaining cheddar, arrange shrimp on top, and drizzle the pan sauce over each plate. Garnish with scallions and lime wedges.",
-    tip: "A cast-iron skillet is key for a proper blackened crust — it holds heat better than other pans. Make the spice blend ahead and store in a jar. Grits thicken as they sit; reheat with a splash of broth or milk stirred in."
+    steps: [
+      "Mix paprika, cayenne, garlic powder, thyme, oregano, salt, and black pepper in a small bowl until blended.",
+      "Coat shrimp with oil on both sides then coat thoroughly with the spice mix. Set aside.",
+      "In a medium pot bring 2 cups chicken broth, milk, water, and salt to a boil — watch carefully so it does not boil over.",
+      "Slowly stir in grits and mix continuously until well combined.",
+      "Reduce heat to lowest setting, cover, and simmer 28–30 min, stirring occasionally to prevent sticking. Add more water if needed.",
+      "Stir in butter, Parmesan, and ¾ of the cheddar. Remove from heat and keep warm.",
+      "Heat a cast-iron skillet over medium-high with a little oil. Add shrimp and cook until spices are darkened and shrimp is opaque, about 2 min per side. Remove shrimp.",
+      "Add remaining ½ cup chicken broth to the hot skillet to deglaze. Simmer 1 min until reduced by half.",
+      "Divide grits among 4 plates, top with remaining cheddar, arrange shrimp on top, and drizzle pan sauce over each plate.",
+      "Garnish with scallions and lime wedges."
+    ],
+    tip: "A cast-iron skillet is key for a proper blackened crust. Make the spice blend ahead and store in a jar. Grits thicken as they sit — reheat with a splash of broth or milk."
   },
 
   // -------------------------------------------------------
@@ -713,7 +957,11 @@ const RECIPES = [
       "¼ cup high-fiber granola",
       "1 tsp honey or maple syrup"
     ],
-    steps: "Layer yogurt in a bowl or mason jar. Top with berries and granola. Drizzle honey.",
+    steps: [
+      "Spoon Greek yogurt into a bowl or mason jar.",
+      "Top with berries and granola.",
+      "Drizzle with honey or maple syrup and serve."
+    ],
     tip: "Buy plain yogurt and sweeten yourself — flavored yogurt has 2–3× the sugar. Prep 4 jars Sunday for the week."
   },
 
@@ -729,7 +977,11 @@ const RECIPES = [
       "½ cup fruit of choice (pineapple, peach, berries)",
       "Pinch of cinnamon or splash of vanilla extract"
     ],
-    steps: "Spoon cottage cheese into a bowl. Top with fruit. Season with cinnamon.",
+    steps: [
+      "Spoon cottage cheese into a bowl.",
+      "Top with your choice of fruit.",
+      "Season with cinnamon or a splash of vanilla extract."
+    ],
     tip: "Portion into small containers Sunday for grab-and-go snacks all week."
   },
 
@@ -748,7 +1000,13 @@ const RECIPES = [
       "½ tsp garlic powder",
       "Salt to taste"
     ],
-    steps: "Pat chickpeas very dry with paper towels — this is key for crispiness. Toss with oil and spices. Roast at 400°F for 25–30 min, shaking pan halfway, until crispy throughout.",
+    steps: [
+      "Preheat oven to 400°F.",
+      "Pat chickpeas completely dry with paper towels — this is key for crispiness.",
+      "Toss with olive oil, smoked paprika, cumin, garlic powder, and salt until coated.",
+      "Spread on a baking sheet in a single layer.",
+      "Roast 25–30 min, shaking the pan halfway through, until crispy throughout."
+    ],
     tip: "Leave in an open bowl at room temp — do not cover or they steam and go soft. Stays crispy 3 days."
   },
 
@@ -766,7 +1024,12 @@ const RECIPES = [
       "Everything bagel seasoning or za'atar",
       "Chives optional"
     ],
-    steps: "Blend cottage cheese with garlic and a pinch of salt until completely smooth. Peel eggs. Use as a dip, sprinkle with seasoning.",
+    steps: [
+      "Blend cottage cheese with garlic and a pinch of salt until completely smooth.",
+      "Transfer to a small bowl and sprinkle with everything bagel seasoning or za'atar.",
+      "Peel hard-boiled eggs and serve alongside the dip.",
+      "Top with chives if desired."
+    ],
     tip: "Boil a dozen eggs Sunday. Blended cottage cheese dip keeps 5 days in the fridge."
   },
 
@@ -785,7 +1048,12 @@ const RECIPES = [
       "Cilantro, squeeze of lime",
       "Pinch of cumin"
     ],
-    steps: "Warm tortilla in a dry pan or microwave. Fill with beans, corn, onion, and cilantro. Squeeze lime over. Fold and eat.",
+    steps: [
+      "Warm tortilla in a dry pan or microwave for 20–30 seconds.",
+      "Fill with seasoned black beans, corn, and red onion.",
+      "Add cilantro and a squeeze of lime.",
+      "Fold and eat immediately."
+    ],
     tip: "Keep the bean-corn mix prepped all week — this assembles in under 2 minutes."
   },
 
@@ -802,7 +1070,11 @@ const RECIPES = [
       "Pinch of cinnamon",
       "1 medium apple, sliced"
     ],
-    steps: "Stir yogurt, peanut butter, and cinnamon together until smooth. Slice apple. Dip.",
+    steps: [
+      "Stir Greek yogurt, peanut butter, and cinnamon together until smooth and well combined.",
+      "Slice apple into wedges.",
+      "Serve apple slices alongside the dip."
+    ],
     tip: "Freeze the yogurt-PB blend for 20 min for a chilled dessert-style treat."
   },
 
@@ -816,7 +1088,7 @@ const RECIPES = [
     serves: 12,
     prep: true,
     tags: ["coconut", "condensed milk", "egg whites", "vanilla", "sweet", "chewy", "light", "crispy"],
-    desc: "Light and chewy coconut macaroons with crispy golden tops. Just five ingredients and no mixer needed. Optionally dip the bottoms in melted dark or milk chocolate to take them to the next level.",
+    desc: "Light and chewy coconut macaroons with crispy golden tops. Just five ingredients and no mixer needed. Optionally dip in melted chocolate.",
     ing: [
       "9 oz shredded coconut (about 4 cups)",
       "1 can (10 oz) sweetened condensed milk",
@@ -825,8 +1097,17 @@ const RECIPES = [
       "¼ tsp salt",
       "Optional: melted dark or milk chocolate for dipping"
     ],
-    steps: "Preheat oven to 325°F. Line a cupcake pan with paper liners. In a large bowl combine shredded coconut, condensed milk, and vanilla extract until well blended. In a separate bowl whisk egg whites and salt to medium peaks — the whites should hold a soft floppy peak when you lift the whisk. Fold egg whites gently into the coconut mixture until just combined. Scoop batter into each cupcake cup, filling generously — the macaroons won't spread so don't be shy. Bake 20–25 min until the tops are golden brown and a toothpick comes out with minimal dry crumbs. Cool in the pan 2–3 min then transfer to a wire rack to cool completely. Optional: once fully cooled, dip the bottoms in melted chocolate and set on parchment until firm.",
-    tip: "Room temperature egg whites whip up much better than cold ones — take them out of the fridge 30 min ahead. Store in an airtight container at room temp for 3 days or refrigerate up to a week."
+    steps: [
+      "Preheat oven to 325°F. Line a cupcake pan with paper liners.",
+      "In a large bowl combine shredded coconut, condensed milk, and vanilla extract until well blended.",
+      "In a separate bowl whisk egg whites and salt to medium peaks — the whites should hold a soft floppy peak when you lift the whisk.",
+      "Fold egg whites gently into the coconut mixture until just combined — do not overmix.",
+      "Scoop batter into each cupcake cup, filling generously — the macaroons won't spread.",
+      "Bake 20–25 min until tops are golden brown and a toothpick comes out with minimal dry crumbs.",
+      "Cool in the pan 2–3 min then transfer to a wire rack to cool completely.",
+      "Optional: once fully cooled, dip the bottoms in melted chocolate and set on parchment until firm."
+    ],
+    tip: "Room temperature egg whites whip up much better than cold ones — take them out of the fridge 30 min ahead. Store in an airtight container at room temp for 3 days."
   },
 
   {
@@ -836,7 +1117,7 @@ const RECIPES = [
     serves: 8,
     prep: false,
     tags: ["apple", "cinnamon", "maple syrup", "powdered sugar", "fried", "sweet", "warm", "crispy", "cozy"],
-    desc: "Crispy fried apple fritters loaded with chunks of Granny Smith or Honeycrisp apple, dunked in a maple-vanilla glaze. A classic comfort treat best served warm.",
+    desc: "Crispy fried apple fritters loaded with chunks of Granny Smith or Honeycrisp apple, dunked in a maple-vanilla glaze. Best served warm.",
     ing: [
       "--- Fritters ---",
       "1½ cups all-purpose flour",
@@ -855,45 +1136,20 @@ const RECIPES = [
       "¼ cup milk",
       "½ tsp vanilla extract"
     ],
-    steps: "Whisk together flour, sugar, baking powder, salt, and cinnamon in a medium bowl. Make a well in the center and add milk, eggs, and applesauce. Stir just until combined — do not overmix or the fritters will be tough. Fold in diced apples. Heat 1½ inches of oil in a heavy skillet, Dutch oven, or deep fryer to 375°F — use a candy thermometer to track temperature. Drop about ¼ cup of batter per fritter into the hot oil, spreading it out slightly as you drop. Do not overcrowd the pan. Cook each side until golden brown, approximately 2 min per side. Remove with a slotted spoon and drain on paper towels. Make glaze: whisk together powdered sugar, maple syrup, milk, and vanilla until smooth. Dunk each fritter in the glaze, turning to coat both sides. Place on a wire rack to air dry and drip.",
-    tip: "Maintain oil temperature as close to 375°F as possible — turn heat up slightly when adding batter (temperature drops) and down slightly when removing fritters (temperature rises). Best eaten warm the day they are made, but store in an airtight container at room temp up to 2 days."
-  },
-  
-  {
-    id: "r27",
-    title: "Pork Dumplings",
-    cal: 480, protein: "pork", proteinG: 32, fiber: 2, cost: "$",
-    serves: 4,
-    prep: true,
-    tags: ["ground pork", "wonton wrappers", "napa cabbage", "ginger", "garlic", "sesame", "chili crisp", "soy sauce", "savory", "umami", "crispy", "rich"],
-    desc: "Pan-fried pork dumplings made with wonton wrappers draped over seasoned pork and cabbage meatballs, served with a creamy chili crisp mayo sauce. Easier than traditional dumplings with incredible results.",
-    ing: [
-      "--- Pork filling ---",
-      "1 lb ground pork",
-      "2 garlic cloves, grated or minced",
-      "½–1 tsp fresh ginger, grated or minced",
-      "2 tbsp soy sauce",
-      "1 tbsp rice vinegar",
-      "1 tsp sesame oil",
-      "¼ cup green onion, thinly sliced (reserve some for garnish)",
-      "1 egg",
-      "Black pepper to taste",
-      "2 tsp cornstarch",
-      "1 cup napa cabbage, thinly sliced",
-      "Pinch of salt (for wilting cabbage)",
-      "Wonton wrappers (dumpling size)",
-      "Cooking oil",
-      "¼ cup water (for steaming)",
-      "--- Chili crisp mayo sauce ---",
-      "¾ cup mayo",
-      "1 tbsp soy sauce",
-      "1 tbsp chili crisp (drain oil, use only the crisp solids)",
-      "2 tbsp rice vinegar",
-      "Pinch of MSG (optional)"
+    steps: [
+      "Whisk together flour, sugar, baking powder, salt, and cinnamon in a medium bowl.",
+      "Make a well in the center and add milk, eggs, and applesauce. Stir just until combined — do not overmix or fritters will be tough.",
+      "Fold in diced apples.",
+      "Heat 1½ inches of oil in a heavy skillet or Dutch oven to 375°F — use a candy thermometer to track temperature.",
+      "Drop about ¼ cup of batter per fritter into the hot oil, spreading slightly. Do not overcrowd the pan.",
+      "Cook each side until golden brown, approximately 2 min per side.",
+      "Remove with a slotted spoon and drain on paper towels.",
+      "Make glaze: whisk together powdered sugar, maple syrup, milk, and vanilla until smooth.",
+      "Dunk each fritter in the glaze, turning to coat both sides. Place on a wire rack to air dry."
     ],
-    steps: "Thinly slice napa cabbage and place in a bowl with a pinch of salt. Work the salt into the cabbage thoroughly and set aside to wilt for 10–15 min. Meanwhile combine ground pork, garlic, ginger, soy sauce, rice vinegar, sesame oil, black pepper, green onion, egg, and cornstarch in a bowl. Mix well. Squeeze and drain as much liquid as possible from the cabbage then add it to the pork mixture. Form into small meatballs and set aside. Mix all sauce ingredients together and set aside. Heat a pan over medium heat with a little cooking oil. Add pork meatballs keeping space between them. Cook until browned on the bottom, about 2–3 min, then flip and brown the other side — about 5 min total. Tilt the pan slightly toward yourself and use a paper towel along the edge to absorb excess fat. Drape a wonton wrapper over each meatball. Add about ¼ cup water to the pan and cover immediately. Steam 2–3 min until wonton wrappers cling to the filling and are cooked through. Plate the dumplings, drizzle generously with sauce, and garnish with remaining green onion.",
-    tip: "Salting and squeezing the cabbage is essential — skipping this step makes the filling watery. The sauce keeps 5 days in the fridge and works great as a dipping sauce for other dishes too. Make a double batch of filling and freeze uncooked meatballs for a quick future meal."
+    tip: "Maintain oil as close to 375°F as possible — turn heat up slightly when adding batter and down when removing. Best eaten warm the day they are made."
   },
+
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
   //  Copy any object above, paste it here, change the id,
@@ -984,10 +1240,10 @@ function proteinBadge(p) {
 }
 
 function cardHTML(r) {
-  const isOpen  = openCards.has(r.id);
-  const isFav   = favs.has(r.id);
+  const isOpen   = openCards.has(r.id);
+  const isFav    = favs.has(r.id);
   const proteins = getProteins(r);
-  const classes = ["card", r.isLettuce ? "is-lettuce" : "", isFav ? "is-fav" : ""].filter(Boolean).join(" ");
+  const classes  = ["card", r.isLettuce ? "is-lettuce" : "", isFav ? "is-fav" : ""].filter(Boolean).join(" ");
 
   const extraBadges = [
     r.isLettuce ? badge("badge-ltr", "Lettuce bowl") : "",
@@ -996,6 +1252,10 @@ function cardHTML(r) {
   ].join("");
 
   const ing = r.ing.map(i => `<li>${i}</li>`).join("");
+
+  const stepsHTML = Array.isArray(r.steps)
+    ? `<ol style="padding-left:1.1rem;font-size:12.5px;color:var(--muted);line-height:1.7;">${r.steps.map(s => `<li style="margin-bottom:4px;">${s}</li>`).join("")}</ol>`
+    : `<p style="font-size:12.5px;color:var(--muted);line-height:1.6;">${r.steps}</p>`;
 
   return `
     <div class="${classes}" id="card-${r.id}">
@@ -1031,7 +1291,7 @@ function cardHTML(r) {
           </div>
           <div>
             <h4>Steps</h4>
-            <p>${r.steps}</p>
+            ${stepsHTML}
           </div>
           <div class="prep-tip">${r.serves ? `<strong>Serves ${r.serves}</strong> &nbsp;&middot;&nbsp; ` : ""}<strong>Prep tip:</strong> ${r.tip}</div>
         </div>
@@ -1040,10 +1300,10 @@ function cardHTML(r) {
 }
 
 function renderAll() {
-  const filtered  = getFiltered();
-  const meals     = filtered.filter(r => !getProteins(r).includes("snack") && !getProteins(r).includes("dessert"));
-  const snacks    = filtered.filter(r => getProteins(r).includes("snack"));
-  const desserts  = filtered.filter(r => getProteins(r).includes("dessert"));
+  const filtered = getFiltered();
+  const meals    = filtered.filter(r => !getProteins(r).includes("snack") && !getProteins(r).includes("dessert"));
+  const snacks   = filtered.filter(r => getProteins(r).includes("snack"));
+  const desserts = filtered.filter(r => getProteins(r).includes("dessert"));
 
   document.getElementById("header-meta").textContent = "";
 
@@ -1056,32 +1316,20 @@ function renderAll() {
 
   if (meals.length) {
     const closed = collapsedSections.has("meals");
-    html += `<div class="section-label" onclick="toggleSection('meals')">
-      Meals (${meals.length}) <span>${closed ? "▶" : "▼"}</span>
-    </div>`;
-    if (!closed) {
-      html += `<div class="recipe-grid">${meals.map(cardHTML).join("")}</div>`;
-    }
+    html += `<div class="section-label" onclick="toggleSection('meals')">Meals (${meals.length}) <span>${closed ? "▶" : "▼"}</span></div>`;
+    if (!closed) html += `<div class="recipe-grid">${meals.map(cardHTML).join("")}</div>`;
   }
 
   if (snacks.length) {
     const closed = collapsedSections.has("snacks");
-    html += `<div class="section-label" onclick="toggleSection('snacks')">
-      Snacks (${snacks.length}) <span>${closed ? "▶" : "▼"}</span>
-    </div>`;
-    if (!closed) {
-      html += `<div class="recipe-grid">${snacks.map(cardHTML).join("")}</div>`;
-    }
+    html += `<div class="section-label" onclick="toggleSection('snacks')">Snacks (${snacks.length}) <span>${closed ? "▶" : "▼"}</span></div>`;
+    if (!closed) html += `<div class="recipe-grid">${snacks.map(cardHTML).join("")}</div>`;
   }
 
   if (desserts.length) {
     const closed = collapsedSections.has("desserts");
-    html += `<div class="section-label" onclick="toggleSection('desserts')">
-      Sweet Treats (${desserts.length}) <span>${closed ? "▶" : "▼"}</span>
-    </div>`;
-    if (!closed) {
-      html += `<div class="recipe-grid">${desserts.map(cardHTML).join("")}</div>`;
-    }
+    html += `<div class="section-label" onclick="toggleSection('desserts')">Sweet Treats (${desserts.length}) <span>${closed ? "▶" : "▼"}</span></div>`;
+    if (!closed) html += `<div class="recipe-grid">${desserts.map(cardHTML).join("")}</div>`;
   }
 
   if (!filtered.length) {
