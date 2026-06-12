@@ -571,7 +571,7 @@ const RECIPES = [
   {
     id: "r19",
     title: "Beef lasagna",
-    cal: 720, protein: "beef", proteinG: 48, fiber: 6, cost: "$$",
+    cal: 720, protein: ["beef", "pork"], proteinG: 48, fiber: 6, cost: "$$",
     serves: 12,
     prep: true,
     tags: ["Italian sausage", "ground beef", "ricotta", "mozzarella", "lasagna noodles", "parmesan", "rich", "savory", "hearty", "cheesy"],
@@ -901,13 +901,14 @@ function getFiltered() {
   const q = document.getElementById("search").value.toLowerCase().trim();
   return RECIPES.filter(r => {
     if (activeFilter === "fav"         && !favs.has(r.id))            return false;
-    if (activeFilter === "chicken"     && r.protein !== "chicken")     return false;
-    if (activeFilter === "beef"        && r.protein !== "beef")        return false;
-    if (activeFilter === "pork"        && r.protein !== "pork")        return false;
-    if (activeFilter === "fish"        && r.protein !== "fish")        return false;
-    if (activeFilter === "vegetarian"  && r.protein !== "vegetarian")  return false;
-    if (activeFilter === "snack"       && r.protein !== "snack")       return false;
-    if (activeFilter === "dessert"     && r.protein !== "dessert")     return false;
+  const proteins = Array.isArray(r.protein) ? r.protein : [r.protein];
+    if (activeFilter === "chicken"    && !proteins.includes("chicken"))    return false;
+    if (activeFilter === "beef"       && !proteins.includes("beef"))       return false;
+    if (activeFilter === "pork"       && !proteins.includes("pork"))       return false;
+    if (activeFilter === "fish"       && !proteins.includes("fish"))       return false;
+    if (activeFilter === "vegetarian" && !proteins.includes("vegetarian")) return false;
+    if (activeFilter === "snack"      && !proteins.includes("snack"))      return false;
+    if (activeFilter === "dessert"    && !proteins.includes("dessert"))    return false;
     if (q) {
       const hay = (r.title + " " + r.tags.join(" ") + " " + r.desc + " " + r.ing.join(" ")).toLowerCase();
       if (!hay.includes(q)) return false;
@@ -921,16 +922,17 @@ function badge(cls, label) {
 }
 
 function proteinBadge(p) {
-  switch(p) {
-    case "chicken":    return badge("badge-chicken",    "🍗 Chicken");
-    case "beef":       return badge("badge-beef",       "🥩 Beef");
-    case "pork":       return badge("badge-pork",       "🍖 Pork");
-    case "fish":       return badge("badge-fish",       "🐟🦐 Seafood");
-    case "vegetarian": return badge("badge-vegetarian", "🥗 Vegetarian");
-    case "snack":      return badge("badge-snack",      "🌿 Snacks");
-    case "dessert":    return badge("badge-dessert",    "🎂 Sweet Treat");
-    default:           return "";
-  }
+  const proteins = Array.isArray(p) ? p : [p];
+  const map = {
+    chicken:    ["badge-chicken",    "🍗 Chicken"],
+    beef:       ["badge-beef",       "🥩 Beef"],
+    pork:       ["badge-pork",       "🥓 Pork"],
+    fish:       ["badge-fish",       "🐟🦐 Seafood"],
+    vegetarian: ["badge-vegetarian", "🥗 Vegetarian"],
+    snack:      ["badge-snack",      "🌿 Snacks"],
+    dessert:    ["badge-dessert",    "🎂 Sweet Treat"],
+  };
+  return proteins.map(p => map[p] ? badge(map[p][0], map[p][1]) : "").join("");
 }
 
 function cardHTML(r) {
@@ -990,13 +992,13 @@ return `
 
 function renderAll() {
   const filtered  = getFiltered();
-  const meals     = filtered.filter(r => r.protein !== "snack" && r.protein !== "dessert");
-  const snacks    = filtered.filter(r => r.protein === "snack");
-  const desserts  = filtered.filter(r => r.protein === "dessert");
-  const totalMeals    = RECIPES.filter(r => r.protein !== "snack" && r.protein !== "dessert").length;
-  const totalSnacks   = RECIPES.filter(r => r.protein === "snack").length;
-  const totalDesserts = RECIPES.filter(r => r.protein === "dessert").length;
-
+ const getProteins = r => Array.isArray(r.protein) ? r.protein : [r.protein];
+  const meals     = filtered.filter(r => !getProteins(r).includes("snack") && !getProteins(r).includes("dessert"));
+  const snacks    = filtered.filter(r => getProteins(r).includes("snack"));
+  const desserts  = filtered.filter(r => getProteins(r).includes("dessert"));
+  const totalMeals    = RECIPES.filter(r => !getProteins(r).includes("snack") && !getProteins(r).includes("dessert")).length;
+  const totalSnacks   = RECIPES.filter(r => getProteins(r).includes("snack")).length;
+  const totalDesserts = RECIPES.filter(r => getProteins(r).includes("dessert")).length;
   document.getElementById("header-meta").textContent = ""
    
 
