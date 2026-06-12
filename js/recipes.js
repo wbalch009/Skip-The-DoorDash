@@ -822,7 +822,40 @@ const RECIPES = [
     tip: "Maintain oil temperature as close to 375°F as possible — turn heat up slightly when adding batter (temperature drops) and down slightly when removing fritters (temperature rises). Best eaten warm the day they are made, but store in an airtight container at room temp up to 2 days."
   },
   
- 
+ {
+    id: "r26",
+    title: "Blackened Shrimp & Grits",
+    cal: 420, protein: "fish", proteinG: 38, fiber: 3, cost: "$$",
+    serves: 4,
+    prep: false,
+    tags: ["shrimp", "grits", "cheddar", "parmesan", "cajun", "scallions", "lime", "spicy", "smoky", "savory", "bold", "rich"],
+    desc: "Cajun-spiced jumbo shrimp blackened in a cast-iron skillet served over creamy cheddar and Parmesan grits, finished with a pan drizzle and fresh scallions. Southern comfort at its best.",
+    ing: [
+      "--- Grits ---",
+      "2½ cups low-sodium chicken broth, divided",
+      "1¼ cups milk",
+      "¼ cup water",
+      "1 tsp kosher salt",
+      "1 cup quick-cooking grits (not instant)",
+      "½ tbsp butter",
+      "1 cup sharp cheddar cheese, freshly grated — divided",
+      "1 tbsp Parmesan cheese, grated",
+      "--- Blackening spice & shrimp ---",
+      "1 tbsp paprika",
+      "½ tsp cayenne pepper",
+      "1 tsp garlic powder",
+      "½ tsp dried thyme",
+      "½ tsp dried oregano",
+      "1 tbsp kosher salt",
+      "1 tsp black pepper",
+      "Cooking oil",
+      "24 jumbo shrimp (about 1 lb), cleaned and deveined",
+      "3 tbsp scallions, sliced",
+      "Lime wedges for serving"
+    ],
+    steps: "Mix paprika, cayenne, garlic powder, thyme, oregano, salt, and black pepper in a small bowl until blended. Spritz shrimp with oil on both sides and coat thoroughly with the spice mix. Set aside. In a medium pot bring 2 cups chicken broth, milk, water, and salt to a boil — watch carefully so it does not boil over. Slowly stir in grits and mix continuously until well combined. Reduce heat to the lowest setting, cover, and simmer 28–30 min, stirring occasionally to prevent sticking. Add more water if needed — finished grits should be smooth like cream of wheat. Stir in butter, Parmesan, and ¾ of the cheddar. Remove from heat and keep warm. Just before grits are done, heat a cast-iron skillet (or heavy sauté pan) over medium-high with a little oil. Add shrimp and cook until spices are darkened and aromatic and shrimp is opaque, about 2 min per side. Remove shrimp. Add remaining ½ cup chicken broth to the hot skillet to deglaze, scraping up any browned bits. Simmer 1 min over medium heat until reduced by half. Divide grits among 4 plates, top with remaining cheddar, arrange shrimp on top, and drizzle the pan sauce over each plate. Garnish with scallions and lime wedges.",
+    tip: "A cast-iron skillet is key for a proper blackened crust — it holds heat better than other pans. Make the spice blend ahead and store in a jar. Grits thicken as they sit; reheat with a splash of broth or milk stirred in."
+  },
 
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
