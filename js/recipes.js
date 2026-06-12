@@ -923,7 +923,7 @@ function proteinBadge(p) {
   switch(p) {
     case "chicken":    return badge("badge-chicken",    "Chicken");
     case "beef":       return badge("badge-beef",       "Beef");
-    case "fish":       return badge("badge-fish",       "Fish");
+    case "fish":       return badge("badge-fish",       "🐟🦐 Seafood");
     case "vegetarian": return badge("badge-vegetarian", "Vegetarian");
     case "snack":      return badge("badge-snack",      "Snack");
     case "dessert":    return badge("badge-dessert",    "Sweet Treat");
