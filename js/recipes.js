@@ -1289,7 +1289,7 @@ function cardHTML(r) {
   const isOpen   = openCards.has(r.id);
   const isFav    = favs.has(r.id);
   const proteins = getProteins(r);
-  const classes  = ["card", r.isLettuce ? "is-lettuce" : "", isFav ? "is-fav" : ""].filter(Boolean).join(" ");
+  const classes  = ["card", r.isLettuce ? "is-lettuce" : "", isFav ? "is-fav" : "", isOpen ? "is-expanded" : ""].filter(Boolean).join(" ");
 
   const extraBadges = [
     r.isLettuce ? badge("badge-ltr", "Lettuce bowl") : "",

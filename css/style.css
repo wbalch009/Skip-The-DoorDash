@@ -232,6 +232,13 @@ ul { list-style: none; }
   flex-direction: column;
   overflow: hidden;
   transition: box-shadow 0.2s, border-color 0.2s;
+  align-self: start;
+}
+
+.card.is-expanded {
+  border: 2px solid #111111;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  grid-column: 1 / -1;
 }
 
 .card:hover {
