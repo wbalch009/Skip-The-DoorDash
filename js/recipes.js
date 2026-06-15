@@ -1149,6 +1149,52 @@ const RECIPES = [
     ],
     tip: "Maintain oil as close to 375°F as possible — turn heat up slightly when adding batter and down when removing. Best eaten warm the day they are made."
   },
+  {
+    id: "r28",
+    title: "Fiesta Chicken Bowl",
+    cal: 480, protein: "chicken", proteinG: 52, fiber: 6, cost: "$",
+    serves: 4,
+    prep: true,
+    tags: ["chicken breast", "charred corn", "cotija", "jalapeño", "red bell pepper", "red onion", "cilantro", "tajín", "Greek yogurt", "spicy", "smoky", "zesty", "bold", "fresh"],
+    desc: "Juicy marinated chicken with charred corn, jalapeño, red pepper, cotija cheese, and a creamy Tajín-lime Greek yogurt sauce. High protein, packed with flavor, and one of those meals where you keep going back for just one more bite.",
+    ing: [
+      "--- Chicken ---",
+      "2 lb chicken breast, diced",
+      "2 tbsp lime juice",
+      "1 tbsp cooking oil",
+      "2 tsp chili powder",
+      "1½ tsp ground cumin",
+      "1 tsp garlic powder",
+      "1 tsp paprika",
+      "1 tsp salt",
+      "½ tsp black pepper",
+      "--- Salad ---",
+      "2 cups corn (about 2 drained cans)",
+      "1 large red onion, finely diced",
+      "1 large red bell pepper, finely diced",
+      "3 jalapeños, finely diced",
+      "1 handful fresh cilantro, chopped",
+      "½ cup Cotija cheese, crumbled",
+      "--- Sauce ---",
+      "1 cup plain Greek yogurt",
+      "Juice of ½ lime",
+      "1 tbsp hot sauce",
+      "2 tsp Tajín seasoning",
+      "½ cup water",
+      "Salt and black pepper to taste"
+    ],
+    steps: [
+      "Combine diced chicken with lime juice, oil, chili powder, cumin, garlic powder, paprika, salt, and black pepper. Toss well and marinate 30 min to 1 hour.",
+      "Heat a large pan over high heat. Add corn and char until slightly blackened, stirring occasionally. Remove from pan and set aside to cool.",
+      "In the same pan, cook marinated chicken over medium-high heat until fully cooked through and slightly browned. Set aside.",
+      "In a large bowl combine charred corn, red onion, red bell pepper, jalapeños, cilantro, and Cotija cheese.",
+      "In a separate bowl whisk together Greek yogurt, lime juice, hot sauce, Tajín, water, salt, and black pepper until smooth.",
+      "Pour the sauce over the salad mixture and stir well to coat everything.",
+      "Add the cooked chicken and give everything one final stir.",
+      "Serve immediately or divide into meal prep containers."
+    ],
+    tip: "This gets even better after a few hours as the flavors meld together — perfect for meal prep. Keeps 4 days refrigerated. If prepping ahead, store the sauce separately and combine when serving to keep everything fresh and crisp. Short on time? Pre-charred or fire-roasted canned corn works great and skips the charring step entirely. No Cotija cheese? Crumbled feta is an excellent substitute with a very similar salty, crumbly texture.",
+  },
 
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
