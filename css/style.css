@@ -257,7 +257,7 @@ ul { list-style: none; }
 /* Card header bar */
 .card-top {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 8px;
   background: #3d5a80;
@@ -291,6 +291,22 @@ ul { list-style: none; }
 
 .fav-btn.active {
   color: #f0c060;
+}
+.close-btn {
+  background: none;
+  border: none;
+  padding: 2px;
+  color: rgba(255,255,255,0.7);
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: color 0.15s, transform 0.15s;
+}
+
+.close-btn:hover {
+  color: #ffffff;
+  transform: scale(1.2);
 }
 
 /* Card body */

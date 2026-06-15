@@ -1306,12 +1306,13 @@ function cardHTML(r) {
   return `
     <div class="${classes}" id="card-${r.id}">
       <div class="card-top">
-        <span class="card-title">${r.title}</span>
         <button class="fav-btn ${isFav ? "active" : ""}"
                 onclick="toggleFav('${r.id}', event)"
                 aria-label="${isFav ? "Remove from" : "Add to"} favorites">
           ${isFav ? "&#9733;" : "&#9734;"}
         </button>
+        <span class="card-title">${r.title}</span>
+        ${isOpen ? `<button class="close-btn" onclick="toggleDetail('${r.id}')" aria-label="Close recipe">&#10005;</button>` : `<span style="width:24px;flex-shrink:0;"></span>`}
       </div>
       <div class="card-body">
         <div class="badge-row">${proteinBadge(r.protein)}${extraBadges}</div>
