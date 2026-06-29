@@ -1249,6 +1249,50 @@ const RECIPES = [
     tip: "Add any other bean for extra protein and fiber. Using rotisserie or pre-shredded chicken makes this faster and works just as well. Also great stuffed into wraps or tortillas. Keeps 4 days refrigerated."
   },
 
+{
+    id: "r30",
+    title: "Cajun Sausage Pasta Salad",
+    cal: 560, protein: "pork", proteinG: 24, fiber: 4, cost: "$",
+    serves: 4,
+    prep: true,
+    tags: ["Italian sausage", "pasta", "Greek yogurt", "Cajun", "honey", "cucumber", "bell pepper", "corn", "smoky", "spicy", "sweet", "tangy", "creamy"],
+    desc: "Cold pasta salad with crispy honey-glazed Cajun sausage, crunchy fresh vegetables, and a smoky honey-mustard style Greek yogurt sauce. Great cold or room temp for meal prep.",
+    ing: [
+      "--- Pasta & sausage ---",
+      "10½ oz pasta (uncooked weight)",
+      "14 oz ground Italian sausage meat",
+      "1 tbsp Cajun seasoning",
+      "1½ tsp smoked paprika",
+      "1½ tsp garlic granules",
+      "1 tbsp honey",
+      "--- Salad ---",
+      "½ cucumber, finely diced",
+      "1 large bell pepper, finely diced",
+      "½ medium red onion, finely diced",
+      "3½ oz sweetcorn (charred works as well)",
+      "--- Sauce ---",
+      "5 oz plain Greek yogurt (about ⅔ cup)",
+      "2 tbsp mayonnaise",
+      "1 tbsp tomato paste",
+      "1 tsp garlic purée (or 1 clove, minced)",
+      "1 tbsp Cajun seasoning",
+      "1 tsp honey",
+      "Salt and pepper to taste",
+      "Optional garnish: parsley, chili flakes"
+    ],
+    steps: [
+      "Boil pasta until al dente according to package instructions. Drain, rinse under cold water, and set aside.",
+      "Season sausage with Cajun seasoning, smoked paprika, and garlic granules.",
+      "Cook sausage in an air fryer or oven for 15–20 min until crispy and fully cooked through.",
+      "Drizzle cooked sausage with honey while still warm.",
+      "Mix Greek yogurt, mayo, tomato paste, garlic, Cajun seasoning, and honey until smooth. Add a dash of water to loosen slightly if needed. Season with salt and pepper to taste.",
+      "Combine pasta, diced cucumber, bell pepper, red onion, and corn in a large bowl.",
+      "Add sausage and sauce. Mix everything together until well coated.",
+      "Garnish with parsley and chili flakes if using. Serve and enjoy."
+    ],
+    tip: "This pasta salad is excellent cold or at room temperature, making it ideal for meal prep or picnics. Keeps 3–4 days refrigerated. Char the corn in a dry pan for extra smoky flavor if not using canned."
+  },
+
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
   //  Copy any object above, paste it here, change the id,
