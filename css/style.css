@@ -1,34 +1,37 @@
 /* =====================================================
-   DESIGN TOKENS — edit colors here to restyle everything
+   DESIGN TOKENS — modern restaurant palette
 ===================================================== */
 :root {
-  --bg:        #d3d3d3;      /* page background — light grey */
-  --surface:   #eae2c6;      /* card background — white */
-  --surface-2: #f8f9fa;      /* hover/elevated surface */
-  --border:    #dde1e7;      /* subtle borders */
-  --border-2:  #c8cdd5;      /* slightly more visible borders */
-  --text:      #111111;      /* primary text — near black */
-  --muted:     #555555;      /* secondary/muted text */
-  --hint:      #888888;      /* very subtle text (labels) */
+  /* Backgrounds */
+  --bg:        #d3d3d3;      /* softened grey */
+  --surface:   #ffffff;      /* clean white cards */
+  --surface-2: #f5f5f5;      /* gentle elevated surface */
+  --border:    #d0d0d0;      /* soft neutral border */
+  --border-2:  #bcbcbc;      /* slightly darker border */
 
-  /* Header/accent — navy blue */
-  --accent:    #3d5a80;
-  --accent-lt: #e8eef5;
-  --accent-tx: #ffffff;
+  /* Text */
+  --text:      #1f1f1f;      /* deep charcoal */
+  --muted:     #5a5a5a;      /* soft grey */
+  --hint:      #8a8a8a;      /* light grey */
 
-  /* Warm — used for favorites star */
-  --gold:      #d4922a;
-  --gold-lt:   #fef3e2;
-  --gold-tx:   #b36b00;
+  /* Accent — modern restaurant gold/bronze */
+  --accent:    #b48a3c;      /* warm gold */
+  --accent-lt: #e8d9b8;      /* soft pale gold */
+  --accent-tx: #ffffff;      /* white text on accent */
 
-  /* Badge colors — light mode */
-  --purple-lt: #ede9fb;
+  /* Warm highlight */
+  --gold:      #d4a74a;
+  --gold-lt:   #fdf5df;
+  --gold-tx:   #8a6b2a;
+
+  /* Badge colors — muted, modern */
+  --purple-lt: #f1eef9;
   --purple-tx: #4a3d9a;
-  --teal-lt:   #e2f5ee;
+  --teal-lt:   #e6f4ef;
   --teal-tx:   #0d6e50;
-  --green-lt:  #e8f5e2;
+  --green-lt:  #eaf4e6;
   --green-tx:  #2d6e10;
-  --amber-lt:  #fef5e2;
+  --amber-lt:  #fdf3e2;
   --amber-tx:  #8a5500;
 
   /* Typography */
@@ -40,6 +43,599 @@
   --radius-md: 10px;
   --radius-lg: 16px;
 }
+
+/* =====================================================
+   SEASONAL THEMES — Fall & Winter
+===================================================== */
+
+/* 🍁 FALL PALETTE */
+.season-fall {
+  --bg: #eec170;        /* warm tan */
+  --accent: #585123;    /* olive header */
+  --accent-lt: #f2a65a; /* pumpkin orange */
+  --accent-tx: #ffffff;
+}
+
+/* ❄️ WINTER PALETTE */
+.season-winter {
+  --bg: #b7e4e3;        /* ice blue */
+  --accent: #1eaedb;    /* glacier blue */
+  --accent-lt: #6bb7d6; /* frost teal */
+  --accent-tx: #ffffff;
+}
+
+/* 🌸 SPRING PALETTE */
+.season-spring {
+  --bg: #e8f7e4;        /* fresh green */
+  --accent: #6bbf59;    /* leafy header */
+  --accent-lt: #a8e6a1; /* mint highlight */
+  --accent-tx: #ffffff;
+}
+
+/* 🌞 SUMMER PALETTE */
+.season-summer {
+  --bg: #fff4d6;        /* warm sand */
+  --accent: #ffb703;    /* golden header */
+  --accent-lt: #ffd166; /* bright yellow */
+  --accent-tx: #000000;
+}
+
+/* =====================================================
+   SEASONAL BACKGROUND ACCENTS
+===================================================== */
+
+body.season-fall {
+  background: linear-gradient(180deg, #f3e9d2 0%, #d9c7a1 100%);
+}
+
+body.season-winter {
+  background: linear-gradient(180deg, #e8f4fc 0%, #cfe7f5 100%);
+}
+
+body.season-spring {
+  background: linear-gradient(180deg, #e8f7e4 0%, #c8eacb 100%);
+}
+
+body.season-summer {
+  background: linear-gradient(180deg, #fff4d6 0%, #ffe7a8 100%);
+}
+
+/* =====================================================
+   SEASONAL SECTION DIVIDERS — DOUBLE ICONS
+===================================================== */
+
+/* 🍁 FALL */
+body.season-fall .section-label::before {
+  content: "🍁🍁 ";
+  margin-right: 6px;
+}
+body.season-fall .section-label::after {
+  content: " 🍁🍁";
+  margin-left: 6px;
+}
+
+/* ❄️ WINTER */
+body.season-winter .section-label::before {
+  content: "❄️❄️ ";
+  margin-right: 6px;
+}
+body.season-winter .section-label::after {
+  content: " ❄️❄️";
+  margin-left: 6px;
+}
+
+/* 🌸 SPRING */
+body.season-spring .section-label::before {
+  content: "🌸🌸 ";
+  margin-right: 6px;
+}
+body.season-spring .section-label::after {
+  content: " 🌸🌸";
+  margin-left: 6px;
+}
+
+/* 🌞 SUMMER */
+body.season-summer .section-label::before {
+  content: "🌞🌞 ";
+  margin-right: 6px;
+}
+body.season-summer .section-label::after {
+  content: " 🌞🌞";
+  margin-left: 6px;
+}
+
+
+/* =====================================================
+   SEASONAL FILTER BUTTON STYLING
+===================================================== */
+
+/* Base seasonal border */
+.filter-btn {
+  border: 2px solid var(--accent);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Seasonal hover glow */
+.filter-btn:hover {
+  box-shadow: 0 0 6px var(--accent);
+}
+
+/* Optional: seasonal icons inside filter buttons */
+body.season-fall   [data-filter="season-fall"]::before   { content: "🍁 "; }
+body.season-winter [data-filter="season-winter"]::before { content: "❄️ "; }
+body.season-spring [data-filter="season-spring"]::before { content: "🌸 "; }
+body.season-summer [data-filter="season-summer"]::before { content: "🌞 "; }
+
+/* Default card shadow (always present) */
+.card {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+
+/* =====================================================
+   SEASONAL CARD BORDERS & SHADOWS
+===================================================== */
+
+/* 🍁 FALL */
+body.season-fall .card {
+  border: 2px solid #a67c52; /* warm brown */
+  box-shadow: 0 2px 8px rgba(166, 124, 82, 0.35);
+}
+
+/* ❄️ WINTER */
+body.season-winter .card {
+  border: 2px solid #7bb3d9; /* icy blue */
+  box-shadow: 0 2px 8px rgba(123, 179, 217, 0.35);
+}
+
+/* 🌸 SPRING */
+body.season-spring .card {
+  border: 2px solid #7ecb7a; /* fresh green */
+  box-shadow: 0 2px 8px rgba(126, 203, 122, 0.35);
+}
+
+/* 🌞 SUMMER */
+body.season-summer .card {
+  border: 2px solid #e6b85c; /* golden yellow */
+  box-shadow: 0 2px 8px rgba(230, 184, 92, 0.35);
+}
+
+/* =====================================================
+   SEASONAL CARD ACCENTS — AMPLIFIED
+===================================================== */
+
+/* 🍁 FALL — warm top accent */
+body.season-fall .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #a67c52, #d9c7a1);
+  border-radius: 6px 6px 0 0;
+}
+
+/* ❄️ WINTER — icy top accent */
+body.season-winter .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #7bb3d9, #cfe7f5);
+  border-radius: 6px 6px 0 0;
+}
+
+/* 🌸 SPRING — fresh green accent */
+body.season-spring .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #7ecb7a, #c8eacb);
+  border-radius: 6px 6px 0 0;
+}
+
+/* 🌞 SUMMER — golden accent */
+body.season-summer .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #e6b85c, #ffe7a8);
+  border-radius: 6px 6px 0 0;
+}
+
+/* =====================================================
+   SEASONAL DIVIDER ANIMATIONS — AMPLIFIED
+===================================================== */
+
+.section-divider {
+  width: 100%;
+  height: 4px;
+  margin: 24px 0;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shared animation */
+.section-divider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 40%;
+  height: 100%;
+  animation: dividerSlide 2.2s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes dividerSlide {
+  0%   { left: -40%; }
+  100% { left: 100%; }
+}
+
+/* 🍁 FALL — warm caramel sweep */
+body.season-fall .section-divider {
+  background: linear-gradient(90deg, #a67c52, #d9c7a1);
+}
+body.season-fall .section-divider::after {
+  background: rgba(166, 124, 82, 0.55);
+}
+
+/* ❄️ WINTER — icy blue shimmer */
+body.season-winter .section-divider {
+  background: linear-gradient(90deg, #7bb3d9, #cfe7f5);
+}
+body.season-winter .section-divider::after {
+  background: rgba(123, 179, 217, 0.55);
+}
+
+/* 🌸 SPRING — fresh green sweep */
+body.season-spring .section-divider {
+  background: linear-gradient(90deg, #7ecb7a, #c8eacb);
+}
+body.season-spring .section-divider::after {
+  background: rgba(126, 203, 122, 0.55);
+}
+
+/* 🌞 SUMMER — golden glow sweep */
+body.season-summer .section-divider {
+  background: linear-gradient(90deg, #e6b85c, #ffe7a8);
+}
+body.season-summer .section-divider::after {
+  background: rgba(230, 184, 92, 0.55);
+}
+
+
+/* =====================================================
+   SEASONAL HERO BANNERS
+===================================================== */
+
+/* 🍁 FALL */
+body.season-fall .site-header {
+  background: linear-gradient(90deg, #585123 0%, #f2a65a 100%);
+}
+
+/* ❄️ WINTER */
+body.season-winter .site-header {
+  background: linear-gradient(90deg, #1eaedb 0%, #6bb7d6 100%);
+}
+
+/* 🌸 SPRING */
+body.season-spring .site-header {
+  background: linear-gradient(90deg, #6bbf59 0%, #a8e6a1 100%);
+}
+
+/* 🌞 SUMMER */
+body.season-summer .site-header {
+  background: linear-gradient(90deg, #ffb703 0%, #ffd166 100%);
+}
+
+/* =====================================================
+   SEASONAL HOVER ANIMATIONS — AMPLIFIED
+===================================================== */
+
+/* 🍁 FALL — stronger warm lift + glow */
+body.season-fall .card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.25),
+    0 0 18px rgba(166, 124, 82, 0.55);
+}
+
+/* ❄️ WINTER — crisp icy rise + shimmer */
+body.season-winter .card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow:
+    0 10px 20px rgba(0,0,0,0.30),
+    0 0 20px rgba(123, 179, 217, 0.60);
+}
+
+/* 🌸 SPRING — bigger bloom bounce */
+body.season-spring .card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.25),
+    0 0 18px rgba(126, 203, 122, 0.55);
+}
+
+/* 🌞 SUMMER — bright sunny pulse */
+body.season-summer .card:hover {
+  transform: translateY(-8px) scale(1.06);
+  box-shadow:
+    0 10px 22px rgba(0,0,0,0.30),
+    0 0 22px rgba(230, 184, 92, 0.60);
+}
+
+
+/* =====================================================
+   SEASONAL TYPOGRAPHY ACCENTS — AMPLIFIED
+===================================================== */
+
+/* 🍁 FALL — stronger cozy serif + spacing */
+body.season-fall .section-label {
+  font-family: "Georgia", serif;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  font-size: 1.35rem;
+}
+
+/* ❄️ WINTER — crisp modern spacing + bold clarity */
+body.season-winter .section-label {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  font-size: 1.38rem;
+}
+
+/* 🌸 SPRING — softer rounded feel + gentle lift */
+body.season-spring .section-label {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.34rem;
+}
+
+/* 🌞 SUMMER — bold sunny emphasis + wider spacing */
+body.season-summer .section-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  font-size: 1.40rem;
+}
+
+
+/* =====================================================
+   SEASONAL BUTTON PRESS ANIMATIONS — AMPLIFIED
+===================================================== */
+
+/* 🍁 FALL — deeper cozy press + warm glow */
+body.season-fall .filter-btn:active {
+  transform: scale(0.90);
+  background: var(--accent-lt);
+  box-shadow:
+    0 0 10px rgba(166, 124, 82, 0.55),
+    inset 0 0 6px rgba(0,0,0,0.25);
+}
+
+/* ❄️ WINTER — crisp snap + icy highlight */
+body.season-winter .filter-btn:active {
+  transform: scale(0.88);
+  background: var(--accent);
+  box-shadow:
+    0 0 12px rgba(123, 179, 217, 0.60),
+    inset 0 0 6px rgba(0,0,0,0.30);
+}
+
+/* 🌸 SPRING — gentle bounce + bloom glow */
+body.season-spring .filter-btn:active {
+  transform: scale(0.92);
+  background: var(--accent-lt);
+  box-shadow:
+    0 0 10px rgba(126, 203, 122, 0.55),
+    inset 0 0 6px rgba(0,0,0,0.25);
+}
+
+/* 🌞 SUMMER — bright sunny pulse + warm shine */
+body.season-summer .filter-btn:active {
+  transform: scale(0.93);
+  background: var(--accent-lt);
+  box-shadow:
+    0 0 12px rgba(230, 184, 92, 0.60),
+    inset 0 0 6px rgba(0,0,0,0.30);
+}
+
+
+/* =====================================================
+   SEASONAL CARD ENTRANCE ANIMATIONS — AMPLIFIED
+===================================================== */
+
+/* 🍁 FALL — stronger warm lift */
+body.season-fall .card {
+  animation: fallCardIn 0.65s ease;
+}
+@keyframes fallCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ❄️ WINTER — crisp slide with more distance */
+body.season-winter .card {
+  animation: winterCardIn 0.65s ease;
+}
+@keyframes winterCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🌸 SPRING — more pronounced bloom pop */
+body.season-spring .card {
+  animation: springCardIn 0.65s ease;
+}
+@keyframes springCardIn {
+  from {
+    opacity: 0;
+    transform: scale(0.90);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 🌞 SUMMER — bigger sunny lift + slight scale */
+body.season-summer .card {
+  animation: summerCardIn 0.65s ease;
+}
+@keyframes summerCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =====================================================
+   SEASONAL BADGE ANIMATIONS — AMPLIFIED
+===================================================== */
+
+/* 🍁 FALL — warm pulse + gentle pop */
+body.season-fall .badge {
+  animation: fallBadgePulse 1.2s ease-in-out infinite;
+}
+@keyframes fallBadgePulse {
+  0%   { transform: scale(1);   box-shadow: 0 0 6px rgba(166,124,82,0.45); }
+  50%  { transform: scale(1.12); box-shadow: 0 0 12px rgba(166,124,82,0.65); }
+  100% { transform: scale(1);   box-shadow: 0 0 6px rgba(166,124,82,0.45); }
+}
+
+/* ❄️ WINTER — icy shimmer + crisp glow */
+body.season-winter .badge {
+  animation: winterBadgeShimmer 1.3s ease-in-out infinite;
+}
+@keyframes winterBadgeShimmer {
+  0%   { transform: scale(1);   box-shadow: 0 0 6px rgba(123,179,217,0.50); }
+  50%  { transform: scale(1.15); box-shadow: 0 0 14px rgba(123,179,217,0.75); }
+  100% { transform: scale(1);   box-shadow: 0 0 6px rgba(123,179,217,0.50); }
+}
+
+/* 🌸 SPRING — soft bloom + gentle bounce */
+body.season-spring .badge {
+  animation: springBadgeBloom 1.25s ease-in-out infinite;
+}
+@keyframes springBadgeBloom {
+  0%   { transform: scale(1);   box-shadow: 0 0 6px rgba(126,203,122,0.45); }
+  50%  { transform: scale(1.14); box-shadow: 0 0 12px rgba(126,203,122,0.65); }
+  100% { transform: scale(1);   box-shadow: 0 0 6px rgba(126,203,122,0.45); }
+}
+
+/* 🌞 SUMMER — bright sunny pulse + warm glow */
+body.season-summer .badge {
+  animation: summerBadgePulse 1.2s ease-in-out infinite;
+}
+@keyframes summerBadgePulse {
+  0%   { transform: scale(1);   box-shadow: 0 0 6px rgba(230,184,92,0.50); }
+  50%  { transform: scale(1.16); box-shadow: 0 0 14px rgba(230,184,92,0.75); }
+  100% { transform: scale(1);   box-shadow: 0 0 6px rgba(230,184,92,0.50); }
+}
+
+/* =====================================================
+   SEASONAL BACKGROUND MOTION — AMPLIFIED
+===================================================== */
+
+/* Shared particle container */
+.season-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Shared particle style */
+.season-particles span {
+  position: absolute;
+  font-size: 1.4rem;
+  opacity: 0.75;
+  animation: floatParticle 6s linear infinite;
+}
+
+/* Generic float animation */
+@keyframes floatParticle {
+  0%   { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-120vh) rotate(360deg); }
+}
+
+/* 🍁 FALL — drifting leaves */
+body.season-fall .season-particles span {
+  animation-duration: 7s;
+  color: #a67c52;
+}
+
+/* ❄️ WINTER — falling snowflakes */
+body.season-winter .season-particles span {
+  animation-duration: 9s;
+  color: #d9ecf7;
+}
+
+/* 🌸 SPRING — floating petals */
+body.season-spring .season-particles span {
+  animation-duration: 8s;
+  color: #c8f3c4;
+}
+
+/* 🌞 SUMMER — rising sun specks */
+body.season-summer .season-particles span {
+  animation-duration: 7s;
+  color: #ffe08a;
+}
+
+/* =====================================================
+   SEASONAL BACKGROUND GRADIENTS — AMPLIFIED
+===================================================== */
+
+body.season-fall {
+  background: linear-gradient(180deg, #f3e9d2 0%, #e2c9a5 40%, #d0b48a 100%);
+}
+
+body.season-winter {
+  background: linear-gradient(180deg, #e8f4fc 0%, #d4e9f7 40%, #c0dff2 100%);
+}
+
+body.season-spring {
+  background: linear-gradient(180deg, #e8f7e4 0%, #d4f0d0 40%, #c0e8bd 100%);
+}
+
+body.season-summer {
+  background: linear-gradient(180deg, #fff4d6 0%, #ffe9b0 40%, #ffd98a 100%);
+}
+
 
 /* =====================================================
    RESET & BASE
@@ -59,6 +655,15 @@ body {
   min-height: 100vh;
 }
 
+body,
+.card,
+.section-label,
+.filter-btn,
+.site-header {
+  transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+}
+
+
 a { color: inherit; text-decoration: none; }
 button { font-family: var(--font-body); cursor: pointer; }
 ul { list-style: none; }
@@ -67,8 +672,8 @@ ul { list-style: none; }
    SITE HEADER
 ===================================================== */
 .site-header {
-  background: #113f67;
-  border-bottom: 1px solid #2e4466;
+  background: #113f67;               /* original header color */
+  border-bottom: 1px solid #2e4466;  /* original border */
   padding: 1.25rem 2rem;
   display: flex;
   align-items: center;
@@ -118,10 +723,9 @@ ul { list-style: none; }
 
 .filter-btn {
   font-size: 13px;
-  font-family: var(--font-body);
-  padding: 5px 14px;
+  padding: 6px 16px;
   border-radius: 99px;
-  border: 1px solid var(--border-2);
+  border: 1px solid var(--border);
   background: var(--surface);
   color: var(--muted);
   transition: all 0.15s;
@@ -151,23 +755,16 @@ ul { list-style: none; }
   width: 16px;
   height: 16px;
   stroke: var(--hint);
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
 }
 
 .search-input {
   width: 100%;
   max-width: 360px;
   padding: 8px 12px 8px 36px;
-  border: 1px solid var(--border-2);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  font-family: var(--font-body);
-  font-size: 13px;
   background: var(--surface);
   color: var(--text);
-  outline: none;
-  transition: border-color 0.15s;
 }
 
 .search-input:focus {
@@ -179,31 +776,61 @@ ul { list-style: none; }
 }
 
 /* =====================================================
-   SECTION LABELS & COUNT
+   SECTION LABELS
 ===================================================== */
 .section-label {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #ffffff;
-  background: #4f959d;
+  color: #3a3a3a; /* darker text for better contrast */
+  background: var(--accent-lt);
   margin: 1.75rem 0 0.75rem;
   padding: 8px 14px;
   border-radius: var(--radius-md);
   text-align: center;
-  cursor: pointer;
-  user-select: none;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: background 0.15s;
+  transition: background 0.15s, color 0.15s;
 }
 
 .section-label:hover {
-  background: #3d7f87;
+  background: var(--accent);
+  color: var(--accent-tx);
 }
+
+
+.section-label:hover {
+  background: var(--accent);
+  color: var(--accent-tx);
+}
+
+.season-fall .section-label {
+  color: #4a3b1a; /* deep olive brown */
+}
+
+.season-winter .section-label {
+  color: #0e4a5f; /* cool navy teal */
+}
+
+body.season-fall .site-header {
+  background: var(--accent);
+}
+
+body.season-winter .site-header {
+  background: var(--accent);
+}
+
+body.season-spring .site-header {
+  background: var(--accent);
+}
+
+body.season-summer .site-header {
+  background: var(--accent);
+}
+
 
 .count-line {
   font-size: 13px;
@@ -235,23 +862,29 @@ ul { list-style: none; }
   align-self: start;
 }
 
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  border-color: var(--accent);
+}
+
 .card.is-expanded {
-  border: 2px solid #111111;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  border: 2px solid var(--accent-lt);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35);
   grid-column: 1 / -1;
 }
 
-.card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-  border-color: var(--border-2);
+/* Fix image placeholder sizing */
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--surface-2);
 }
 
-.card.is-lettuce {
-  border-top: 3px solid #2d8f65;
-}
-
-.card.is-fav {
-  border-top: 3px solid var(--gold);
+/* Prevent empty boxes when no image */
+.card img[src=""] {
+  display: none;
 }
 
 /* Card header bar */
@@ -260,46 +893,42 @@ ul { list-style: none; }
   align-items: center;
   justify-content: space-between;
   gap: 8px;
-  background: #3d5a80;
+  background: #556b2f; /* olive/vine green */
   padding: 10px 14px;
 }
 
 .card-title {
   font-size: 14px;
   font-weight: 600;
-  color: #ffffff;
-  line-height: 1.35;
-  flex: 1;
+  color: #f4f1ec; /* warm cream text */
 }
 
-/* Favorite star button */
+/* Favorite star */
 .fav-btn {
   background: none;
   border: none;
   padding: 2px;
   color: rgba(255,255,255,0.6);
   font-size: 18px;
-  line-height: 1;
-  flex-shrink: 0;
   transition: color 0.15s, transform 0.15s;
 }
 
 .fav-btn:hover {
-  color: #f0c060;
+  color: var(--gold);
   transform: scale(1.15);
 }
 
 .fav-btn.active {
-  color: #f0c060;
+  color: var(--gold);
 }
+
+/* Close button */
 .close-btn {
   background: none;
   border: none;
   padding: 2px;
   color: rgba(255,255,255,0.7);
   font-size: 16px;
-  line-height: 1;
-  flex-shrink: 0;
   cursor: pointer;
   transition: color 0.15s, transform 0.15s;
 }
@@ -315,7 +944,6 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   gap: 8px;
-  flex: 1;
 }
 
 /* =====================================================
@@ -335,22 +963,20 @@ ul { list-style: none; }
   letter-spacing: 0.02em;
 }
 
-.badge-sw         { background: var(--purple-lt); color: var(--purple-tx); }
-.badge-as         { background: var(--teal-lt);   color: var(--teal-tx);   }
-.badge-other      { background: #ede9fb;          color: #4a3d9a;          }
-.badge-snack      { background: var(--amber-lt);  color: var(--amber-tx);  }
-.badge-ltr        { background: var(--green-lt);  color: var(--green-tx);  }
-.badge-prep       { background: #e8f5e2;          color: #2d6e10;          }
-.badge-new        { background: var(--teal-lt);   color: var(--teal-tx);   border: 1px solid #2d8f65; }
-.badge-chicken    { background: #e8f5ee;          color: #0d6e40;          }
-.badge-beef       { background: #fdeee8;          color: #8a3010;          }
-.badge-pork { background: #fde8f0; color: #8a1040; }
-.badge-fish       { background: #e2eef8;          color: #1a4a80;          }
-.badge-vegetarian { background: #e8f5e2;          color: #2d6e10;          }
-.badge-dessert    { background: #f5e8f8;          color: #6e2d8a;          }
+.badge-dessert { background: #fdf3e2; color: #8a5500; }
+
+.badge-season {
+  background: var(--accent);
+  color: var(--accent-tx);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  margin-left: 6px;
+}
+
 
 /* =====================================================
-   MACRO STATS ROW
+   MACRO STATS
 ===================================================== */
 .macro-row {
   display: flex;
@@ -367,7 +993,6 @@ ul { list-style: none; }
   font-size: 15px;
   font-weight: 600;
   color: var(--text);
-  display: block;
 }
 
 .macro-lbl {
@@ -379,7 +1004,6 @@ ul { list-style: none; }
   width: 1px;
   height: 28px;
   background: var(--border);
-  flex-shrink: 0;
 }
 
 /* =====================================================
@@ -393,10 +1017,10 @@ ul { list-style: none; }
 
 .tag {
   font-size: 11px;
-  padding: 2px 7px;
+  padding: 3px 8px;
   border-radius: var(--radius-sm);
-  background: #fada7a;
-  color: var(--muted);
+  background: var(--amber-lt);
+  color: var(--amber-tx);
   border: 1px solid var(--border);
 }
 
@@ -456,8 +1080,6 @@ ul { list-style: none; }
   font-size: 12px;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 4px;
-  letter-spacing: 0.02em;
 }
 
 .card-detail ul {
@@ -474,67 +1096,16 @@ ul { list-style: none; }
   line-height: 1.6;
 }
 
-/* Prep tip box inside expanded card */
+/* Prep tip */
 .prep-tip {
   background: var(--accent-lt);
   border-radius: var(--radius-sm);
   padding: 7px 10px;
   font-size: 12px;
   color: var(--accent);
-  line-height: 1.5;
   border-left: 3px solid var(--accent);
 }
 
-.prep-tip strong { font-weight: 600; }
-
-/* =====================================================
-   EMPTY STATE
-===================================================== */
-.empty {
-  text-align: center;
-  padding: 3rem 1rem;
-  color: var(--hint);
-  font-size: 14px;
-}
-/* =====================================================
-   FLOATING FOOD DECORATIONS
-===================================================== */
-.food-deco {
-  position: fixed;
-  top: 80px;
-  bottom: 0;
-  width: 55px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.left-deco  { left: 0; }
-.right-deco { right: 0; }
-
-.food-deco span {
-  font-size: 24px;
-  opacity: 0.6;
-  animation: floatEmoji 4s ease-in-out infinite;
-  animation-delay: var(--d);
-  transform: translateX(var(--x));
-  display: block;
-  filter: saturate(0.8);
-}
-
-@keyframes floatEmoji {
-  0%   { transform: translateX(var(--x)) translateY(0px);   }
-  50%  { transform: translateX(var(--x)) translateY(-12px); }
-  100% { transform: translateX(var(--x)) translateY(0px);   }
-}
-
-/* Hide on small screens where there's no room */
-@media (max-width: 900px) {
-  .food-deco { display: none; }
-}
 /* =====================================================
    RESPONSIVE — mobile
 ===================================================== */

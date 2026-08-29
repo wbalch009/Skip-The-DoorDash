@@ -9,63 +9,154 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
+
+<div class="season-particles"></div>
+
+
+<!-- Floating food emojis -->
 <div class="food-deco left-deco" aria-hidden="true">
   <span style="--d:0s;   --x:20px">🍋</span>
   <span style="--d:1.2s; --x:10px">🌿</span>
   <span style="--d:2.4s; --x:25px">🧄</span>
-  <span style="--d:0.8s; --x:5px" >🌶️</span>
+  <span style="--d:0.8s; --x:5px">🌶️</span>
   <span style="--d:3.1s; --x:18px">🥑</span>
   <span style="--d:1.8s; --x:12px">🫑</span>
-  <span style="--d:2.9s; --x:8px" >🍊</span>
+  <span style="--d:2.9s; --x:8px">🍊</span>
   <span style="--d:0.4s; --x:22px">🧅</span>
   <span style="--d:3.5s; --x:15px">🌿</span>
-  <span style="--d:1.5s; --x:6px" >🍋</span>
+  <span style="--d:1.5s; --x:6px">🍋</span>
 </div>
 
 <div class="food-deco right-deco" aria-hidden="true">
   <span style="--d:0.6s; --x:18px">🫙</span>
-  <span style="--d:1.9s; --x:8px" >🧂</span>
+  <span style="--d:1.9s; --x:8px">🧂</span>
   <span style="--d:2.2s; --x:20px">🥚</span>
   <span style="--d:0.3s; --x:12px">🫒</span>
   <span style="--d:3.3s; --x:25px">🥗</span>
-  <span style="--d:1.1s; --x:6px" >🍅</span>
+  <span style="--d:1.1s; --x:6px">🍅</span>
   <span style="--d:2.7s; --x:16px">🧀</span>
   <span style="--d:0.9s; --x:10px">🥦</span>
   <span style="--d:3.8s; --x:22px">🌿</span>
-  <span style="--d:1.6s; --x:4px" >🫑</span>
+  <span style="--d:1.6s; --x:4px">🫑</span>
 </div>
-  <header class="site-header">
-    <h1>&#127860; Skip The DoorDash &#128298;</h1>
-    <span class="header-meta" id="header-meta">Loading...</span>
-  </header>
 
-  <main class="container">
+<header class="site-header">
+  <h1>&#127860; Skip The DoorDash &#128298;</h1>
+  <span class="header-meta" id="header-meta">Loading...</span>
+</header>
 
-    <div class="controls">
-      <div class="filter-row" id="filter-row">
-        <button class="filter-btn active" data-filter="all">All recipes</button>
-        <button class="filter-btn" data-filter="fav">&#9733; Favorites</button>
-        <button class="filter-btn" data-filter="chicken">&#127831; Chicken</button>
-        <button class="filter-btn" data-filter="beef">&#x1F969; Beef</button>
-        <button class="filter-btn" data-filter="pork">&#129363; Pork</button>
-        <button class="filter-btn" data-filter="fish">&#128031;&#129424; Seafood</button>
-        <button class="filter-btn" data-filter="vegetarian">&#129367; Vegetarian</button>
-        <button class="filter-btn" data-filter="snack">&#127807; Snacks</button>
-        <button class="filter-btn" data-filter="dessert">&#127874; Sweet Treats</button>
-      </div>
-      <div class="search-wrap">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        <input class="search-input" id="search" type="text" placeholder="Search by name, ingredient, tag..." />
-      </div>
+<main class="container">
+
+  <!-- FILTERS + SEARCH -->
+  <div class="controls">
+    <div class="filter-row" id="filter-row">
+      <button class="filter-btn active" data-filter="all">All recipes</button>
+      <button class="filter-btn" data-filter="fav">&#9733; Favorites</button>
+      <button class="filter-btn" data-filter="chicken">&#127831; Chicken</button>
+      <button class="filter-btn" data-filter="beef">&#x1F969; Beef</button>
+      <button class="filter-btn" data-filter="pork">&#129363; Pork</button>
+      <button class="filter-btn" data-filter="fish">&#128031;&#129424; Seafood</button>
+      <button class="filter-btn" data-filter="vegetarian">&#129367; Vegetarian</button>
+      <button class="filter-btn" data-filter="snack">&#127807; Snacks</button>
+      <button class="filter-btn" data-filter="dessert">&#127874; Sweet Treats</button>
+
+      <!-- ⭐ Seasonal filters (NEW) ⭐ -->
+      <button class="filter-btn" data-filter="season-fall">🍁 Fall Recipes</button>
+      <button class="filter-btn" data-filter="season-winter">❄️ Winter Recipes</button>
+      <button class="filter-btn" data-filter="season-spring">🌸 Spring Recipes</button>
+      <button class="filter-btn" data-filter="season-summer">🌞 Summer Recipes</button>
+
     </div>
 
-    <div class="count-line" id="count-line"></div>
-    <div id="recipe-output"></div>
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8"/>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+      <input class="search-input" id="search" type="text" placeholder="Search by name, ingredient, tag..." />
+    </div>
+  </div>
 
-  </main>
+  <!-- NORMAL RECIPE OUTPUT -->
+  <div class="count-line" id="count-line"></div>
+  <div id="recipe-output"></div>
 
-  <script src="js/recipes.js" defer></script>
+</main>
+
+<script src="js/recipes.js" defer></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const particleContainer = document.querySelector('.season-particles');
+  const icons = {
+    'season-fall': ['🍁','🍂'],
+    'season-winter': ['❄️','✨'],
+    'season-spring': ['🌸','💮'],
+    'season-summer': ['☀️','✨']
+  };
+
+  function generateParticles() {
+    particleContainer.innerHTML = '';
+    const season = document.body.className.match(/season-\w+/)?.[0];
+    const set = icons[season] || [];
+
+    for (let i = 0; i < 18; i++) {
+      const p = document.createElement('span');
+      p.textContent = set[Math.floor(Math.random() * set.length)];
+      p.style.left = Math.random() * 100 + '%';
+      p.style.top = '100vh';
+      p.style.animationDelay = Math.random() * 4 + 's';
+      particleContainer.appendChild(p);
+    }
+  }
+
+  generateParticles();
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const particleContainer = document.querySelector('.season-particles');
+  const icons = {
+    'season-fall': ['🍁','🍂'],
+    'season-winter': ['❄️','✨'],
+    'season-spring': ['🌸','💮'],
+    'season-summer': ['☀️','✨']
+  };
+
+  function generateParticles() {
+    particleContainer.innerHTML = '';
+    const season = document.body.className.match(/season-\w+/)?.[0];
+    const set = icons[season] || [];
+
+    for (let i = 0; i < 18; i++) {
+      const p = document.createElement('span');
+      p.textContent = set[Math.floor(Math.random() * set.length)];
+      p.style.left = Math.random() * 100 + '%';
+      p.style.top = '100vh';
+      p.style.animationDelay = Math.random() * 4 + 's';
+      particleContainer.appendChild(p);
+    }
+  }
+
+  generateParticles();
+
+  // ⭐ NEW: Make seasonal filter buttons change the body class
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+
+      // Only change season if the filter is a season
+      if (filter.startsWith('season-')) {
+        document.body.className = filter;   // switch season
+        generateParticles();                // regenerate icons
+      }
+    });
+  });
+});
+</script>
+
 
 </body>
 </html>

@@ -1293,6 +1293,107 @@ const RECIPES = [
     tip: "This pasta salad is excellent cold or at room temperature, making it ideal for meal prep or picnics. Keeps 3–4 days refrigerated. Char the corn in a dry pan for extra smoky flavor if not using canned."
   },
 
+
+ {
+  id: "d3",
+  title: "Apple Cider Donuts",
+  cal: 320,
+  protein: "dessert",
+  proteinG: 4,
+  fiber: 1,
+  cost: "$",
+  serves: 12,
+  prep: false,
+  season: "fall",
+
+  tags: ["apple", "cinnamon", "donuts", "fall", "baked"],
+
+  desc: "Soft, warm cinnamon‑sugar donuts made with reduced apple cider for deep fall flavor.",
+
+  ing: [
+    "Cooking spray",
+    "1 cup apple cider",
+    "2 cups all-purpose flour",
+    "1 tsp baking powder",
+    "1 tsp kosher salt",
+    "1/2 tsp ground nutmeg",
+    "1/4 tsp ground ginger",
+    "3 1/2 tsp ground cinnamon (divided)",
+    "3/4 cup vegetable oil",
+    "1/2 cup packed dark brown sugar",
+    "1 cup granulated sugar (divided)",
+    "1 large egg",
+    "6 tbsp unsalted butter, melted"
+  ],
+
+  steps: [
+    "Preheat oven to 350°F. Grease donut pans.",
+    "Boil apple cider until reduced to 1/2 cup; cool.",
+    "Whisk flour, baking powder, salt, nutmeg, ginger, and 2 tsp cinnamon.",
+    "Whisk oil, brown sugar, and 1/2 cup granulated sugar. Add egg, dry ingredients, and cider.",
+    "Pipe or spoon batter into pans until 3/4 full.",
+    "Bake 12–15 minutes; cool 5 minutes.",
+    "Mix remaining sugar + cinnamon. Brush donuts with butter and toss in cinnamon sugar."
+  ],
+
+  tip: "Reduce the cider the day before for deeper flavor."
+},
+
+
+
+{
+  id: "d4",
+  title: "Apple Pie Cheesecake",
+  cal: 480,
+  protein: "dessert",
+  proteinG: 6,
+  fiber: 2,
+  cost: "$$",
+  serves: 12,
+  prep: false,
+  season: "fall",
+
+  tags: ["cheesecake", "apple pie", "fall", "holiday", "crumble", "rich"],
+
+  desc: "A rich, creamy cheesecake layered with apple pie filling and topped with a buttery cinnamon crumble.",
+
+  ing: [
+    "18 graham cracker sheets, crushed",
+    "1/2 cup butter, melted",
+    "1/4 cup brown sugar",
+    "1/4 tsp salt",
+    "32 oz cream cheese, softened",
+    "4 eggs",
+    "1 cup white sugar",
+    "1/2 cup sour cream",
+    "2 tsp vanilla",
+    "20 oz canned apple pie filling",
+    "1 1/2 cups white flour",
+    "1/3 cup brown sugar",
+    "6 tbsp butter, melted",
+    "1 tsp vanilla",
+    "1 tsp cinnamon"
+  ],
+
+  steps: [
+    "Preheat oven to 350°F. Grease a springform pan.",
+    "Mix crust ingredients and press into pan. Bake 12 minutes.",
+    "Beat cream cheese, eggs, sugar, sour cream, and vanilla.",
+    "Mix crumble topping ingredients until crumbly.",
+    "Pour cheesecake filling over crust.",
+    "Add apple pie filling evenly.",
+    "Add crumble topping.",
+    "Bake 30 minutes at 325°F, then 50 minutes at 250°F.",
+    "Cool slowly in oven, then at room temp, then chill overnight.",
+    "Serve with warm caramel sauce."
+  ],
+
+  tip: "Chill overnight for clean slices. Warm caramel makes it extra decadent."
+},
+
+
+
+
   // -------------------------------------------------------
   //  ADD NEW RECIPES ABOVE THIS LINE
   //  Copy any object above, paste it here, change the id,
@@ -1301,6 +1402,48 @@ const RECIPES = [
   // -------------------------------------------------------
 
 ]; // <-- end of RECIPES array
+
+// =========================================================
+//  FILTER HANDLER (categories + favorites + seasonal)
+// =========================================================
+
+const filterButtons = document.querySelectorAll(".filter-btn");
+const output = document.getElementById("recipe-output");
+
+filterButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const filter = btn.dataset.filter;
+
+    // Remove active class from all buttons
+    filterButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    let filtered = RECIPES;
+
+    // ⭐ Seasonal filters (fall, winter, etc.)
+    if (filter.startsWith("season-")) {
+      const seasonName = filter.replace("season-", "");
+      filtered = RECIPES.filter(r => r.season === seasonName);
+    }
+
+    // ⭐ Favorites
+    else if (filter === "fav") {
+      filtered = RECIPES.filter(r => r.isFav);
+    }
+
+    // ⭐ Category filters (chicken, beef, snack, dessert, etc.)
+    else if (filter !== "all") {
+      filtered = RECIPES.filter(r => {
+        if (Array.isArray(r.protein)) {
+          return r.protein.includes(filter);
+        }
+        return r.protein === filter;
+      });
+    }
+
+    renderRecipes(filtered);
+  });
+});
 
 
 // =========================================================
@@ -1348,6 +1491,13 @@ function getFiltered() {
   const q = document.getElementById("search").value.toLowerCase().trim();
   return RECIPES.filter(r => {
     const proteins = getProteins(r);
+
+    // ⭐ Seasonal filters
+    if (activeFilter.startsWith("season-")) {
+      const seasonName = activeFilter.replace("season-", "");
+      if (!r.season || r.season !== seasonName) return false;
+    }
+
     if (activeFilter === "fav"         && !favs.has(r.id))                  return false;
     if (activeFilter === "chicken"     && !proteins.includes("chicken"))     return false;
     if (activeFilter === "beef"        && !proteins.includes("beef"))        return false;
@@ -1356,6 +1506,7 @@ function getFiltered() {
     if (activeFilter === "vegetarian"  && !proteins.includes("vegetarian")) return false;
     if (activeFilter === "snack"       && !proteins.includes("snack"))       return false;
     if (activeFilter === "dessert"     && !proteins.includes("dessert"))     return false;
+
     if (q) {
       const hay = (r.title + " " + r.tags.join(" ") + " " + r.desc + " " + r.ing.join(" ")).toLowerCase();
       if (!hay.includes(q)) return false;
@@ -1386,12 +1537,30 @@ function cardHTML(r) {
   const isOpen   = openCards.has(r.id);
   const isFav    = favs.has(r.id);
   const proteins = getProteins(r);
-  const classes  = ["card", r.isLettuce ? "is-lettuce" : "", isFav ? "is-fav" : "", isOpen ? "is-expanded" : ""].filter(Boolean).join(" ");
+  const classes  = ["card", r.isLettuce ? "is-lettuce" : "", isFav ? "is-fav" : "", isOpen ? "is-expanded" : ""]
+    .filter(Boolean)
+    .join(" ");
 
   const extraBadges = [
     r.isLettuce ? badge("badge-ltr", "Lettuce bowl") : "",
-    r.isNew     ? badge("badge-new", "New")           : "",
-    (r.prep && !proteins.includes("snack") && !proteins.includes("dessert")) ? badge("badge-prep", "Meal-prep") : ""
+    r.isNew     ? badge("badge-new", "New") : "",
+
+    // ⭐ Seasonal badge with icons
+    r.season
+      ? badge(
+          "badge-season",
+          {
+            fall: "🍁 Fall",
+            winter: "❄️ Winter",
+            spring: "🌸 Spring",
+            summer: "🌞 Summer"
+          }[r.season] || r.season
+        )
+      : "",
+
+    (r.prep && !proteins.includes("snack") && !proteins.includes("dessert"))
+      ? badge("badge-prep", "Meal-prep")
+      : ""
   ].join("");
 
   const ing = r.ing.map(i => `<li>${i}</li>`).join("");
@@ -1488,8 +1657,24 @@ document.getElementById("filter-row").addEventListener("click", e => {
   const btn = e.target.closest(".filter-btn");
   if (!btn) return;
   activeFilter = btn.dataset.filter;
+
+  // ⭐ Apply seasonal theme to <body>
+  document.body.classList.remove(
+    "season-fall",
+    "season-winter",
+    "season-spring",
+    "season-summer"
+  );
+
+  if (activeFilter.startsWith("season-")) {
+    const seasonName = activeFilter.replace("season-", "");
+    document.body.classList.add(`season-${seasonName}`);
+  }
+
+  // Remove active class from all buttons
   document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
   btn.classList.add("active");
+
   openCards.clear();
   renderAll();
 });
@@ -1497,5 +1682,20 @@ document.getElementById("filter-row").addEventListener("click", e => {
 // Wire up search
 document.getElementById("search").addEventListener("input", renderAll);
 
+// ⭐ Default load state (runs ONCE when page loads)
+activeFilter = "all"; // show all recipes by default
+
+// Remove any seasonal theme on initial load
+document.body.classList.remove(
+  "season-fall",
+  "season-winter",
+  "season-spring",
+  "season-summer"
+);
+
+// Mark the "All recipes" button active on load
+document.querySelector('[data-filter="all"]').classList.add("active");
+
 // Initial render
 renderAll();
+
