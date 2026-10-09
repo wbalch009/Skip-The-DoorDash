@@ -1339,6 +1339,55 @@ const RECIPES = [
   tip: "Reduce the cider the day before for deeper flavor."
 },
 
+{
+  id: "d4",
+  title: "Pumpkin Snickerdoodle Cookies",
+  cal: 220,
+  protein: "dessert",
+  proteinG: 3,
+  fiber: 1,
+  cost: "$",
+  serves: 24,
+  prep: false,
+  season: "fall",
+
+  tags: ["pumpkin", "cookies", "cinnamon", "fall", "dessert"],
+
+  desc: "Soft, chewy pumpkin cookies rolled in cinnamon sugar with crisp edges and tender centers.",
+
+  ing: [
+    "1/2 cup (113g) unsalted butter, melted",
+    "1/2 cup (110g) light brown sugar, packed",
+    "1/2 cup (100g) granulated sugar",
+    "1/3 cup (80ml) pure pumpkin puree",
+    "2-3 drops fresh lemon juice",
+    "1/2 tsp vanilla extract",
+    "1 1/3 cups (190g) all-purpose flour",
+    "1/2 tsp pumpkin pie spice",
+    "1/2 tsp baking soda",
+    "1/2 tsp baking powder",
+    "1/2 tsp salt",
+    "3 tbsp (40g) granulated sugar",
+    "1 tsp ground cinnamon"
+  ],
+
+  steps: [
+    "Whisk melted butter, brown sugar, granulated sugar, and pumpkin puree until smooth.",
+    "Mix in vanilla extract and lemon juice.",
+    "Whisk together flour, pumpkin pie spice, baking soda, baking powder, and salt.",
+    "Fold dry ingredients into the pumpkin mixture until just combined.",
+    "Cover and refrigerate dough for 1 hour.",
+    "Preheat oven to 350°F and line baking sheets with parchment paper.",
+    "Mix cinnamon and sugar together in a small bowl.",
+    "Scoop dough into 1-ounce portions and roll into balls.",
+    "Roll each dough ball in cinnamon sugar.",
+    "Place 3 inches apart on prepared baking sheets. Do not flatten.",
+    "Bake 9-12 minutes until edges are lightly golden and centers remain soft.",
+    "Cool on baking sheet for 2 minutes before transferring to a wire rack."
+  ],
+
+  tip: "Chill the dough fully before baking for thicker cookies and better crackly tops."
+},
 
 
 {
