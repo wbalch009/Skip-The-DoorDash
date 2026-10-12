@@ -1389,6 +1389,42 @@ const RECIPES = [
   tip: "Chill the dough fully before baking for thicker cookies and better crackly tops."
 },
 
+  {
+    id: "d5",
+    title: "Maple Brown Sugar Cookies",
+    cal: 220, protein: "dessert", proteinG: 2, fiber: 0, cost: "$",
+    serves: 18,
+    fall: true,
+    prep: true,
+    tags: ["maple syrup", "brown sugar", "butter", "cookies", "maple icing", "sweet", "chewy", "warm", "cozy"],
+    desc: "Soft and chewy brown sugar cookies made with pure maple syrup and finished with an optional buttery maple icing. Simple ingredients, big flavor, and the kind of cookie you keep coming back to.",
+    ing: [
+      "--- Cookies ---",
+      "½ cup (1 stick) unsalted butter, softened to room temperature",
+      "1 cup packed dark brown sugar",
+      "1 large egg, room temperature",
+      "⅓ cup pure maple syrup",
+      "1½ cups all-purpose flour",
+      "½ tsp baking soda",
+      "¼ tsp salt",
+      "--- Maple icing (optional) ---",
+      "2 tbsp unsalted butter",
+      "⅓ cup pure maple syrup",
+      "1 cup confectioners sugar, sifted",
+      "Pinch of salt to taste",
+    ],
+    steps: [
+      "Whisk together flour, baking soda, and salt in a bowl. Set aside.",
+      "In a separate bowl, cream softened butter and brown sugar together until combined.",
+      "Mix in the egg and maple syrup until smooth.",
+      "Gradually add the dry ingredients and mix until a dough forms.",
+      "Cover the dough and chill in the fridge for at least 3 hours or overnight — do not skip this step. The maple syrup makes the dough naturally sticky and chilling makes it workable.",
+      "Once chilled, let the dough sit out briefly to soften just enough to handle. Divide into portions and roll into balls, working quickly as the dough gets sticky as it warms.",
+      "Bake at 350°F for 12–13 min until the edges are set. Let cool completely before icing.",
+      "For the icing: melt butter and maple syrup together in a small saucepan. Remove from heat and whisk in sifted confectioners sugar and a pinch of salt until smooth. Drizzle over cooled cookies."
+    ],
+    tip: "Chilling the dough overnight gives the best flavor and texture. Work quickly when rolling — pop the dough back in the fridge for a few minutes if it gets too sticky to handle. The maple icing is optional but highly recommended."
+  },
 
 {
   id: "d4",
